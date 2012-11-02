@@ -1,4 +1,7 @@
 class Consume < ActiveRecord::Base
-  belongs_to :thing_instance
+	#attributes
   attr_accessible :date, :puprpose
+
+	#relations
+  belongs_to :thing_instance
 end

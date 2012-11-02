@@ -82,10 +82,12 @@ ActiveRecord::Schema.define(:version => 20121102132335) do
     t.integer  "storage_id",  :null => false
     t.integer  "purchase_id", :null => false
     t.integer  "thing_id",    :null => false
+    t.integer  "consume_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
 
+  add_index "thing_instances", ["consume_id"], :name => "index_thing_instances_on_consume_id"
   add_index "thing_instances", ["purchase_id"], :name => "index_thing_instances_on_purchase_id"
   add_index "thing_instances", ["storage_id"], :name => "index_thing_instances_on_storage_id"
   add_index "thing_instances", ["thing_id"], :name => "index_thing_instances_on_thing_id"

@@ -7,4 +7,5 @@ class ThingInstance < ActiveRecord::Base
   belongs_to :storage
   belongs_to :thing
   belongs_to :purchase
+	has_one :consume
 end
