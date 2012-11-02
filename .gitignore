@@ -43,3 +43,6 @@ nb-configuration.xml
 
 #gem info list
 gems_to_install
+
+#diagrams
+*.dia
