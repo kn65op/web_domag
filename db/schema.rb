@@ -34,9 +34,14 @@ ActiveRecord::Schema.define(:version => 20121102132335) do
     t.float    "critical"
     t.float    "ends"
     t.float    "full"
+    t.integer  "user_id"
+    t.integer  "thing_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  add_index "limits", ["thing_id"], :name => "index_limits_on_thing_id"
+  add_index "limits", ["user_id"], :name => "index_limits_on_user_id"
 
   create_table "manufacturers", :force => true do |t|
     t.string   "name",       :null => false

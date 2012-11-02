@@ -4,8 +4,13 @@ class CreateLimits < ActiveRecord::Migration
       t.float :critical
       t.float :ends
       t.float :full
+			t.references :user
+			t.references :thing
 
       t.timestamps
     end
+
+    add_index :limits, :user_id
+    add_index :limits, :thing_id
   end
 end

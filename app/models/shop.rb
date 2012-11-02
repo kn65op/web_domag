@@ -1,4 +1,4 @@
-class Shops < ActiveRecord::Base
+class Shop < ActiveRecord::Base
 	#attributes
   attr_accessible :address, :name
 

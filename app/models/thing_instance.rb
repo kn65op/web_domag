@@ -1,4 +1,4 @@
-class ThingInstances < ActiveRecord::Base
+class ThingInstance < ActiveRecord::Base
 	#attributes
   attr_accessible :valid_until
 
