@@ -5,12 +5,19 @@ gem 'rails', '3.2.8'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+#development enviroment
 group :development do
   gem 'sqlite3'
 end
 
+#production enviroment
 group :production do
   gem 'pg'
+end
+
+#test enviroment
+group :test do
+  gem 'sqlite3'
 end
 
 gem 'json'
@@ -43,3 +50,16 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'ruby-debug'
+
+#js
+gem 'execjs'
+gem 'therubyracer'
+
+#haml
+gem 'haml'
+
+#for forms
+gem 'simple_form'
+
+#interationalization
+gem 'rails-i18n'

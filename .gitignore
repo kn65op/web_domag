@@ -40,3 +40,6 @@ dist/
 nbdist/
 nbactions.xml
 nb-configuration.xml
+
+#gem info list
+gems_to_install
