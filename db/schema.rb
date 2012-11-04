@@ -10,25 +10,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121102132335) do
+ActiveRecord::Schema.define(:version => 20121104212407) do
 
   create_table "categories", :force => true do |t|
-    t.integer  "parent"
+    t.integer  "parent_id"
     t.string   "name",        :null => false
     t.string   "description"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
-
-  create_table "consumes", :force => true do |t|
-    t.date     "date",              :null => false
-    t.string   "puprpose"
-    t.integer  "thing_instance_id", :null => false
-    t.datetime "created_at",        :null => false
-    t.datetime "updated_at",        :null => false
-  end
-
-  add_index "consumes", ["thing_instance_id"], :name => "index_consumes_on_thing_instance_id"
 
   create_table "limits", :force => true do |t|
     t.float    "critical"
@@ -49,18 +39,6 @@ ActiveRecord::Schema.define(:version => 20121102132335) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "purchases", :force => true do |t|
-    t.decimal  "price"
-    t.date     "date",            :null => false
-    t.integer  "shop_id"
-    t.integer  "manufacturer_id"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
-  end
-
-  add_index "purchases", ["manufacturer_id"], :name => "index_purchases_on_manufacturer_id"
-  add_index "purchases", ["shop_id"], :name => "index_purchases_on_shop_id"
-
   create_table "shops", :force => true do |t|
     t.string   "name",       :null => false
     t.string   "address"
@@ -70,7 +48,7 @@ ActiveRecord::Schema.define(:version => 20121102132335) do
 
   create_table "storages", :force => true do |t|
     t.string   "name",        :null => false
-    t.integer  "parent"
+    t.integer  "parent_id"
     t.string   "description"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
@@ -78,17 +56,23 @@ ActiveRecord::Schema.define(:version => 20121102132335) do
 
   create_table "thing_instances", :force => true do |t|
     t.date     "valid_until"
-    t.integer  "user_id",     :null => false
-    t.integer  "storage_id",  :null => false
-    t.integer  "purchase_id", :null => false
-    t.integer  "thing_id",    :null => false
+    t.date     "purchase_date"
+    t.decimal  "price"
+    t.date     "consume_date"
+    t.string   "consume_purpose"
+    t.integer  "user_id",         :null => false
+    t.integer  "storage_id",      :null => false
+    t.integer  "purchase_id",     :null => false
+    t.integer  "thing_id",        :null => false
     t.integer  "consume_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.integer  "shop_id"
+    t.integer  "manufacturer_id"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
   end
 
-  add_index "thing_instances", ["consume_id"], :name => "index_thing_instances_on_consume_id"
-  add_index "thing_instances", ["purchase_id"], :name => "index_thing_instances_on_purchase_id"
+  add_index "thing_instances", ["manufacturer_id"], :name => "index_thing_instances_on_manufacturer_id"
+  add_index "thing_instances", ["shop_id"], :name => "index_thing_instances_on_shop_id"
   add_index "thing_instances", ["storage_id"], :name => "index_thing_instances_on_storage_id"
   add_index "thing_instances", ["thing_id"], :name => "index_thing_instances_on_thing_id"
   add_index "thing_instances", ["user_id"], :name => "index_thing_instances_on_user_id"
@@ -125,5 +109,16 @@ ActiveRecord::Schema.define(:version => 20121102132335) do
   add_index "users", ["confirmation_token"], :name => "index_users_on_confirmation_token", :unique => true
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
+
+  create_table "users_storages", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "storage_id"
+    t.boolean  "admin"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "users_storages", ["storage_id"], :name => "index_users_storages_on_storage_id"
+  add_index "users_storages", ["user_id"], :name => "index_users_storages_on_user_id"
 
 end

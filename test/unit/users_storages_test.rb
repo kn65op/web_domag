@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class PurchasesTest < ActiveSupport::TestCase
+class UsersStoragesTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

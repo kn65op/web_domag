@@ -4,4 +4,6 @@ class Thing < ActiveRecord::Base
 
 	#relations
 	has_many :limits
+	has_many :thing_instances
+	belongs_to :category
 end

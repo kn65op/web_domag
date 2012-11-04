@@ -46,3 +46,4 @@ gems_to_install
 
 #diagrams
 *.dia
+erd.pdf

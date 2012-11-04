@@ -3,5 +3,5 @@ class Shop < ActiveRecord::Base
   attr_accessible :address, :name
 
 	#relations
-	has_many :purchases
+	has_many :thing_instances
 end

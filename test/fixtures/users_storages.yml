@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  price: 9.99
-  shop: 
-  manufacturer: 
+  user: 
+  storage: 
+  admin: false
 
 two:
-  price: 9.99
-  shop: 
-  manufacturer: 
+  user: 
+  storage: 
+  admin: false
