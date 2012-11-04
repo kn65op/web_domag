@@ -57,18 +57,18 @@ ActiveRecord::Schema.define(:version => 20121104212407) do
   create_table "thing_instances", :force => true do |t|
     t.date     "valid_until"
     t.date     "purchase_date"
-    t.decimal  "price"
+    t.decimal  "price",           :precision => 12, :scale => 2
     t.date     "consume_date"
     t.string   "consume_purpose"
-    t.integer  "user_id",         :null => false
-    t.integer  "storage_id",      :null => false
-    t.integer  "purchase_id",     :null => false
-    t.integer  "thing_id",        :null => false
+    t.integer  "user_id",                                        :null => false
+    t.integer  "storage_id",                                     :null => false
+    t.integer  "purchase_id",                                    :null => false
+    t.integer  "thing_id",                                       :null => false
     t.integer  "consume_id"
     t.integer  "shop_id"
     t.integer  "manufacturer_id"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.datetime "created_at",                                     :null => false
+    t.datetime "updated_at",                                     :null => false
   end
 
   add_index "thing_instances", ["manufacturer_id"], :name => "index_thing_instances_on_manufacturer_id"

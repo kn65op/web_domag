@@ -3,7 +3,7 @@ class CreateThingInstances < ActiveRecord::Migration
     create_table :thing_instances do |t|
       t.date :valid_until
 			t.date :purchase_date
-      t.decimal :price
+      t.decimal :price, :precision => 12, :scale => 2
 			t.date :consume_date
 			t.string :consume_purpose 
       t.references :user, :null => false
