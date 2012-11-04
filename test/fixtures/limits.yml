@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  critical: 1.5
+  ends: 1.5
+  full: 1.5
+
+two:
+  critical: 1.5
+  ends: 1.5
+  full: 1.5

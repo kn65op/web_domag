@@ -8,6 +8,7 @@ gem 'rails', '3.2.8'
 #development enviroment
 group :development do
   gem 'sqlite3'
+	gem "rails-erd"
 end
 
 #production enviroment
@@ -63,3 +64,6 @@ gem 'simple_form'
 
 #interationalization
 gem 'rails-i18n'
+
+#authentication
+gem 'devise'

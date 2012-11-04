@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  valid_until: 2012-11-02
+  user: 
+  storage: 
+  purchase: 
+  thing: 
+
+two:
+  valid_until: 2012-11-02
+  user: 
+  storage: 
+  purchase: 
+  thing: 
