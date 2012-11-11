@@ -67,3 +67,6 @@ gem 'rails-i18n'
 
 #authentication
 gem 'devise'
+
+#localization
+gem 'route_translator'
