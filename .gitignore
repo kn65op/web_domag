@@ -47,3 +47,7 @@ gems_to_install
 #diagrams
 *.dia
 erd.pdf
+
+#certificate
+privkey.pem
+server.cert.csr

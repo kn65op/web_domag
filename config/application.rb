@@ -65,6 +65,9 @@ module WebDomag
 		#routes localization
 		config.route_translator.force_locale = true
 
+		#https  ssl
+		config.force_ssl = true
+
 	  
   end
 end
