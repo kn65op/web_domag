@@ -62,6 +62,9 @@ module WebDomag
 	  #suggested for devise on heroku
 	  config.assets.initialize_on_precompile = false
 
+		#routes localization
+		config.route_translator.force_locale = true
+
 	  
   end
 end

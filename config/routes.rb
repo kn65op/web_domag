@@ -1,8 +1,15 @@
 WebDomag::Application.routes.draw do
-  devise_for :users
+  #devise_for :users
 
-	root :to => 'application#main_page'
+	root :to => redirect("/en")
+	localized do
+	  root :to => 'application#main_page'
+    devise_for :users
+	end
 
+	#localization
+  WebDomag::Application.routes.translate_from_file
+	
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
