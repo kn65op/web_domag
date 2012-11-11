@@ -8,4 +8,5 @@ class ThingInstance < ActiveRecord::Base
   belongs_to :thing
 	belongs_to :shop
 	belongs_to :manufacturer
+	has_many :consumes
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121104212407) do
+ActiveRecord::Schema.define(:version => 20121111112727) do
 
   create_table "categories", :force => true do |t|
     t.integer  "parent_id"
@@ -19,6 +19,17 @@ ActiveRecord::Schema.define(:version => 20121104212407) do
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
+
+  create_table "consumes", :force => true do |t|
+    t.date     "date",              :null => false
+    t.string   "purpose"
+    t.float    "amount",            :null => false
+    t.integer  "thing_instance_id", :null => false
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+  end
+
+  add_index "consumes", ["thing_instance_id"], :name => "index_consumes_on_thing_instance_id"
 
   create_table "limits", :force => true do |t|
     t.float    "critical"
@@ -58,13 +69,9 @@ ActiveRecord::Schema.define(:version => 20121104212407) do
     t.date     "valid_until"
     t.date     "purchase_date"
     t.decimal  "price",           :precision => 12, :scale => 2
-    t.date     "consume_date"
-    t.string   "consume_purpose"
     t.integer  "user_id",                                        :null => false
     t.integer  "storage_id",                                     :null => false
-    t.integer  "purchase_id",                                    :null => false
     t.integer  "thing_id",                                       :null => false
-    t.integer  "consume_id"
     t.integer  "shop_id"
     t.integer  "manufacturer_id"
     t.datetime "created_at",                                     :null => false

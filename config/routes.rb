@@ -1,6 +1,8 @@
 WebDomag::Application.routes.draw do
   devise_for :users
 
+	root :to => 'application#main_page'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -4,13 +4,9 @@ class CreateThingInstances < ActiveRecord::Migration
       t.date :valid_until
 			t.date :purchase_date
       t.decimal :price, :precision => 12, :scale => 2
-			t.date :consume_date
-			t.string :consume_purpose 
       t.references :user, :null => false
       t.references :storage, :null => false
-      t.references :purchase, :null => false
       t.references :thing, :null => false
-			t.references :consume
       t.references :shop
       t.references :manufacturer
 
