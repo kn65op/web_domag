@@ -8,4 +8,9 @@
 		= csrf_meta_tag
 		= favicon_link_tag
 	%body
-		=yield
+		- #Top menubar
+		- if current_user == nil #no user logged
+			no_user
+		- else
+			user
+		= yield

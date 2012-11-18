@@ -33,6 +33,9 @@ module WebDomag
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 
+		#locales
+		config.i18n.load_path += Dir[Rails.root.join('config','locales','*','*.yml').to_s]
+		
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
 
@@ -68,6 +71,5 @@ module WebDomag
 		#https  ssl
 		config.force_ssl = true
 
-	  
   end
 end

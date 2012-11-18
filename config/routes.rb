@@ -3,7 +3,7 @@ WebDomag::Application.routes.draw do
 
 	root :to => redirect("/en")
 	localized do
-	  root :to => 'application#main_page'
+	  root :to => 'users#main_page'
     devise_for :users
 	end
 
