@@ -1,9 +1,9 @@
 class CreateUsersStorages < ActiveRecord::Migration
   def change
     create_table :users_storages do |t|
-      t.references :user
-      t.references :storage
-      t.boolean :admin
+      t.references :user, :null => false 
+      t.references :storage, :null => false 
+      t.boolean :admin, :null => false 
 
       t.timestamps
     end

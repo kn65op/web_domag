@@ -2,8 +2,9 @@ class CreateThingInstances < ActiveRecord::Migration
   def change
     create_table :thing_instances do |t|
       t.date :valid_until
-			t.date :purchase_date
+			t.date :purchase_date, :null => false 
       t.decimal :price, :precision => 12, :scale => 2
+			t.float :size, :null => false
       t.references :user, :null => false
       t.references :storage, :null => false
       t.references :thing, :null => false

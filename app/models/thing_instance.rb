@@ -1,6 +1,6 @@
 class ThingInstance < ActiveRecord::Base
 	#attributes
-  attr_accessible :valid_until, :consume_date, :consume_purpose, :price, :purchase_date
+  attr_accessible :valid_until, :consume_date, :consume_purpose, :price, :purchase_date, :size
 
 	#relations
   belongs_to :user

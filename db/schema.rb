@@ -67,8 +67,9 @@ ActiveRecord::Schema.define(:version => 20121111112727) do
 
   create_table "thing_instances", :force => true do |t|
     t.date     "valid_until"
-    t.date     "purchase_date"
+    t.date     "purchase_date",                                  :null => false
     t.decimal  "price",           :precision => 12, :scale => 2
+    t.float    "size",                                           :null => false
     t.integer  "user_id",                                        :null => false
     t.integer  "storage_id",                                     :null => false
     t.integer  "thing_id",                                       :null => false
@@ -118,9 +119,9 @@ ActiveRecord::Schema.define(:version => 20121111112727) do
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
 
   create_table "users_storages", :force => true do |t|
-    t.integer  "user_id"
-    t.integer  "storage_id"
-    t.boolean  "admin"
+    t.integer  "user_id",    :null => false
+    t.integer  "storage_id", :null => false
+    t.boolean  "admin",      :null => false
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
