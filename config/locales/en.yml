@@ -5,3 +5,9 @@ en:
   common:
     hello: Hello world
     web_title: Home depot.
+  upper_menu:
+    login: Login
+    logout: Logout
+    register: Register
+    forgot: Forgot your password?
+    remember: Remember me

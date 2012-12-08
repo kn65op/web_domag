@@ -1,14 +1,33 @@
 WebDomag::Application.routes.draw do
-  #devise_for :users
-
-	root :to => redirect("/en")
-	localized do
-	  root :to => 'users#main_page'
-    devise_for :users
+	devise_for :users, :skip => [:sessions]
+	as :user do
+		get 'signin' => 'users#main_page', :as => :new_user_session
+		post 'signin' => 'devise/sessions#create', :as => :user_session
+		delete 'signout' => 'devise/sessions#destroy', :as => :destroy_user_session
 	end
 
-	#localization
+	#root to
+root :to => redirect("/en")
+#	  root :to => redirect("/en/users/sec")
+
+	authenticated do #path where to go after login
+	  root :to => redirect("/en/users/sec")
+	end
+
+	#localized routed
+	localized do
+	  root :to => 'users#main_page'
+		match "/users/sec"  => 'users#second'
+ #   devise_for :users
+	end
+
+	#translations
   WebDomag::Application.routes.translate_from_file
+
+	#devise link to login
+#	as :user do
+#		get "/users/main_page" => "devise/sessions#new"
+#	end
 	
   # The priority is based upon order of creation:
   # first created -> highest priority.

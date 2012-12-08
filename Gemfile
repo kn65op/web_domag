@@ -7,19 +7,19 @@ gem 'rails', '3.2.8'
 
 #development enviroment
 group :development do
-  gem 'sqlite3'
 	gem "rails-erd"
 end
 
 #production enviroment
 group :production do
-  gem 'pg'
 end
 
 #test enviroment
 group :test do
-  gem 'sqlite3'
 end
+
+#database
+gem 'pg'
 
 gem 'json'
 

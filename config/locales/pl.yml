@@ -3,5 +3,11 @@
 
 pl:
   common:
-    hello: "witaj ziomuś"
-    web_title: "Domowy magazynier"
+    hello: witaj ziomuś
+    web_title: Domowy magazynier
+  upper_menu:
+    login: Zaloguj
+    logout: Wyloguj
+    register: Zarejestruj się
+    forgot: Zapomniałeś hasła?
+    remember: Zapamiętaj mnie
