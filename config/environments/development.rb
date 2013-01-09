@@ -2,16 +2,6 @@ WebDomag::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
 	config.action_mailer.default_url_options = { :host => 'localhost:3000' }
-#	config.action_mailer.delivery_method = :smtp
-#	config.action_mailer.smtp_settings = {
-#		:enable_starttls_auto => true,
-#		:address => "smtp.gmail.com",
-#		:port => "587",
-#		:domain => "gmail.com",
-#		:authentication => :plain,
-#		:user_name => "web.domag@gmail.com",
-#		:password => "e%y7Q2^yVr3@"
-#}
 
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development

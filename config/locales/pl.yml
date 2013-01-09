@@ -21,6 +21,8 @@ pl:
         password: Hasło
         remember_me: Zapamiętaj mnie
         sign_in: Zaloguj
+  #for devise
+  
 #from Internet
   date:
     abbr_day_names:
