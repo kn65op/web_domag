@@ -1,6 +1,39 @@
 # Additional translations at https://github.com/plataformatec/devise/wiki/I18n
 
 en:
+  account:
+    label:
+      remember_me: Remember me
+      password_confirmation: Password confirmation
+    do:
+      sign_in: Sign in
+      sign_up: Sign up
+      remind: Remind
+      reset_password: Reset password
+      resend: Resend
+    title:
+      sign_in: Sign in
+      sign_up: Sign up
+      remind_password: Remind password
+      reset_password: Reset password
+      resend_confirmation_instructions: Resend confirmation instructions
+      resend_unlock_instructions: Reset unlock instructions
+    link:
+      sign_in: Sign in
+      sign_up: Sign up
+      forgot_your_password: Forgot your password?
+      did_not_receive_confirmation_instructions: Did not receive confirmation instructions?
+      did_not_receive_unlock_instructions: Did not receive unlock instructions?
+      sign_in_with: Sign in with
+    mail:
+      welcome: Welcom
+      confirmation_instructions: To sign in to system you must confirm your account. You can do it following link below.
+      confirm_my_account: Confirm my account
+      reset_password_instructions: Reset password has been requested. Follow link below.
+      change_my_password: Change my password
+      unlock_instructions: Your account has been blocked. Follow link below to unclock it.
+      unlock_my_account: Unlock my account
+  
   errors:
     messages:
       expired: "has expired, please request a new one"

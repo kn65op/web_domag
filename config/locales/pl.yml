@@ -21,6 +21,7 @@ pl:
         password: Hasło
         remember_me: Zapamiętaj mnie
         sign_in: Zaloguj
+        password_confirmation: Potwierdź hasło
   #for devise
   
 #from Internet

@@ -1,0 +1,15 @@
+%h2
+	= t 'account.title.reset_password'
+= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| 
+	= devise_error_messages!
+	
+	%div
+		= f.label :email
+		= f.email_field :email
+	
+	%div
+		= f.submit t 'account.do.reset_password'
+
+= render "devise/shared/links"
+
+	

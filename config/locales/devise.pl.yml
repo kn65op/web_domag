@@ -8,12 +8,14 @@ pl:
     do:
       sign_in: "Zaloguj"
       sign_up: "Zarejestruj"
+      reset_password: "Resetuj hasło"
       remind: "Przypomnij"
       resend: "Wyślij"
     title:
       sign_in: "Zaloguj się"
       sign_up: "Zarejestruj się"
       remind_password: "Przypomnij hasło"
+      reset_password: "Resetuj hasło"
       resend_confirmation_instructions: "Wyślij wiadomość z potwierdzeniem"
       resend_unlock_instructions: "Wyślij instrukcję odblokowania"
     link:
@@ -22,6 +24,7 @@ pl:
       forgot_your_password: "Zapomniałeś hasła?"
       did_not_receive_confirmation_instructions: "Nie otrzymałeś wiadomości z potwierdzeniem?"
       did_not_receive_unlock_instructions: "Konto zostało zablokowane?"
+      sign_in_with: "Zaloguj za pomocą: "
     mail:
       welcome: "Witaj"
       confirmation_instructions: 'Aby zalogować się do systemu, musisz najpierw zatwierdzić swoje konto. Kliknij link poniżej.'
