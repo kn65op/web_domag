@@ -17,7 +17,7 @@ root :to => redirect("/en")
 	#localized routed
 	localized do
 	  root :to => 'users#main_page'
-		match "/users/sec"  => 'users#second'
+		match "/user/settings" => "users#settings"
     devise_for :users
 	end
 
