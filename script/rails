@@ -9,8 +9,8 @@ if true
 	require 'webrick'
 	require 'webrick/https'
 	
-#	module Rails
-#    class Server < ::Rack::Server
+	module Rails
+    class Server < ::Rack::Server
 #			def default_options
 #				super.merge({
 #						:Port => 3000,
@@ -26,9 +26,9 @@ if true
 #						:SSLCertName => [["CN", WEBrick::Utils::getservername]]
 #					})
 #			end
-#    end
-#	end 
-#end
+    end
+	end 
+end
 
 APP_PATH = File.expand_path('../../config/application',  __FILE__)
 require File.expand_path('../../config/boot',  __FILE__)
