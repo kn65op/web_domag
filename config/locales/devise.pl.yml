@@ -8,7 +8,8 @@ pl:
     do:
       sign_in: "Zaloguj"
       sign_up: "Zarejestruj"
-      reset_password: "Resetuj hasło"
+      reset_password: "Resetuj hasło" 
+      change_password: Zmień hasło
       remind: "Przypomnij"
       resend: "Wyślij"
     title:

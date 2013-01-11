@@ -10,6 +10,7 @@ en:
       sign_up: Sign up
       remind: Remind
       reset_password: Reset password
+      change_password: Change password
       resend: Resend
     title:
       sign_in: Sign in
