@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
-
-one:
-  user: 
-  storage: 
-  admin: false
-
-two:
-  user: 
-  storage: 
-  admin: false
+#
+#one:
+#  user: users(:one).id
+#  storage: storages(:one).id 
+#  admin: false
+#
+#two:
+#  user: users(:one).id
+#  storage: storages(:one).id 
+#  admin: false

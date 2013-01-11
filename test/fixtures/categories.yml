@@ -2,10 +2,8 @@
 
 one:
   parent: 
-  name: MyString
-  description: MyString
+  name: category one
 
 two:
   parent: 
-  name: MyString
-  description: MyString
+  name: category two

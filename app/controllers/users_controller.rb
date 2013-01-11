@@ -4,11 +4,11 @@
 class UsersController < ApplicationController
 	skip_before_filter :authenticate_user!, :only => [:main_page]
 	def main_page
+		puts current_user
 #		render :partial => "users/login", :layout => "application"
 	end
 
-	def settings
-		
+	def second
+		puts current_user
 	end
-
 end

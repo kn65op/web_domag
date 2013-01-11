@@ -1,11 +1,12 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  name: MyString
-  unit: MyString
-  descripion: MyString
-
-two:
-  name: MyString
-  unit: MyString
-  descripion: MyString
+#one:
+#  name: MyString
+#  unit: MyString
+#  descripion: MyString
+#  category
+#
+#two:
+#  name: MyString
+#  unit: MyString
+#  descripion: MyString

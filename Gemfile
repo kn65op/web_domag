@@ -8,6 +8,7 @@ gem 'rails', '>3.2.10'
 #development enviroment
 group :development do
 	gem "rails-erd"
+	gem "ruby-debug"
 end
 
 #production enviroment
