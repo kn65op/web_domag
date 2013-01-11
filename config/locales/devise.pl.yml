@@ -31,6 +31,8 @@ pl:
       confirmation_instructions: 'Aby zalogować się do systemu, musisz najpierw zatwierdzić swoje konto. Kliknij link poniżej.'
       confirm_my_account: 'Zatwierdź moje konto'
       reset_password_instructions: 'Zażądano zmiany hasła w systemie. Możesz ustawić nowe hasło klikając w link poniżej.'
+      ignore: Jeśli nie żądałeś zmiany hasła lub przypomniałeś sobie, to możesz zignorować tą wiadomość.
+      no_password_change: Hasło nie zostanie zmienione, dopóki nie wejdziesz w link powyżej i nie zmienisz go samemu.
       change_my_password: 'Zmień moje hasło'
       unlock_instructions: 'Twoje konto zostało zablokowane. Aby je odblokować, kliknij w link poniżej.'
       unlock_my_account: 'Odblokuj moje konto'

@@ -27,10 +27,12 @@ en:
       did_not_receive_unlock_instructions: Did not receive unlock instructions?
       sign_in_with: Sign in with
     mail:
-      welcome: Welcom
+      welcome: Hello 
       confirmation_instructions: To sign in to system you must confirm your account. You can do it following link below.
       confirm_my_account: Confirm my account
       reset_password_instructions: Reset password has been requested. Follow link below.
+      ignore: If you didn't request this, please ignore this email.
+      no_password_change: Your password won't change until you access the link above and create a new one.
       change_my_password: Change my password
       unlock_instructions: Your account has been blocked. Follow link below to unclock it.
       unlock_my_account: Unlock my account
