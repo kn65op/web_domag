@@ -27,6 +27,6 @@
 				= link_to t('upper_menu.forgot'), new_password_path('user')
 				= link_to t('upper_menu.register'), new_user_registration_path	
 		- else
-			= link_to t('upper_menu.settings'), user_settings_path(current_user)
+			= link_to t('upper_menu.settings'), user_settings_path()
 			= link_to t('upper_menu.logout'), destroy_user_session_path, :method => :delete
 		= yield
