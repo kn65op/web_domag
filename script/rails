@@ -11,21 +11,21 @@ if true
 	
 	module Rails
     class Server < ::Rack::Server
-#			def default_options
-#				super.merge({
-#						:Port => 3000,
-#						:environment => (ENV['RAILS_ENV'] || "development").dup,
-#						:daemonize => false,
-#						:debugger => false,
-#						:pid => File.expand_path("tmp/pids/server.pid"),
-#						:config => File.expand_path("config.ru"),
-#						:SSLEnable => true,
-#						:SSLVerifyClient => OpenSSL::SSL::VERIFY_NONE,
-#						:SSLPrivateKey => OpenSSL::PKey::RSA.new(
-#							File.open("privkey.pem").read),
-#						:SSLCertName => [["CN", WEBrick::Utils::getservername]]
-#					})
-#			end
+			def default_options
+				super.merge({
+						:Port => 3000,
+						:environment => (ENV['RAILS_ENV'] || "development").dup,
+						:daemonize => false,
+						:debugger => false,
+						:pid => File.expand_path("tmp/pids/server.pid"),
+						:config => File.expand_path("config.ru"),
+						:SSLEnable => true,
+						:SSLVerifyClient => OpenSSL::SSL::VERIFY_NONE,
+						:SSLPrivateKey => OpenSSL::PKey::RSA.new(
+							File.open("privkey.pem").read),
+						:SSLCertName => [["CN", WEBrick::Utils::getservername]]
+					})
+			end
     end
 	end 
 end
