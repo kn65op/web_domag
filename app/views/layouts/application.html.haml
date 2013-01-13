@@ -10,11 +10,6 @@
 	%body
 		- #Top menubar
 		-#%form{:action => "#{url_for(params.merge(:locale => "" ))}", :method => "POST"}
-		%form{:action => "#{url_for(params)}"}
-			%select{:name => "locale"}
-				%option{:value => "en" } English
-				%option{:value => "pl"} Polski
-			%button{:type => "submit"} Wyslij
 		- #TODO: add change language
 		- if current_user == nil #no user logged
 			= form_tag user_session_path do

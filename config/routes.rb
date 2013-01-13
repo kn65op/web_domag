@@ -10,9 +10,9 @@ WebDomag::Application.routes.draw do
 root :to => redirect("/en")
 #	  root :to => redirect("/en/users/sec")
 
-	authenticated do #path where to go after login
-	  root :to => redirect("/en/users/sec")
-	end
+#	authenticated do #path where to go after login
+#	  root :to => redirect("/en/users/sec")
+#	end
 
 	#localized routed
 	localized do

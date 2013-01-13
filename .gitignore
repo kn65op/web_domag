@@ -53,3 +53,4 @@ privkey.pem
 server.cert.csr
 
 routes.txt
+/.idea/
