@@ -16,7 +16,6 @@ development:
 test:
   adapter: postgresql
   encode: unicode
-  host: 127.0.0.1
   database: web_domag_test
   username: web_domag
   password: web_domag
