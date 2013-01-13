@@ -1,0 +1,12 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+pl:
+  main_page:
+    welcome_title: Witaj w domowym magazynierze!
+    welcome_text: Dzięki nam będziesz mógł kontrolować przedmioty przechowywane w domu. Możesz także kontrolować koszty oraz porównywać pod względem ceny różne sklepy i marki.
+  user:
+    settings:
+      language:
+        title: "Zmień język: "
+        button: Zmień

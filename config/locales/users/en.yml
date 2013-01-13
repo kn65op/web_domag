@@ -1,0 +1,12 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  main_page:
+    welcome_title: Welcome in home depot!
+  user:
+    welcome_text: With us you can manage goods you store in your home. You will be able to control budget and compare different shops and brands.
+    settings:
+      language:
+        title: "Change language: "
+        button: Change
