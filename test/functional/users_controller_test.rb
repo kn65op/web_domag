@@ -30,6 +30,6 @@ class UsersControllerTest < ActionController::TestCase
 		sign_in users(:one)
 		get :settings, :locale => :pl
   	assert_response :success, "Not success"
-	end
+  end
 
 end

@@ -17,6 +17,8 @@ end
 
 #test enviroment
 group :test do
+	gem "capybara"
+	gem "warden"
 end
 
 #database

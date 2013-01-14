@@ -17,7 +17,7 @@
 				= password_field_tag 'user[password]'
 				= check_box_tag 'user[remember_me]'
 				= label_tag 'user[remember_me]', t('upper_menu.remember')
-				%button
+				%button#Login
 					= t('upper_menu.login')
 				= link_to t('upper_menu.forgot'), new_password_path('user')
 				= link_to t('upper_menu.register'), new_user_registration_path	
