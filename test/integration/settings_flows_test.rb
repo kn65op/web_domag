@@ -7,6 +7,10 @@ class SettingsFlowsTest < ActionDispatch::IntegrationTest
   # end
   include Warden::Test::Helpers
 
+  setup do
+    Capybara.current_driver = Capybara.javascript_driver
+  end
+
   test "Login and go to settings page with specified lang" do
     https!
     get "/en"
@@ -49,14 +53,26 @@ class SettingsFlowsTest < ActionDispatch::IntegrationTest
   end
 
   test "Change language" do
+    https!
     login_as(users(:one))
 
-    get "/en/user/settings"
-    assert_equal "/en/user/settings", path, "Not got settings"
+#    get "/en/user/settings"
+    visit "/en/user/settings"
+
+    page.has_content?("Change language")
+#    current_path.should == user_settings()
+#    assert_equal "/en/user/settings", path, "Not got settings"
+
+    assert_equal "en", find_by_id('lang_select').find('option[selected]').value, "Wrong selected lang"
 
     #Change lang
-    get "/en/user/settings"
-    assert_equal "/pl/user/settings", path, "Not changed lang"
+ #   find("option[value='pl']").click
+    page.select('Polski', :id=> "lang_select")
+    click_button('Change')
+    page.has_content?("Zmień język")
+    assert_equal "pl", find_by_id('lang_select').find('option[selected]').value, "Wrong selected lang"
+
+#    assert_equal "/pl/user/settings", path, "Not changed lang"
 
     Warden.test_reset!
 

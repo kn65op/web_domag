@@ -70,7 +70,7 @@ module WebDomag
 		config.route_translator.force_locale = true
 
 		#https  ssl
-		config.force_ssl = true
+		config.force_ssl = true if !Rails.env.test?
 
   end
 end

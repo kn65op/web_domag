@@ -1,8 +1,14 @@
 .language_settings
   = t 'user.settings.language.title'
-  %form{:action => "#{url_for(params)}"}
-    %select{:name => "locale"}
-      %option{:value => "en"} English
-      %option{:value => "pl"} Polski
+  %form#lang_form{:action => "#{url_for(params)}"}
+    %select#lang_select{:name => "locale", :onChange => "set_lang_from_link()"}
+      - if params[:locale] == "en"
+        %option{:value => "en", :selected => "selected"} English
+      - else
+        %option{:value => "en"} English
+      - if params[:locale] == "pl"
+        %option{:value => "pl", :selected => "selected"} Polski
+      - else
+        %option{:value => "pl"} Polski
     %button{:type => "submit", }
       = t 'user.settings.language.button'
