@@ -1,5 +1,7 @@
 class StoragesController < ApplicationController
+
   def index
+    @storages = current_user.storages
   end
 
   def add

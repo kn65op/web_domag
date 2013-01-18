@@ -36,5 +36,12 @@ class UserTest < ActiveSupport::TestCase
 	test "Dont save user with short password" do
 		user = User.new(:email => "a@example.com", :password => "12345")
 		assert !user.save, "User saved with short password"
-	end
+  end
+
+  #storage validations
+  test "Not single storage" do
+    user = User.new
+    assert_equal nil, user.getStorages, "Have some storeages"
+  end
+
 end
