@@ -10,7 +10,9 @@ class UsersControllerTest < ActionController::TestCase
 	
 	test "should get index without user" do
 		get :main_page, :locale => :pl
-  	assert_response :success, "Not success"
+  	assert_response :success, "Not success pl"
+    get :main_page, :locale => :en
+    assert_response :success, "Not success en"
 #		assert_not_nil assigns(:posts), "Nill asssigns"
 	end
 
