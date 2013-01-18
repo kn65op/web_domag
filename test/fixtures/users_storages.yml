@@ -1,11 +1,31 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 #
-#one:
-#  user: users(:one).id
-#  storage: storages(:one).id 
-#  admin: false
-#
-#two:
-#  user: users(:one).id
-#  storage: storages(:one).id 
-#  admin: false
+one_kitchen:
+  user: users(:one).id
+  storage: storages(:kitchen).id
+  admin: true
+
+one_cupboard_sink:
+  user: users(:one).id
+  storage: storages(:cupboard_sink).id
+  admin: true
+
+one_cupboard_dishwasher:
+  user: users(:one).id
+  storage: storages(:cupboard_dishwasher).id
+  admin: true
+
+one_good_cupboard:
+  user: users(:one).id
+  storage: storages(:good_cupboard).id
+  admin: false
+
+two_good_cupboard:
+  user: users(:two).id
+  storage: storages(:good_cupboard).id
+  admin: true
+
+two_bad_cupboard:
+  user: users(:two).id
+  storage: storages(:bad_cupboard).id
+  admin: true

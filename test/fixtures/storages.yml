@@ -1,11 +1,23 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-#one:
-#  name: MyString
-#  parent: 
-#  description: MyString
-#
-#two:
-#  name: MyString
-#  parent: 
-#  description: MyString
+kitchen:
+  name: Kitchen
+  description: My kitchen
+
+cupboard_sink:
+  name: Cupboard above sink
+  parent: kitchen
+  description: My favourite cupboard. There are lies sugar and milk.
+
+cupboard_dishwasher:
+  name: Cupboard above dishwasher
+  parent: kitchen
+  description: Cupboard for flour and stuff
+
+good_cupboard:
+  name: Someone good cupboard
+  description: Good cupboard which someone else is owner.
+
+evil_cupboard:
+  name: Someone evil cupboard
+  description: Evil cupboard which someone else is owner.
