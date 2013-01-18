@@ -1,6 +1,6 @@
 .language_settings
   = t 'user.settings.language.title'
-  %form#lang_form{:action => "#{url_for(params)}"}
+  %form#lang_form{:action => "#{url_for(params)}", :method => :get}
     %select#lang_select{:name => "locale", :onChange => "set_lang_from_link()"}
       - if params[:locale] == "en"
         %option{:value => "en", :selected => "selected"} English
