@@ -54,3 +54,4 @@ server.cert.csr
 
 routes.txt
 /.idea/
+*.pdf
