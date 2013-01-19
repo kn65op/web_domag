@@ -39,9 +39,9 @@ class UserTest < ActiveSupport::TestCase
   end
 
   #storage validations
-  test "Not single storage" do
-    user = User.new
-    assert_equal nil, user.getStorages, "Have some storeages"
-  end
+#  test "Not single storage" do
+#    user = User.new
+#    assert_equal nil, user.getStorages, "Have some storeages"
+#  end
 
 end

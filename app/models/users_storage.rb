@@ -5,4 +5,7 @@ class UsersStorage < ActiveRecord::Base
 	#relations
   belongs_to :user
   belongs_to :storage
+
+  #validations
+  validate :admin, :presence => true
 end

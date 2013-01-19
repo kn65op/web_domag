@@ -11,10 +11,12 @@ pl:
     register: Zarejestruj się
     forgot: Zapomniałeś hasła?
     remember: Zapamiętaj mnie
+    storages: Moje schowki
 #active records
   activerecord:
     models:
-      user: Użytkownik
+      user: użytkownik
+      storage: schowek
     attributes:
       user:
         email: e-mail
@@ -23,7 +25,7 @@ pl:
         sign_in: Zaloguj
         password_confirmation: Potwierdź hasło
   #for devise
-  
+
 #from Internet
   date:
     abbr_day_names:

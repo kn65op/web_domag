@@ -1,0 +1,8 @@
+%h1= t('storages.new.title')
+
+= simple_form_for @storage, :url => url_for(new_storage_path)  do |f|
+  = f.input :name
+  = f.input :description
+  = f.button :submit
+
+

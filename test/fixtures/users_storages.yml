@@ -25,7 +25,7 @@ two_good_cupboard:
   storage: good_cupboard
   admin: true
 
-two_bad_cupboard:
+two_evil_cupboard:
   user: two
-  storage: bad_cupboard
+  storage: evil_cupboard
   admin: true

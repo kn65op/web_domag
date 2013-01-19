@@ -20,7 +20,7 @@ root :to => redirect("/en")
 		match "/user/settings" => "users#settings", :as => "user_settings"
     devise_for :users
     match "/storages" => "storages#index", :as => "storages"
-    match "/storage/new" => "storages#add", :as => "new_storage"
+    match "/storage/new" => "storages#new", :as => "new_storage"
     match "/storage/edit" => "storages#edit", :as => "edit_storage"
     match "/storage/delete" => "storages#delete", :as => "delete_storage"
 	end

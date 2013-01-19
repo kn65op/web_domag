@@ -1,0 +1,17 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  storages:
+    index:
+      title: Your storages
+      new: Add new storage
+      header:
+        name: Storage
+        description: Description
+    new:
+      title: Add storage
+  simple_form:
+    labels:
+      storage:
+

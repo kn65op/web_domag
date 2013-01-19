@@ -12,7 +12,7 @@ class StoragesControllerTest < ActionController::TestCase
 
   test "should get add logged" do
     sign_in users(:one)
-    get :add, :locale => :pl
+    get :new, :locale => :pl
     assert_response :success , "Can't access add with log in"
   end
 
@@ -75,7 +75,7 @@ class StoragesControllerTest < ActionController::TestCase
   end
 
   test "should get add" do
-    get :add, :locale => :pl
+    get :new, :locale => :pl
     assert_redirected_to new_user_session_pl_path, "Can access add without log in"
   end
 

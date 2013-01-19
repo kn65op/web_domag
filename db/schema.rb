@@ -119,11 +119,11 @@ ActiveRecord::Schema.define(:version => 20121111112727) do
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
 
   create_table "users_storages", :force => true do |t|
-    t.integer  "user_id",    :null => false
-    t.integer  "storage_id", :null => false
-    t.boolean  "admin",      :null => false
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.integer  "user_id",                      :null => false
+    t.integer  "storage_id",                   :null => false
+    t.boolean  "admin",      :default => true, :null => false
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
   end
 
   add_index "users_storages", ["storage_id"], :name => "index_users_storages_on_storage_id"

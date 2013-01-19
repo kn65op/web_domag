@@ -21,17 +21,22 @@ class StoragesFlowsTest < ActionDispatch::IntegrationTest
 
     https!
     login_as(users(:one))
+    visit "/pl/storages"
 
-    visit "/pl/storage/new"
+    click_link("Dodaj nowy")
     page.has_content?("Dodaj nowy schowek")
 
     fill_in("Nazwa", :with => new_storage)
     fill_in("Opis", :with => new_description)
 
-    click_button("Dodaj")
+    click_button("Utwórz schowek")
 
     page.has_content?("Dodano schowek")
     page.has_content?(new_storage)
+
+    clink_link(new_storage)
+
+    page.has_content?(new_description)
 
   end
 
