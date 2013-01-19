@@ -60,6 +60,28 @@ class StoragesControllerTest < ActionController::TestCase
     assert_equal "Nie masz praw dostępu do tej strony.", flash[:error]
   end
 
+#delete - various id
+  test "should get confirmed_delete with admin id" do
+    sign_in users(:one)
+    get :confirmed_delete, :id => storages(:kitchen).id, :locale => :pl
+    assert_redirected_to storages_path, "Not redirected to storages index"
+    assert_equal "Usunięto schowek", flash[:notice]
+  end
+
+  test "should not get confirmed_delete with non admin id" do
+    sign_in users(:one)
+    get :confirmed_delete, :id => storages(:good_cupboard).id, :locale => :pl
+    assert_redirected_to storages_path , "Can access delete with log in and owning storage not as admin"
+    assert_equal "Nie masz praw dostępu do tej strony.", flash[:error]
+  end
+
+  test "should not get confirmed_delete not own id" do
+    sign_in users(:one)
+    get :confirmed_delete, :id => storages(:evil_cupboard).id, :locale => :pl
+    assert_redirected_to storages_path, "Can access delete with log in and not owning storage"
+    assert_equal "Nie masz praw dostępu do tej strony.", flash[:error]
+  end
+
 #view - various id
 
   test "should get view with admin id" do

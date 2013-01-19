@@ -54,7 +54,7 @@ class StoragesFlowsTest < ActionDispatch::IntegrationTest
 
     click_link("Tak")
 
-    assert current_path == storages_path
+    assert current_path == storages_pl_path, "Wrong redirected"
 
     page.has_content?("Usunięto schowek")
     page.has_no_content?(new_storage)

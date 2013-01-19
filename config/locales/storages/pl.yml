@@ -18,6 +18,12 @@ pl:
     edit:
       title: Edytuj schowek
       successful: Edycja zakończona powodzeniem
+    delete:
+      title: Usuń schowek
+      info: Czy na pewno? Przedmioty w schowku zostaną przeniesione do przestrzeni luźnej.
+      answer_yes: Tak
+      answer_no: Nie
+      succesful: Usunięto schowek
 
   simple_form:
     labels:

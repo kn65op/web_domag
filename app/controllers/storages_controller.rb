@@ -1,7 +1,7 @@
 class StoragesController < ApplicationController
 
   before_filter :canView?, :only => :view
-  before_filter :canManage?, :only => [:edit, :delete]
+  before_filter :canManage?, :only => [:edit, :delete, :confirmed_delete]
 
   def index
     @storages = current_user.storages
@@ -33,6 +33,12 @@ class StoragesController < ApplicationController
 
   def delete
     @storage = getStorage
+  end
+
+  def confirmed_delete
+    @storage = getStorage
+    @storage.delete
+    redirect_to storages_path, :notice => t('storages.delete.succesful')
   end
 
 private

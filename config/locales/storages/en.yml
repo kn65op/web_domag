@@ -17,6 +17,12 @@ en:
     edit:
       title: Edit storage
       successful: Edition was successful
+    delete:
+      title: Delete storage
+      info: Are you sure? Items in storage will be moved to non storage
+      answer_yes: Yes
+      answer_no: No
+      succesful: Storage was deleted
   simple_form:
     labels:
       storage:
