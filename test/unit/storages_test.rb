@@ -40,4 +40,15 @@ class StoragesTest < ActiveSupport::TestCase
     assert storage.isUserAdmin?(users(:one)), "One is not admin for kitchen - not changed"
   end
 
+  test "Can view true" do
+    storage = storages(:kitchen)
+    assert storage.canView?(users(:one))
+  end
+
+  test "Can view false" do
+    storage = storages(:kitchen)
+    assert !storage.canView?(users(:two))
+  end
+
+
 end

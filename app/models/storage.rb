@@ -27,4 +27,8 @@ class Storage < ActiveRecord::Base
     userstorage.save
   end
 
+  def canView?(user)
+    users.include? user
+  end
+
 end
