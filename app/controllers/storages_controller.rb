@@ -8,6 +8,7 @@ class StoragesController < ApplicationController
   end
 
   def new
+    @users = User.all
     if params[:storage] != nil #Save to database
       @storage = Storage.new(params[:storage]) #create new storage
       @storage.users << current_user  #connect with user
@@ -25,6 +26,7 @@ class StoragesController < ApplicationController
   end
 
   def edit
+    @users = User.all.delete(current_user)
     @storage = getStorage
     if params[:storage] != nil && @storage.update_attributes(params[:storage])
       redirect_to view_storage_path(@storage), :notice => t('storages.edit.successful')

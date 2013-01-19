@@ -3,7 +3,7 @@ class CreateUsersStorages < ActiveRecord::Migration
     create_table :users_storages do |t|
       t.references :user, :null => false 
       t.references :storage, :null => false 
-      t.boolean :admin, :null => false, :default => true
+      t.boolean :admin, :null => false, :default => false
 
       t.timestamps
     end

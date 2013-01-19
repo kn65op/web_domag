@@ -1,6 +1,6 @@
 class Storage < ActiveRecord::Base
 	#attributes
-  attr_accessible :description, :name, :parent
+  attr_accessible :description, :name, :parent, :user_ids
 
 	#relations
 	has_many :users_storages

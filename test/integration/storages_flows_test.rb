@@ -61,20 +61,35 @@ class StoragesFlowsTest < ActionDispatch::IntegrationTest
 
   end
 
-# adding user permissions will be add later
-#  test "Add storage, add permission to view to other user, check if user can view" do
-#    new_storage = "Nowy schowek"
-#    new_description = "Nowy opis"
-#
-#    https!
-#    login_as(users(:one))
-#
-#    visit "/pl/storage/new"
-#    page.has_content?("Dodaj nowy schowek")
-#
-#    fill_in("Nazwa", :with => new_storage)
-#    fill_in("Opis", :with => new_description)
-#  end
+ #adding user permissions will be add later
+  test "Add storage, add permission to view to other user, check if user can view" do
+    new_storage = "Nowy schowek"
+    new_description = "Nowy opis"
+
+    https!
+    login_as(users(:one))
+
+    visit "/pl/storage/new"
+    page.has_content?("Dodaj nowy schowek")
+
+    fill_in("Nazwa", :with => new_storage)
+    fill_in("Opis", :with => new_description)
+
+    page.select(users(:two).email, :id=> "storage_user_ids")
+
+    click_button("Utwórz schowek")
+
+    logout
+
+    login_as(users(:two))
+    visit "/pl/storages"
+    page.has_content?(new_storage)
+
+    click_link(new_storage)
+
+    assert current_path != storages_pl_path, "Was redirected"
+    page.has_content?(new_description)
+  end
 
 #    current_path.should == user_settings()
 #    assert_equal "en", find_by_id('lang_select').find('option[selected]').value, "Wrong selected lang"

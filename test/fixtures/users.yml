@@ -7,7 +7,9 @@
 one: 
   email: one@example.com
   encrypted_password: $2a$10$RDQk7h1J05ry4cB7Kiyy2uSfnMu4SEVzgiTc7sPdHmRMCxvQpnCry
+  name: Name one
 #
 two: 
   email: two@example.com
   encrypted_password: 2
+  name: Name two
