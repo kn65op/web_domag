@@ -1,5 +1,7 @@
 class StoragesController < ApplicationController
 
+  before_filter :canView?, :only => :view
+
   def index
     @storages = current_user.storages
   end
@@ -18,8 +20,6 @@ class StoragesController < ApplicationController
   end
 
   def view
-    @storage = Storage.find(params[:id])
-    redirect_to storages_path, :notice => t('flash.no_view_permission') if !@storage.users.include? current_user
 
   end
 
@@ -27,5 +27,17 @@ class StoragesController < ApplicationController
   end
 
   def delete
+  end
+
+private
+
+  def canView?
+    @storage = Storage.find(params[:id])
+    redirect_to storages_path, :flash => {:error => t('flash.no_view_permission')} if !@storage.users.include? current_user
+  end
+
+  def canManage?
+    storage = Storage.find(params[:id])
+
   end
 end

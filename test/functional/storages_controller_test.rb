@@ -18,45 +18,23 @@ class StoragesControllerTest < ActionController::TestCase
     assert_response :success , "Can't access add with log in"
   end
 
-#no storage id
-  test "should not get edit none id" do
-    sign_in users(:one)
-    get :edit, :locale => :pl
-    assert_redirected_to storages_path, "Can access edit logged in without storage id"
-    assert_equal "Nie możesz tego zrobić.", flash[:error]
-  end
-
-  test "should not get delete none id" do
-    sign_in users(:one)
-    get :delete, :locale => :pl
-    assert_redirected_to storages_path, "Can access delete logged in without storage id"
-    assert_equal "Nie możesz tego zrobić.", flash[:error]
-  end
-
-  test "should not get view none id" do
-    sign_in users(:one)
-    get :view, :locale => :pl
-    assert_redirected_to storages_path, "Can access view logged in without storage id"
-    assert_equal "Nie możesz tego zrobić.", flash[:error]
-  end
-
 #edit - various id
   test "should get edit with admin id" do
     sign_in users(:one)
-    get :edit, :locale => :pl, :id => storages(:kitchen).id
+    get :edit, :id => storages(:kitchen).id, :locale => :pl
     assert_response :success , "Can't access edit with owning storage as admin"
   end
 
   test "should get edit with non admin id" do
     sign_in users(:one)
-    get :edit, :locale => :pl, :id => storages(:evil_cupboard).id
+    get :edit, :id => storages(:evil_cupboard).id, :locale => :pl
     assert_redirected_to storages_path , "Can access edit with not owning storage"
     assert_equal "Nie masz praw dostępu do tej strony.", flash[:error]
   end
 
   test "should not get edit with not own id" do
     sign_in users(:one)
-    get :edit, :locale => :pl, :id => storages(:good_cupboard).id
+    get :edit, :id => storages(:good_cupboard).id, :locale => :pl
     assert_redirected_to storages_path, "Can access edit with owning storage not as admin"
     assert_equal "Nie masz praw dostępu do tej strony.", flash[:error]
   end
@@ -64,20 +42,20 @@ class StoragesControllerTest < ActionController::TestCase
 #delete - various id
   test "should get delete with admin id" do
     sign_in users(:one)
-    get :delete, :locale => :pl, :id => storages(:kitchen).id
+    get :delete, :id => storages(:kitchen).id, :locale => :pl
     assert_response :success , "Can't access delete with log in and owning storage as admin"
   end
 
   test "should not get delete with non admin id" do
     sign_in users(:one)
-    get :delete, :locale => :pl, :id => storages(:good_cupboard).id
+    get :delete, :id => storages(:good_cupboard).id, :locale => :pl
     assert_redirected_to storages_path , "Can access delete with log in and owning storage not as admin"
     assert_equal "Nie masz praw dostępu do tej strony.", flash[:error]
   end
 
   test "should not get delete not own id" do
     sign_in users(:one)
-    get :delete, :locale => :pl, :id => storages(:evil_cupboard).id
+    get :delete, :id => storages(:evil_cupboard).id, :locale => :pl
     assert_redirected_to storages_path, "Can access delete with log in and not owning storage"
     assert_equal "Nie masz praw dostępu do tej strony.", flash[:error]
   end
@@ -86,20 +64,20 @@ class StoragesControllerTest < ActionController::TestCase
 
   test "should get view with admin id" do
     sign_in users(:one)
-    get :view, :locale => :pl, :id => storages(:kitchen).id
+    get :view, :id => storages(:kitchen).id, :locale => :pl
     assert_response :success , "Can't access edit with owning storage as admin"
   end
 
   test "should get view with non admin id" do
     sign_in users(:one)
-    get :view, :locale => :pl, :id => storages(:good_cupboard).id
+    get :view, :id => storages(:good_cupboard).id, :locale => :pl
     assert_response :success , "Can't access delete with log in and owning storage not as admin"
   end
 
   test "should not get view with non own id" do
     sign_in users(:one)
-    get :view, :locale => :pl, :id => storages(:evil_cupboard).id
-    assert_response :success , "Can access edit with not owning storage"
+    get :view, :locale => :pl, :id => storages(:evil_cupboard).id, :locale => :pl
+    assert_redirected_to storages_path , "Can access edit with not owning storage"
     assert_equal "Nie masz praw dostępu do tej strony.", flash[:error]
   end
 
@@ -115,17 +93,17 @@ class StoragesControllerTest < ActionController::TestCase
   end
 
   test "should not get view not logged" do
-    get :view, :locale => :pl
+    get :view, :id => storages(:evil_cupboard), :locale => :pl
     assert_redirected_to new_user_session_pl_path, "Can access index without log in"
   end
 
   test "should not get edit not logged" do
-    get :edit, :locale => :pl
+    get :edit, :id => storages(:evil_cupboard),:locale => :pl
     assert_redirected_to new_user_session_pl_path, "Can access edit without log in"
   end
 
   test "should get delete" do
-    get :delete, :locale => :pl
+    get :delete, :id => storages(:evil_cupboard), :locale => :pl
     assert_redirected_to new_user_session_pl_path, "Can access delete without log in"
   end
 
