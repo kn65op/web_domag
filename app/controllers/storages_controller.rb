@@ -26,7 +26,8 @@ class StoragesController < ApplicationController
   end
 
   def edit
-    @users = User.all.delete(current_user)
+    @users = User.all
+    #TODO: remove current user from @users
     @storage = getStorage
     if params[:storage] != nil && @storage.update_attributes(params[:storage])
       redirect_to view_storage_path(@storage), :notice => t('storages.edit.successful')
