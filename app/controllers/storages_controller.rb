@@ -17,6 +17,12 @@ class StoragesController < ApplicationController
     end
   end
 
+  def view
+    @storage = Storage.find(params[:id])
+    redirect_to storages_path, :notice => t('flash.no_view_permission') if !@storage.users.include? current_user
+
+  end
+
   def edit
   end
 

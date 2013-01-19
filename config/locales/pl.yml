@@ -12,6 +12,8 @@ pl:
     forgot: Zapomniałeś hasła?
     remember: Zapamiętaj mnie
     storages: Moje schowki
+  flash:
+    no_view_permission: Nie masz praw dostępu do tej strony.
 #active records
   activerecord:
     models:

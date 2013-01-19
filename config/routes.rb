@@ -23,6 +23,7 @@ root :to => redirect("/en")
     match "/storage/new" => "storages#new", :as => "new_storage"
     match "/storage/edit" => "storages#edit", :as => "edit_storage"
     match "/storage/delete" => "storages#delete", :as => "delete_storage"
+    match "/storage/:id" => "storages#view", :as => "view_storage"
 	end
 
 	#translations

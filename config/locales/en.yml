@@ -12,3 +12,5 @@ en:
     forgot: Forgot your password?
     remember: Remember me
     storages: My storages
+  flash:
+    no_view_permission: You don't have permission to view this site.

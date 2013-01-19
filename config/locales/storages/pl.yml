@@ -1,0 +1,21 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+pl:
+  storages:
+    index:
+      title: Twoje schowki
+      new: Dodaj nowy schowek
+      header:
+        name: Schowek
+        description: Opis
+    new:
+      title: Dodaj schowek
+      successful: Dodano schowek
+
+  simple_form:
+    labels:
+      storage:
+        name: Nazwa
+        description: Opis
+
