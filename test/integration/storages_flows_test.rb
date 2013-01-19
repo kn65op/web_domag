@@ -34,9 +34,30 @@ class StoragesFlowsTest < ActionDispatch::IntegrationTest
     page.has_content?("Dodano schowek")
     page.has_content?(new_storage)
 
-    clink_link(new_storage)
+    click_link(new_storage)
 
     page.has_content?(new_description)
+    click_link("Edytuj")
+
+    new_storage = "QWEWQRWQ"
+    new_description = " WQEdsaem 23k54!DWF qwe"
+
+    fill_in("Nazwa", :with => new_storage)
+    fill_in("Opis", :with => new_description)
+
+    click_button("Edytuj schowek")
+
+    page.has_content?("Edycja zakończona powodzeniem")
+    page.has_content?(new_description)
+
+    click_link("Usuń schowek")
+
+    click_link("Tak")
+
+    assert current_path == storages_path
+
+    page.has_content?("Usunięto schowek")
+    page.has_no_content?(new_storage)
 
   end
 

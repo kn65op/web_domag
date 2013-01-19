@@ -183,7 +183,7 @@ pl:
     submit:
       create: Utwórz %{model}
       submit: Zapisz %{model}
-      update: Aktualizuj %{model}
+      update: Edytuj %{model}
   number:
     currency:
       format:

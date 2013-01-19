@@ -1,2 +1,7 @@
-<h1>Storages#edit</h1>
-<p>Find me in app/views/storages/edit.html.erb</p>
+%h1= t('storages.edit.title')
+
+= simple_form_for @storage, :url => url_for(edit_storage_path(@storage))  do |f|
+  = f.input :name
+  = f.input :description
+  = f.button :submit
+

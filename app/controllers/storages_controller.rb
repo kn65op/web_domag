@@ -21,22 +21,30 @@ class StoragesController < ApplicationController
   end
 
   def view
-
+    @storage = getStorage
   end
 
   def edit
+    @storage = getStorage
+    if params[:storage] != nil && @storage.update_attributes(params[:storage])
+      redirect_to view_storage_path(@storage), :notice => t('storages.edit.successful')
+    end
   end
 
   def delete
+    @storage = getStorage
   end
 
 private
+  def getStorage
+    Storage.find(params[:id])
+  end
 
   def canView?
-    redirect_to storages_path, :flash => {:error => t('flash.no_view_permission')} if !Storage.find(params[:id]).canView?(current_user)
+    redirect_to storages_path, :flash => {:error => t('flash.no_view_permission')} if !getStorage.canView?(current_user)
   end
 
   def canManage?
-    redirect_to storages_path, :flash => {:error => t('flash.no_view_permission')} if !Storage.find(params[:id]).isUserAdmin?(current_user)
+    redirect_to storages_path, :flash => {:error => t('flash.no_view_permission')} if !getStorage.isUserAdmin?(current_user)
   end
 end

@@ -11,6 +11,12 @@ en:
         description: Description
     new:
       title: Add storage
+    view:
+      edit: Edit
+      delete: Delete
+    edit:
+      title: Edit storage
+      successful: Edition was successful
   simple_form:
     labels:
       storage:

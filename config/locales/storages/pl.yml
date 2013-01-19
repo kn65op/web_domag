@@ -12,6 +12,12 @@ pl:
     new:
       title: Dodaj schowek
       successful: Dodano schowek
+    view:
+      edit: Edytuj
+      delete: Usuń schowek
+    edit:
+      title: Edytuj schowek
+      successful: Edycja zakończona powodzeniem
 
   simple_form:
     labels:
