@@ -6,6 +6,7 @@ class Thing < ActiveRecord::Base
 	has_many :limits
 	has_many :thing_instances
 	belongs_to :category
+  belongs_to :user
 
   #validations
   validate :name, :presence => true

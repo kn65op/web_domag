@@ -14,6 +14,8 @@ class User < ActiveRecord::Base
 	has_many :limits
 	has_many :users_storages
 	has_many :storages, :through => :users_storages
+  has_many :things
+  has_many :categories
 
   #validations
   validate :name, :presence => true, :uniqueness => true

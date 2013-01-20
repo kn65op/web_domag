@@ -4,6 +4,7 @@ class CreateCategories < ActiveRecord::Migration
       t.integer :parent_id
       t.string :name, :null => false, :unique => true
       t.string :description
+      t.references :user, :null => false
 
       t.timestamps
     end
