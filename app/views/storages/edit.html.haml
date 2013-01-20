@@ -3,5 +3,6 @@
 = simple_form_for @storage, :url => url_for(edit_storage_path(@storage))  do |f|
   = f.input :name
   = f.input :description
+  = f.association :users, :collection => @users, :include_blank => false, :label_method => :email
   = f.button :submit
 

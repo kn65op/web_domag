@@ -8,10 +8,9 @@ class StoragesController < ApplicationController
   end
 
   def new
-    @users = User.all
+    @users = getAllUsersWithoutCurrentUser
     if params[:storage] != nil #Save to database
       @storage = Storage.new(params[:storage]) #create new storage
-      @storage.users << current_user  #connect with user
       if @storage.save #no errors on save, redirect
         @storage.userAdmin!(current_user, true) #set admin
         redirect_to storages_path, :notice => t('storages.new.successful')
@@ -26,10 +25,11 @@ class StoragesController < ApplicationController
   end
 
   def edit
-    @users = User.all
+    @users = getAllUsersWithoutCurrentUser
     #TODO: remove current user from @users
     @storage = getStorage
     if params[:storage] != nil && @storage.update_attributes(params[:storage])
+      @storage.userAdmin!(current_user, true) #set admin
       redirect_to view_storage_path(@storage), :notice => t('storages.edit.successful')
     end
   end
@@ -45,6 +45,12 @@ class StoragesController < ApplicationController
   end
 
 private
+  def getAllUsersWithoutCurrentUser
+    @users = User.all
+    @users.delete(current_user)
+    @users
+  end
+
   def getStorage
     Storage.find(params[:id])
   end

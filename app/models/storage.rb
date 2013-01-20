@@ -22,6 +22,7 @@ class Storage < ActiveRecord::Base
   end
 
   def userAdmin!(user, ad)
+    users << user
     userstorage =  UsersStorage.find_by_storage_id_and_user_id(self.id, user.id)
     userstorage.admin = ad
     userstorage.save
