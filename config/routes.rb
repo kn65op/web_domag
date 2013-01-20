@@ -1,4 +1,5 @@
 WebDomag::Application.routes.draw do
+
 	#devise_for :users, :skip => [:sessions]
 #	as :user do
 #		get 'signin' => 'users#main_page', :as => :new_user_session
@@ -19,12 +20,16 @@ root :to => redirect("/en")
 	  root :to => 'users#main_page'
 		match "/user/settings" => "users#settings", :as => "user_settings"
     devise_for :users
-    match "/storages" => "storages#index", :as => "storages"
-    match "/storage/new" => "storages#new", :as => "new_storage"
-    match "/storage/edit/:id" => "storages#edit", :as => "edit_storage"
-    match "/storage/delete/:id" => "storages#delete", :as => "delete_storage"
-    match "/storage/confirmed_delete/:id" => "storages#confirmed_delete", :as => "confirmed_delete_storage"
-    match "/storage/:id" => "storages#view", :as => "view_storage"
+    match "storages" => "storages#index", :as => "storages"
+    match "storage/new" => "storages#new", :as => "new_storage"
+    match "storage/edit/:id" => "storages#edit", :as => "edit_storage"
+    match "storage/delete/:id" => "storages#delete", :as => "delete_storage"
+    match "storage/confirmed_delete/:id" => "storages#confirmed_delete", :as => "confirmed_delete_storage"
+    match "storage/:id" => "storages#view", :as => "view_storage"
+    match "categories" => "categories#index", :as => "categories"
+    match "category/add/:id" => "categies#add", :as => "add_category"
+    match "category/edit/:id" => "categories#edit", :as => "edit_category"
+    match "category/delete/:id" => "categories#delete", :as => "delete_category"
 	end
 
 	#translations

@@ -1,9 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  parent: 
-  name: category one
-
-two:
-  parent: 
-  name: category two
+#one:
+#  parent:
+#  name: category one
+#
+#two:
+#  parent:
+#  name: category two
