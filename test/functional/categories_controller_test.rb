@@ -15,22 +15,72 @@ class CategoriesControllerTest < ActionController::TestCase
     assert_redirected_to new_user_session_pl_path, "Can get view not logged"
   end
 
-  test "should get new" do
+  test "should get new not logged" do
     get :new, :locale => :pl
     assert_redirected_to new_user_session_pl_path, "Can get new not logged"
   end
 
-  test "should get edit" do
+  test "should get edit not logged" do
     get :edit, :id => categories(:one_drinks), :locale => :pl
     assert_redirected_to new_user_session_pl_path, "Can get edit not logged"
   end
 
-  test "should get delete" do
+  test "should get delete not logged" do
     get :delete, :id => categories(:one_drinks), :locale => :pl
     assert_redirected_to new_user_session_pl_path, "Can get delete not logged"
   end
 
 #logged
+  test "should get index logged" do
+    sign_in users(:one)
+    get :index, :locale => :pl
+    assert_response :success, "Not get index logged"
+  end
 
+  test "should get view logged" do
+    sign_in users(:one)
+    get :view, :id => categories(:one_drinks), :locale => :pl
+    assert_response :success, "Not get view logged"
+  end
+
+  test "should get new logged" do
+    sign_in users(:one)
+    get :new, :locale => :pl
+    assert_response :success, "Not get new logged"
+  end
+
+  test "should get edit logged" do
+    sign_in users(:one)
+    get :edit, :id => categories(:one_drinks), :locale => :pl
+    assert_response :success, "Not get edit logged"
+  end
+
+  test "should get delete logged" do
+    sign_in users(:one)
+    get :delete, :id => categories(:one_drinks), :locale => :pl
+    assert_response :success, "Not get delete logged"
+  end
+
+#logged, other user category
+  test "should get view logged other user" do
+    sign_in users(:one)
+    get :view, :id => categories(:two_drinks), :locale => :pl
+    assert_redirected_to categories_pl_path, "Not redirected"
+    assert_equal "Nie masz praw dostępu do tej strony.", flash[:error]
+  end
+
+  test "should get edit logged other user" do
+    sign_in users(:one)
+    get :edit, :id => categories(:two_drinks), :locale => :pl
+    assert_redirected_to categories_pl_path, "Not redirected"
+    assert_equal "Nie masz praw dostępu do tej strony.", flash[:error]
+  end
+
+  test "should get delete logged other user" do
+    sign_in users(:one)
+    get :delete, :id => categories(:two_drinks), :locale => :pl
+    assert_redirected_to categories_pl_path, "Not redirected"
+    assert_equal "Nie masz praw dostępu do tej strony.", flash[:error]
+  end
 
 end
