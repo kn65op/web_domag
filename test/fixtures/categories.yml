@@ -1,9 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-#one:
-#  parent:
-#  name: category one
-#
-#two:
-#  parent:
-#  name: category two
+one_drinks:
+  name: Napoje
+  description: Napoje do picia
+  user: one
+
+one_food:
+  name: Jedzenie
+  description: Jedzenie do jedzenia
+  user: one
+
+two_drinks:
+  name: Napoje dwa
+  description: Napoje do picia dwa
+  user: two
+
