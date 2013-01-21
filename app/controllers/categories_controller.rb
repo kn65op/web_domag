@@ -2,7 +2,10 @@ class CategoriesController < ApplicationController
   def index
   end
 
-  def add
+  def new
+  end
+
+  def view
   end
 
   def edit

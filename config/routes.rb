@@ -27,7 +27,8 @@ root :to => redirect("/en")
     match "storage/confirmed_delete/:id" => "storages#confirmed_delete", :as => "confirmed_delete_storage"
     match "storage/:id" => "storages#view", :as => "view_storage"
     match "categories" => "categories#index", :as => "categories"
-    match "category/add/:id" => "categies#add", :as => "add_category"
+    match "category/new" => "categories#new", :as => "new_category"
+    match "category/view/:id" => "categories#view", :as => "view_category"
     match "category/edit/:id" => "categories#edit", :as => "edit_category"
     match "category/delete/:id" => "categories#delete", :as => "delete_category"
 	end
