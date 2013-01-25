@@ -11,4 +11,9 @@ class Thing < ActiveRecord::Base
   validate :name, :presence => true
   validate :category_id, :presence => true
   validate :unit, :presence => true
+
+  #methods
+  def canView?(user)
+    category.user == user
+  end
 end
