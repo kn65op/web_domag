@@ -1,2 +1,8 @@
-<h1>Things#add</h1>
-<p>Find me in app/views/things/add.html.erb</p>
+%h1= @thing.name
+%h2= @thing.description
+%p= @thing.unit
+
+=#TODO: ilość towaru
+
+.edit= link_to t('things.view.edit'), edit_thing_path(@thing)
+.delete= link_to t('things.view.delete'), delete_thing_path(@thing)
