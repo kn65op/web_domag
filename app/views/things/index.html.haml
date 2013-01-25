@@ -1,2 +1,14 @@
-<h1>Things#index</h1>
-<p>Find me in app/views/things/index.html.erb</p>
+%h1= t ('things.index.title')
+%table
+  %thead
+    %tr
+      %th= t ('things.index.header.name')
+      %th= t ('things.index.header.description')
+      %th= t ('things.index.header.unit')
+  - @things.each do |t|
+    %tr
+      %td= link_to t.name, view_thing_path(s)
+      %td= t.description
+      %td= t.unit
+
+= link_to t('things.index.new'), new_thing_path

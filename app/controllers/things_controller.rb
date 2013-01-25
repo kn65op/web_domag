@@ -7,23 +7,48 @@ class ThingsController < ApplicationController
   end
 
   def new
+    @things = getCategories
+    if params[:thing] != nil #Save to database
+      @thing = Thing.new(params[:thing]) #create new thing
+      @thing.user = current_user
+      if @thing.save #no errors on save, redirect
+        redirect_to things_path, :notice => t('things.new.successful')
+      end
+    else
+      @thing = Thing.new
+    end
   end
 
   def view
+    @thing = getThing
   end
 
   def edit
+    @categories = getCategories
+    @thing = getThing
+    if params[:thing] != nil && @thing.update_attributes(params[:thing])
+      redirect_to view_thing_path(@thing), :notice => t('things.edit.successful')
+    end
   end
 
   def delete
+    @thing = getThing
   end
 
   def confirmed_delete
+    thing = getThing
+    thing.delete
+
+    redirect_to things_path, :notice => t('things.delete.succesful')
   end
 
 private
   def getThing
     Thing.find(params[:id])
+  end
+
+  def getCategories
+    current_user.things
   end
 
   def canView?
