@@ -22,6 +22,10 @@ class User < ActiveRecord::Base
 
   #methods
   def getThings
-
+    things = []
+    categories.each { |c|
+      things = things + c.things
+    }
+    return things
   end
 end
