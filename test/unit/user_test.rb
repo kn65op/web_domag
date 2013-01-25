@@ -37,6 +37,21 @@ class UserTest < ActiveSupport::TestCase
 		user = User.new(:email => "a@example.com", :password => "12345")
 		assert !user.save, "User saved with short password"
   end
+#thigs test
+
+  test "User get all things" do
+    things = users(:one).getThings
+    assert things.size == 3, "returned not 3 things"
+
+    beer = things.index(things(:one_beer))
+    assert beer != nil, "Not found beer"
+
+    tea = things.index(things(:one_tea))
+    assert tea != nil, "Not found tea"
+
+    bread = things.index(things(:one_bread))
+    assert bread != nil, "Not found bread"
+  end
 
   #storage validations
 #  test "Not single storage" do

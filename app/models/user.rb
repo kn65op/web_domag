@@ -21,5 +21,7 @@ class User < ActiveRecord::Base
   validate :email, :presence => true, :uniqueness => true
 
   #methods
+  def getThings
 
+  end
 end

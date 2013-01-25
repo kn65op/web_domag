@@ -3,6 +3,7 @@ class ThingsController < ApplicationController
   before_filter :canView?, :only => [:edit, :delete, :confirmed_delete, :view]
 
   def index
+    @things = current_user.getThings
   end
 
   def new
