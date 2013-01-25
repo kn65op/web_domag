@@ -2,26 +2,26 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  categories:
+  things:
     index:
-      title: Your categories
-      new: Add new category
+      title: Your things
+      new: Add new thing
       header:
-        name: Category
+        name: Thing
         description: Description
     new:
-      title: Add category
-      successful: Category added
+      title: Add thing
+      successful: Thing added
     view:
       edit: Edit
       delete: Delete
     edit:
-      title: Edit category
+      title: Edit thing
       successful: Edition was successful
     delete:
-      title: Delete category
-      info: Are you sure? Items in category will be moved to non category
+      title: Delete thing
+      info: Are you sure? All history connected to this thing will be erased (purchases/consumes)
       answer_yes: "Yes"
       answer_no: "No"
-      succesful: Category was deleted
+      succesful: Thing was deleted
 

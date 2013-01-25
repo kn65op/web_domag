@@ -2,32 +2,34 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 pl:
-  categories:
+  things:
     index:
-      title: Twoje kategorie
-      new: Dodaj nową kategorię
+      title: Twoje rzeczy
+      new: Dodaj nową recz
       header:
-        name: Kategoria
+        name: Rzecz
         description: Opis
+        unit: Jednostka
     new:
-      title: Dodaj kategorię
-      successful: Dodano kategorię
+      title: Dodaj rzecz
+      successful: Dodano rzecz
     view:
       edit: Edytuj
-      delete: Usuń kategorię
+      delete: Usuń rzecz
     edit:
-      title: Edytuj kategorię
+      title: Edytuj rzecz
       successful: Edycja zakończona powodzeniem
     delete:
-      title: Usuń kategorię
-      info: Czy na pewno? Przedmioty w kategori zostaną przeniesione do przestrzeni luźnej.
+      title: Usuń rzecz
+      info: Czy na pewno? Zostanie usunięta cała historia powiązana z tą rzeczą (kupno/zużycie)
       answer_yes: Tak
       answer_no: Nie
-      succesful: Usunięto kategorię
+      succesful: Usunięto rzecz
 
   simple_form:
     labels:
-      category:
+      thing:
         name: Nazwa
         description: Opis
+        unit: Jednostka
 
