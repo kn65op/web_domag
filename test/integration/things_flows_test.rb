@@ -26,6 +26,7 @@ class ThingsFlowsTest < ActionDispatch::IntegrationTest
     fill_in("Nazwa", :with => new_thing)
     fill_in("Opis", :with => new_description)
     fill_in("Jednostka", :with => new_unit)
+    page.select(categories(:one_drinks).name, :id => "thing_category_id")
 
     click_button("Utwórz rzecz")
 
@@ -45,6 +46,7 @@ class ThingsFlowsTest < ActionDispatch::IntegrationTest
     fill_in("Nazwa", :with => new_thing)
     fill_in("Opis", :with => new_description)
     fill_in("Jednostka", :with => new_unit)
+    page.select(categories(:one_food).name, :id => "thing_category_id")
 
     click_button("Edytuj rzecz")
 

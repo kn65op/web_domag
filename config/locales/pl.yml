@@ -22,6 +22,7 @@ pl:
       user: użytkownik
       storage: schowek
       category: kategorię
+      thing: rzecz
     attributes:
       user:
         email: e-mail
