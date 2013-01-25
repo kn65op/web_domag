@@ -1,12 +1,26 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-#one:
-#  name: MyString
-#  unit: MyString
-#  descripion: MyString
-#  category
-#
-#two:
-#  name: MyString
-#  unit: MyString
-#  descripion: MyString
+one_tea:
+  name: Herbata w torebkach
+  unit: Torebka
+  descripion: Herbata w torebkach.
+  category: one_drinks
+
+one beer:
+  name: Piwo
+  unit: Litr
+  descripion:  Piwo to moje paliwo
+  category: one_drinks
+
+one_bread:
+  name: Chleb
+  unit: Sztuka
+  description: To jest chelb
+  category: one_food
+
+two_beer:
+  name: Piwo
+  unit: 0.5l (puszka, butelka)
+  descripion:  Piwo z rana jak śmietana
+  category: two_drinks
+
