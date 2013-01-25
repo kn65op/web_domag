@@ -11,6 +11,6 @@ class ThingsController < ApplicationController
   def delete
   end
 
-  def confirm_delete
+  def confirmed_delete
   end
 end

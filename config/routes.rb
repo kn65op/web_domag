@@ -1,5 +1,6 @@
 WebDomag::Application.routes.draw do
 
+
 	#devise_for :users, :skip => [:sessions]
 #	as :user do
 #		get 'signin' => 'users#main_page', :as => :new_user_session
@@ -32,6 +33,11 @@ root :to => redirect("/en")
     match "category/edit/:id" => "categories#edit", :as => "edit_category"
     match "category/delete/:id" => "categories#delete", :as => "delete_category"
     match "category/confirmed_delete/:id" => "categories#confirmed_delete", :as => "confirmed_delete_category"
+    match "things" => "things#index", :as => "things"
+    match "thing/new" => "things#new", :as => "new_thing"
+    match "thing/edit/:id" => "things#edit", :as => "edit_thing"
+    match "thing/delete/:id" => "things#delete", :as => "delete_thing"
+    match "thing/confirmed_delete/:id" => "things#confirmed_delete", :as => "confirmed_delete_thing"
 	end
 
 	#translations
@@ -43,7 +49,7 @@ root :to => redirect("/en")
 #	end
 	
   # The priority is based upon order of creation:
-  # first created -> highest priority.
+  # first created => highest priority.
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
