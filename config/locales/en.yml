@@ -13,5 +13,6 @@ en:
     remember: Remember me
     storages: My storages
     categories: My categories
+    things: My things
   flash:
     no_view_permission: You don't have permission to view this site.

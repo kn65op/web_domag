@@ -22,6 +22,7 @@
         = link_to t('upper_menu.forgot'), new_password_path('user')
         = link_to t('upper_menu.register'), new_user_registration_path
     -else #user logged
+      = link_to t('upper_menu.things'), things_path
       = link_to t('upper_menu.categories'), categories_path
       = link_to t('upper_menu.storages'), storages_path
       = link_to t('upper_menu.settings'), user_settings_path()

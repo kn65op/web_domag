@@ -13,6 +13,7 @@ pl:
     remember: Zapamiętaj mnie
     storages: Moje schowki
     categories: Moje kategorie
+    things: Moje rzeczy
   flash:
     no_view_permission: Nie masz praw dostępu do tej strony.
 #active records
