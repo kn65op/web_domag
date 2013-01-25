@@ -11,6 +11,7 @@ en:
         description: Description
     new:
       title: Add storage
+      successful: Storage added
     view:
       edit: Edit
       delete: Delete
@@ -23,7 +24,4 @@ en:
       answer_yes: Yes
       answer_no: No
       succesful: Storage was deleted
-  simple_form:
-    labels:
-      storage:
 

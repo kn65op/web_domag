@@ -12,6 +12,7 @@ pl:
     forgot: Zapomniałeś hasła?
     remember: Zapamiętaj mnie
     storages: Moje schowki
+    categories: Moje kategorie
   flash:
     no_view_permission: Nie masz praw dostępu do tej strony.
 #active records
@@ -19,6 +20,7 @@ pl:
     models:
       user: użytkownik
       storage: schowek
+      category: kategorię
     attributes:
       user:
         email: e-mail

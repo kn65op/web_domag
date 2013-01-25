@@ -31,6 +31,7 @@ root :to => redirect("/en")
     match "category/view/:id" => "categories#view", :as => "view_category"
     match "category/edit/:id" => "categories#edit", :as => "edit_category"
     match "category/delete/:id" => "categories#delete", :as => "delete_category"
+    match "category/confirmed_delete/:id" => "categories#confirmed_delete", :as => "confirmed_delete_category"
 	end
 
 	#translations

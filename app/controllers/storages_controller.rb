@@ -39,8 +39,9 @@ class StoragesController < ApplicationController
   end
 
   def confirmed_delete
-    @storage = getStorage
-    @storage.delete
+    storage = getStorage
+    storage.delete
+
     redirect_to storages_path, :notice => t('storages.delete.succesful')
   end
 
