@@ -1,0 +1,27 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  categories:
+    index:
+      title: Your categories
+      new: Add new category
+      header:
+        name: Category
+        description: Description
+    new:
+      title: Add category
+      successful: Category added
+    view:
+      edit: Edit
+      delete: Delete
+    edit:
+      title: Edit category
+      successful: Edition was successful
+    delete:
+      title: Delete category
+      info: Are you sure? Items in category will be moved to non category
+      answer_yes: "Yes"
+      answer_no: "No"
+      succesful: Category was deleted
+

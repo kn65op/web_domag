@@ -1,0 +1,33 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+pl:
+  categories:
+    index:
+      title: Twoje kategorie
+      new: Dodaj nową kategorię
+      header:
+        name: Kategoria
+        description: Opis
+    new:
+      title: Dodaj kategorię
+      successful: Dodano kategorię
+    view:
+      edit: Edytuj
+      delete: Usuń kategorię
+    edit:
+      title: Edytuj kategorię
+      successful: Edycja zakończona powodzeniem
+    delete:
+      title: Usuń kategorię
+      info: Czy na pewno? Przedmioty w kategori zostaną przeniesione do przestrzeni luźnej.
+      answer_yes: Tak
+      answer_no: Nie
+      succesful: Usunięto kategorię
+
+  simple_form:
+    labels:
+      category:
+        name: Nazwa
+        description: Opis
+
