@@ -7,10 +7,11 @@ class ThingsController < ApplicationController
   end
 
   def new
+    #TODO: Check if there are at least one category
+    @categories = getCategories
     @things = getCategories
     if params[:thing] != nil #Save to database
       @thing = Thing.new(params[:thing]) #create new thing
-      @thing.user = current_user
       if @thing.save #no errors on save, redirect
         redirect_to things_path, :notice => t('things.new.successful')
       end
@@ -48,7 +49,7 @@ private
   end
 
   def getCategories
-    current_user.things
+    current_user.categories
   end
 
   def canView?

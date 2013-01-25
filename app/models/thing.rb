@@ -1,6 +1,6 @@
 class Thing < ActiveRecord::Base
 	#attributes
-  attr_accessible :description, :name, :unit
+  attr_accessible :description, :name, :unit, :category_id
 
 	#relations
 	has_many :limits
@@ -8,9 +8,9 @@ class Thing < ActiveRecord::Base
 	belongs_to :category
 
   #validations
-  validate :name, :presence => true
-  validate :category_id, :presence => true
-  validate :unit, :presence => true
+  validates :name, :presence => true
+  validates :category, :presence => true
+  validates :unit, :presence => true
 
   #methods
   def canView?(user)

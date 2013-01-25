@@ -1,2 +1,8 @@
-<h1>Things#add</h1>
-<p>Find me in app/views/things/add.html.erb</p>
+%h1= t('things.new.title')
+
+= simple_form_for @thing, :url => url_for(new_thing_path)  do |f|
+  = f.input :name
+  = f.input :description
+  = f.input :unit
+  = f.association :category, :collection => @categories
+  = f.button :submit
