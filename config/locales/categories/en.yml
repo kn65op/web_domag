@@ -21,7 +21,7 @@ en:
     delete:
       title: Delete category
       info: Are you sure? Items in category will be moved to non category
-      answer_yes: Yes
-      answer_no: No
+      answer_yes: "Yes"
+      answer_no: "No"
       succesful: Category was deleted
 
