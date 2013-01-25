@@ -1,6 +1,6 @@
 class Thing < ActiveRecord::Base
 	#attributes
-  attr_accessible :descripion, :name, :unit
+  attr_accessible :description, :name, :unit
 
 	#relations
 	has_many :limits
