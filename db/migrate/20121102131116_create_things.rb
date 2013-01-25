@@ -5,7 +5,6 @@ class CreateThings < ActiveRecord::Migration
       t.string :unit, :null => false, :unique => true
       t.string :descripion
 			t.references :category, :null => false
-      t.references :user, :null => false
 
       t.timestamps
     end
