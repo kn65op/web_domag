@@ -1,2 +1,5 @@
-<h1>Things#delete</h1>
-<p>Find me in app/views/things/delete.html.erb</p>
+%h1= t('things.delete.title')
+
+%p= t('things.delete.info')
+= link_to t('things.delete.answer_no'), view_thing_path(@thing)
+= link_to t('things.delete.answer_yes'), confirmed_delete_thing_path(@thing)
