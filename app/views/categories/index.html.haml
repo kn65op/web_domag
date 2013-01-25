@@ -6,7 +6,7 @@
       %th= t ('categories.index.header.description')
   - @categories.each do |c|
     %tr
-      %td= link_to c.name, view_category_path(s)
+      %td= link_to c.name, view_category_path(c)
       %td= c.description
 
 = link_to t('categories.index.new'), new_category_path
