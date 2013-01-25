@@ -1,0 +1,12 @@
+%h1= t ('categories.index.title')
+%table
+  %thead
+    %tr
+      %th= t ('categories.index.header.name')
+      %th= t ('categories.index.header.description')
+  - @categories.each do |s|
+    %tr
+      %td= link_to s.name, view_category_path(s)
+      %td= s.description
+
+= link_to t('categories.index.new'), new_category_path

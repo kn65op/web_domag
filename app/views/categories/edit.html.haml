@@ -1,0 +1,6 @@
+%h1= t('categories.edit.title')
+
+= simple_form_for @category, :url => url_for(edit_category_path(@category))  do |f|
+  = f.input :name
+  = f.input :description
+  = f.button :submit
