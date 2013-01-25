@@ -53,6 +53,11 @@ class UserTest < ActiveSupport::TestCase
     assert bread != nil, "Not found bread"
   end
 
+  test "Uset getThings with no Categories" do
+    things = User.new.getThings
+    assert things.length == 0, "Not zero things"
+  end
+
   #storage validations
 #  test "Not single storage" do
 #    user = User.new
