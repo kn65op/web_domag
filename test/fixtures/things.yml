@@ -3,13 +3,13 @@
 one_tea:
   name: Herbata w torebkach
   unit: Torebka
-  descripion: Herbata w torebkach.
+  description: Herbata w torebkach.
   category: one_drinks
 
-one beer:
+one_beer:
   name: Piwo
   unit: Litr
-  descripion:  Piwo to moje paliwo
+  description:  Piwo to moje paliwo
   category: one_drinks
 
 one_bread:
@@ -21,6 +21,6 @@ one_bread:
 two_beer:
   name: Piwo
   unit: 0.5l (puszka, butelka)
-  descripion:  Piwo z rana jak śmietana
+  description:  Piwo z rana jak śmietana
   category: two_drinks
 

@@ -35,6 +35,7 @@ root :to => redirect("/en")
     match "category/confirmed_delete/:id" => "categories#confirmed_delete", :as => "confirmed_delete_category"
     match "things" => "things#index", :as => "things"
     match "thing/new" => "things#new", :as => "new_thing"
+    match "thing/view" => "things#view", :as => "view_thing"
     match "thing/edit/:id" => "things#edit", :as => "edit_thing"
     match "thing/delete/:id" => "things#delete", :as => "delete_thing"
     match "thing/confirmed_delete/:id" => "things#confirmed_delete", :as => "confirmed_delete_thing"
