@@ -10,4 +10,9 @@ class Category < ActiveRecord::Base
 
 	#validations
 	validates :name, :presence => true
+
+  #methods
+  def canView? (u)
+    user == u
+  end
 end
