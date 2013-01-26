@@ -11,6 +11,8 @@ pl:
       storage: schowek
       category: kategorię
       thing: rzecz
+      shop: sklep
+      manufacturer: producenta
     attributes:
       user:
         email: e-mail
