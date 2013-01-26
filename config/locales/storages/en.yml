@@ -25,3 +25,7 @@ en:
       answer_no: "No"
       succesful: Storage was deleted
 
+  simple_form:
+    labels:
+      storage:
+        users: Share with users

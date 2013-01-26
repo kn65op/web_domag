@@ -30,4 +30,5 @@ pl:
       storage:
         name: Nazwa
         description: Opis
+        users: Udostępnij użytkownikom
 
