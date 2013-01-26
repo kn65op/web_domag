@@ -8,6 +8,6 @@ class UsersStorage < ActiveRecord::Base
 
   #validations
 #  validates :admin, :presence => true
-  validates :storage, :presence => true
-  validates :user, :presence => true
+#  validates :storage``_id, :presence => true
+#  validates :user_id, :presence => true
 end

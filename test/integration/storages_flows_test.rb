@@ -79,7 +79,10 @@ class StoragesFlowsTest < ActionDispatch::IntegrationTest
 
     click_button("Utwórz schowek")
 
+    click_link(new_storage)
+
     page.has_content?(new_storage)
+    page.has_content?(new_description)
 
     logout
 

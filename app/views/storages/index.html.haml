@@ -1,7 +1,5 @@
 %h1= t ('storages.index.title')
 =#TODO: szukaj
-%ul
-  - @storages.each do |s|
-    %li= link_to s.name, view_storage_path(s)
+= render :partial => "storage_show", :locals => {:storage => @storages}
 
 = link_to t('storages.index.new'), new_storage_path

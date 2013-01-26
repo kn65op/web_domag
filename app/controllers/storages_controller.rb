@@ -4,16 +4,18 @@ class StoragesController < ApplicationController
   before_filter :canManage?, :only => [:edit, :delete, :confirmed_delete]
 
   def index
-    @storages = current_user.storages.sort {|a,b| a.getFullName <=> b.getFullName}
+    @storages = current_user.storages.find_all{|s| s.getNested == 0}.sort {|a,b| a.getFullName <=> b.getFullName}
   end
 
   def new
     @users = getAllUsersWithoutCurrentUser
     if params[:storage] != nil #Save to database
       @storage = Storage.new(params[:storage]) #create new storage
+      @storage.userAdmin!(current_user, true) #set admin
       if @storage.save #no errors on save, redirect
-        @storage.userAdmin!(current_user, true) #set admin
         redirect_to storages_path, :notice => t('storages.new.successful')
+      else
+        @error = t('storages.new.unsuccessful')
       end
     else
       @storage = Storage.new

@@ -1,5 +1,8 @@
 %h1= t('storages.new.title')
 
+-if @error != nil
+  %h2.error= @error
+
 = simple_form_for @storage, :url => url_for(new_storage_path)  do |f|
   = f.input :name
   = f.input :description
