@@ -8,7 +8,7 @@ pl:
       new: Dodaj nowy sklep
       header:
         name: Kategoria
-        description: Opis
+        address: Adres
     new:
       title: Dodaj sklep
       successful: Dodano sklep
@@ -29,5 +29,5 @@ pl:
     labels:
       shop:
         name: Nazwa
-        description: Opis
+        address: Adres
 

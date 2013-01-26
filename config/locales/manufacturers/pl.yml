@@ -8,7 +8,6 @@ pl:
       new: Dodaj nowego producenta
       header:
         name: Kategoria
-        description: Opis
     new:
       title: Dodaj producenta
       successful: Dodano producenta
@@ -29,5 +28,3 @@ pl:
     labels:
       manufacturer:
         name: Nazwa
-        description: Opis
-

@@ -14,17 +14,17 @@ class ShopsFlowsTest < ActionDispatch::IntegrationTest
 
   test "Add, edit, delete new simple shop" do #simple means no parent or co-storagers
     new_shop = "Nowy sklep"
-    new_description = "Nowy opis"
+    new_address = "Nowy address"
 
     https!
     login_as(users(:one))
     visit "/pl/shops"
 
-    click_link("Dodaj nowy")
+    click_link("Dodaj nowy sklep")
     page.has_content?("Dodaj nowy sklep")
 
     fill_in("Nazwa", :with => new_shop)
-    fill_in("Opis", :with => new_description)
+    fill_in("Adres", :with => new_address)
 
     click_button("Utwórz sklep")
 
@@ -33,19 +33,19 @@ class ShopsFlowsTest < ActionDispatch::IntegrationTest
 
     click_link(new_shop)
 
-    page.has_content?(new_description)
+    page.has_content?(new_address)
     click_link("Edytuj")
 
     new_shop = "QWEWQRWQ"
-    new_description = " WQEdsaem 23k54!DWF qwe"
+    new_address = " WQEdsaem 23k54!DWF qwe"
 
     fill_in("Nazwa", :with => new_shop)
-    fill_in("Opis", :with => new_description)
+    fill_in("Adres", :with => new_address)
 
     click_button("Edytuj sklep")
 
     page.has_content?("Edycja zakończona powodzeniem")
-    page.has_content?(new_description)
+    page.has_content?(new_address)
 
     click_link("Usuń sklep")
 

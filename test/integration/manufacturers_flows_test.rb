@@ -14,17 +14,15 @@ class ManufacturersFlowsTest < ActionDispatch::IntegrationTest
 
   test "Add, edit, delete new simple manufacturer" do #simple means no parent or co-storagers
     new_manufacturer = "Nowy producent"
-    new_description = "Nowy opis"
 
     https!
     login_as(users(:one))
     visit "/pl/manufacturers"
 
-    click_link("Dodaj nowego")
+    click_link("Dodaj nowego producenta")
     page.has_content?("Dodaj nowego producenta")
 
     fill_in("Nazwa", :with => new_manufacturer)
-    fill_in("Opis", :with => new_description)
 
     click_button("Utwórz producenta")
 
@@ -33,19 +31,17 @@ class ManufacturersFlowsTest < ActionDispatch::IntegrationTest
 
     click_link(new_manufacturer)
 
-    page.has_content?(new_description)
+    page.has_content?(new_manufacturer)
     click_link("Edytuj")
 
     new_manufacturer = "QWEWQRWQ"
-    new_description = " WQEdsaem 23k54!DWF qwe"
 
     fill_in("Nazwa", :with => new_manufacturer)
-    fill_in("Opis", :with => new_description)
 
     click_button("Edytuj producenta")
 
     page.has_content?("Edycja zakończona powodzeniem")
-    page.has_content?(new_description)
+    page.has_content?(new_manufacturer)
 
     click_link("Usuń producenta")
 
