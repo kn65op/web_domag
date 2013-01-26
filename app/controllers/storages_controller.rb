@@ -4,7 +4,7 @@ class StoragesController < ApplicationController
   before_filter :canManage?, :only => [:edit, :delete, :confirmed_delete]
 
   def index
-    @storages = current_user.storages
+    @storages = current_user.storages.sort {|a,b| a.getFullName <=> b.getFullName}
   end
 
   def new

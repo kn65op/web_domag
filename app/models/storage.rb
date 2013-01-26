@@ -42,4 +42,14 @@ class Storage < ActiveRecord::Base
     return full_name
   end
 
+  def getNested
+    i = 0
+    sto = self
+    while (sto.parent != nil)
+      sto = sto.parent
+      i = i + 1
+    end
+    return i
+  end
+
 end

@@ -60,4 +60,14 @@ class StoragesTest < ActiveSupport::TestCase
     assert storage.getFullName == "Kitchen", "Wrong full name for kitchen"
   end
 
+  test "Nested 0" do
+    storage = storages(:kitchen)
+    assert storage.getNested == 0, "Nested not 0 for kitchen"
+  end
+
+  test "Nested 1" do
+    storage = storages(:cupboard_sink)
+    assert storage.getNested == 1,  "Nested not 0 for cupboaord"
+  end
+
 end
