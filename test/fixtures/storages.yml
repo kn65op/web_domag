@@ -21,3 +21,9 @@ good_cupboard:
 evil_cupboard:
   name: Someone evil cupboard
   description: Evil cupboard which someone else is owner.
+
+good_nested:
+  name: Nested from other
+  description: hehe
+  parent: evil_cupboard
+

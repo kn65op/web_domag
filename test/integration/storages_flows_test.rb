@@ -72,6 +72,8 @@ class StoragesFlowsTest < ActionDispatch::IntegrationTest
     visit "/pl/storage/new"
     page.has_content?("Dodaj nowy schowek")
 
+    page.has_content(storages(:good_nested).name)
+
     fill_in("Nazwa", :with => new_storage)
     fill_in("Opis", :with => new_description)
 

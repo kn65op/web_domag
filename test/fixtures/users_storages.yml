@@ -29,3 +29,14 @@ two_evil_cupboard:
   user: two
   storage: evil_cupboard
   admin: true
+
+one_nested:
+  user: one
+  storage: good_nested
+  admin: false
+
+one_nested:
+  user: two
+  storage: good_nested
+  admin: true
+
