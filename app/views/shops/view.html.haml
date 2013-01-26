@@ -1,2 +1,7 @@
-<h1>Shops#new</h1>
-<p>Find me in app/views/shops/new.html.erb</p>
+%h1= @shop.name
+%h2= @shop.address
+
+=#TODO: tabela z zawartością
+
+.edit= link_to t('shops.view.edit'), edit_shop_path(@shop)
+.delete= link_to t('shops.view.delete'), delete_shop_path(@shop)
