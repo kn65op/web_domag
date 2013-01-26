@@ -8,5 +8,6 @@ class CreateThings < ActiveRecord::Migration
 
       t.timestamps
     end
+    add_index :things, :category_id
   end
 end

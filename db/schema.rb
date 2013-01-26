@@ -21,16 +21,20 @@ ActiveRecord::Schema.define(:version => 20121111112727) do
     t.datetime "updated_at",  :null => false
   end
 
+  add_index "categories", ["user_id"], :name => "index_categories_on_user_id"
+
   create_table "consumes", :force => true do |t|
     t.date     "date",              :null => false
     t.string   "purpose"
     t.float    "amount",            :null => false
     t.integer  "thing_instance_id", :null => false
+    t.integer  "user_id",           :null => false
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
   end
 
   add_index "consumes", ["thing_instance_id"], :name => "index_consumes_on_thing_instance_id"
+  add_index "consumes", ["user_id"], :name => "index_consumes_on_user_id"
 
   create_table "limits", :force => true do |t|
     t.float    "critical"
@@ -64,16 +68,18 @@ ActiveRecord::Schema.define(:version => 20121111112727) do
     t.string   "name",        :null => false
     t.integer  "parent_id"
     t.string   "description"
+    t.integer  "user_id",     :null => false
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
+
+  add_index "storages", ["user_id"], :name => "index_storages_on_user_id"
 
   create_table "thing_instances", :force => true do |t|
     t.date     "valid_until"
     t.date     "purchase_date",                                  :null => false
     t.decimal  "price",           :precision => 12, :scale => 2
-    t.float    "size",                                           :null => false
-    t.integer  "user_id",                                        :null => false
+    t.decimal  "size",            :precision => 20, :scale => 3, :null => false
     t.integer  "storage_id"
     t.integer  "thing_id",                                       :null => false
     t.integer  "shop_id"
@@ -86,7 +92,6 @@ ActiveRecord::Schema.define(:version => 20121111112727) do
   add_index "thing_instances", ["shop_id"], :name => "index_thing_instances_on_shop_id"
   add_index "thing_instances", ["storage_id"], :name => "index_thing_instances_on_storage_id"
   add_index "thing_instances", ["thing_id"], :name => "index_thing_instances_on_thing_id"
-  add_index "thing_instances", ["user_id"], :name => "index_thing_instances_on_user_id"
 
   create_table "things", :force => true do |t|
     t.string   "name",        :null => false
@@ -96,6 +101,8 @@ ActiveRecord::Schema.define(:version => 20121111112727) do
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
+
+  add_index "things", ["category_id"], :name => "index_things_on_category_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false

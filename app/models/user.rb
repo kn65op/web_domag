@@ -19,8 +19,8 @@ class User < ActiveRecord::Base
   has_many :manufacturers
 
   #validations
-  validate :name, :presence => true, :uniqueness => true
-  validate :email, :presence => true, :uniqueness => true
+  validates :name, :presence => true, :uniqueness => true
+  validates :email, :presence => true, :uniqueness => true
 
   #methods
   def getThings
