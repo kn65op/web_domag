@@ -1,0 +1,9 @@
+%ul
+  - if storage.kind_of?(Array)
+    - storage.each do |s|
+      %li
+        = link_to s.name, view_storage_path(s)
+        = render :partial => "storage_show", :locals => {:storage => s.substorages}
+  - else
+    = link_to storage.name, view_storage_path(storage)
+
