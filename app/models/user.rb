@@ -10,7 +10,6 @@ class User < ActiveRecord::Base
   # attr_accessible :title, :body
 
 	#relations
-	has_many :thing_instances
 	has_many :limits
 	has_many :users_storages
 	has_many :storages, :through => :users_storages
