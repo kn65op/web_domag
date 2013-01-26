@@ -15,12 +15,12 @@ class CategoriesTest < ActiveSupport::TestCase
 		assert cat.save, "Category not saved"
   end
 
-  test "Can edit my category" do
+  test "Can view my category" do
     cat = categories(:one_drinks)
     assert cat.canView?(users(:one)), "cannot edit"
   end
 
-  test "Can't edit not my category" do
+  test "Can't view not my category" do
     cat = categories(:two_drinks)
     assert !cat.canView?(users(:one)), "can edit"
   end

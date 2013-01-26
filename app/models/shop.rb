@@ -5,4 +5,9 @@ class Shop < ActiveRecord::Base
 	#relations
 	has_many :thing_instances
   belongs_to :user
+
+  #methods
+  def canView? (u)
+    user == u
+  end
 end

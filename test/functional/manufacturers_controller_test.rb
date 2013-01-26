@@ -11,7 +11,7 @@ class ManufacturersControllerTest < ActionController::TestCase
   end
 
   test "should not get view not logged" do
-    get :view, :id => manufacturers(:one_drinks), :locale => :pl
+    get :view, :id => manufacturers(:one_zywiec), :locale => :pl
     assert_redirected_to new_user_session_pl_path, "Can get view not logged"
   end
 
@@ -21,12 +21,12 @@ class ManufacturersControllerTest < ActionController::TestCase
   end
 
   test "should get edit not logged" do
-    get :edit, :id => manufacturers(:one_drinks), :locale => :pl
+    get :edit, :id => manufacturers(:one_zywiec), :locale => :pl
     assert_redirected_to new_user_session_pl_path, "Can get edit not logged"
   end
 
   test "should get delete not logged" do
-    get :delete, :id => manufacturers(:one_drinks), :locale => :pl
+    get :delete, :id => manufacturers(:one_zywiec), :locale => :pl
     assert_redirected_to new_user_session_pl_path, "Can get delete not logged"
   end
 
@@ -39,7 +39,7 @@ class ManufacturersControllerTest < ActionController::TestCase
 
   test "should get view logged" do
     sign_in users(:one)
-    get :view, :id => manufacturers(:one_drinks), :locale => :pl
+    get :view, :id => manufacturers(:one_zywiec), :locale => :pl
     assert_response :success, "Not get view logged"
   end
 
@@ -51,34 +51,34 @@ class ManufacturersControllerTest < ActionController::TestCase
 
   test "should get edit logged" do
     sign_in users(:one)
-    get :edit, :id => manufacturers(:one_drinks), :locale => :pl
+    get :edit, :id => manufacturers(:one_zywiec), :locale => :pl
     assert_response :success, "Not get edit logged"
   end
 
   test "should get delete logged" do
     sign_in users(:one)
-    get :delete, :id => manufacturers(:one_drinks), :locale => :pl
+    get :delete, :id => manufacturers(:one_zywiec), :locale => :pl
     assert_response :success, "Not get delete logged"
   end
 
 #logged, other user manufacturer
   test "should get view logged other user" do
     sign_in users(:one)
-    get :view, :id => manufacturers(:two_drinks), :locale => :pl
+    get :view, :id => manufacturers(:two_zywiec), :locale => :pl
     assert_redirected_to manufacturers_pl_path, "Not redirected"
     assert_equal "Nie masz praw dostępu do tej strony.", flash[:error]
   end
 
   test "should get edit logged other user" do
     sign_in users(:one)
-    get :edit, :id => manufacturers(:two_drinks), :locale => :pl
+    get :edit, :id => manufacturers(:two_zywiec), :locale => :pl
     assert_redirected_to manufacturers_pl_path, "Not redirected"
     assert_equal "Nie masz praw dostępu do tej strony.", flash[:error]
   end
 
   test "should get delete logged other user" do
     sign_in users(:one)
-    get :delete, :id => manufacturers(:two_drinks), :locale => :pl
+    get :delete, :id => manufacturers(:two_zywiec), :locale => :pl
     assert_redirected_to manufacturers_pl_path, "Not redirected"
     assert_equal "Nie masz praw dostępu do tej strony.", flash[:error]
   end
