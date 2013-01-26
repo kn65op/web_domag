@@ -3,7 +3,7 @@ class ManufacturersController < ApplicationController
   before_filter :canView?, :only => [:edit, :delete, :confirmed_delete, :view]
 
   def index
-    @manufactures = current_user.manufacturers
+    @manufacturers = current_user.manufacturers
   end
 
   def new
