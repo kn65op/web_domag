@@ -15,4 +15,15 @@ class Category < ActiveRecord::Base
   def canView? (u)
     user == u
   end
+
+  def getNested
+    i = 0
+    cat = self
+    while (cat.parent != nil)
+      cat = cat.parent
+      i = i + 1
+    end
+    return i
+  end
+
 end

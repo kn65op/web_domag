@@ -5,6 +5,18 @@ one_drinks:
   description: Napoje do picia
   user: one
 
+one_alco:
+  name: Alkohole
+  description: Alkohole do picia
+  user: one
+  parent: one_drinks
+
+one_high:
+  name: Wysokoprocentowe alkohole
+  description: Wysokoprocentowe alkohole
+  user: one
+  parent: one_alco
+
 one_food:
   name: Jedzenie
   description: Jedzenie do jedzenia
