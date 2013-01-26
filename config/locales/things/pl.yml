@@ -24,6 +24,7 @@ pl:
         ends: Kończy się
         full: Pełno
         header: Limity
+        checkbox: Ustal limity
     edit:
       title: Edytuj rzecz
       successful: Edycja zakończona powodzeniem

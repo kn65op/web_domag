@@ -1,0 +1,10 @@
+
+-if thing.limit != nil
+  .limits#limits_info
+    = t ('things.view.limit.header')
+    = simple_form_for @thing.limit, :url => view_thing_path(@thing) do |f|
+      = f.input :critical
+      = f.input :ends
+      = f.input :full
+      = f.submit
+

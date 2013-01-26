@@ -5,15 +5,13 @@
 
 =#TODO: lista towaru
 
-- if @thing.limit != nil
-  = t ('things.view.limit.header')
-  = simple_form_for @thing.limit, :url => view_thing_path(@thing) do |f|
-    = f.input :critical
-    = f.input :ends
-    = f.input :full
-    = f.submit
+%input{:type => "checkbox", :onclick => "change_limits()", :id => "limits_checkbox"}= t 'things.view.limit.checkbox'
 
-
+#limits_place
+  = render :partial => "limits_form", :locals => {:thing => @thing}
 
 .edit= link_to t('things.view.edit'), edit_thing_path(@thing)
 .delete= link_to t('things.view.delete'), delete_thing_path(@thing)
+
+=#TMP
+#thing_id= @thing.id

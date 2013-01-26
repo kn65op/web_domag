@@ -24,6 +24,7 @@ en:
         ends: Ends
         full: Full
         header: Limits
+        checkbox: Use limits
     edit:
       title: Edit thing
       successful: Edition was successful

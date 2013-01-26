@@ -1,6 +1,6 @@
 class ThingsController < ApplicationController
 
-  before_filter :canView?, :only => [:edit, :delete, :confirmed_delete, :view]
+  before_filter :canView?, :only => [:edit, :delete, :confirmed_delete, :view, :get_limits]
 
   def index
     @things = current_user.getThings
@@ -44,6 +44,21 @@ class ThingsController < ApplicationController
     thing.delete
 
     redirect_to things_path, :notice => t('things.delete.succesful')
+  end
+
+  def get_limits
+    @thing = getThing
+    if params[:do] == "create"
+      @thing.limit = Limit.new
+      render :layout => false
+    elsif params[:do] == "delete"
+      if @thing.limit != nil
+        @thing.limit.delete
+      end
+      render :nothing => true
+    else
+      redirect_to view_thing_path(@thing), :notice => t('things.get_limits.wrong_param')
+    end
   end
 
 private
