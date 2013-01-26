@@ -1,9 +1,10 @@
 WebDomag::Application.routes.draw do
 
 
+
 	#devise_for :users, :skip => [:sessions]
 #	as :user do
-#		get 'signin' => 'users#main_page', :as => :new_user_session
+#		match 'signin' => 'users#main_page', :as => :new_user_session
 #		post 'signin' => 'devise/sessions#create', :as => :user_session
 #		delete 'signout' => 'devise/sessions#destroy', :as => :destroy_user_session
 #	end
@@ -39,6 +40,16 @@ root :to => redirect("/en")
     match "thing/edit/:id" => "things#edit", :as => "edit_thing"
     match "thing/delete/:id" => "things#delete", :as => "delete_thing"
     match "thing/confirmed_delete/:id" => "things#confirmed_delete", :as => "confirmed_delete_thing"
+    match "manufacturers/index" => "manufacturers#index", :as => "manufacturers"
+    match "manufacturer/new" => "manufacturers#new", :as => "new_manufacturer"
+    match "manufacturer/edit/:id" => "manufacturers#edit", :as => "edit_manufacturer"
+    match "manufacturer/delete/:id" => "manufacturers#delete", :as => "delete_manufacturer"
+    match "manufacturer/confirmed_delete/:id" => "manufacturers#confirmed_delete", :as => "confirmed_delete_manufacturer"
+    match "shops/index" => "shops#index", :as => "shops"
+    match "shop/new" => "shops#new", :as => "new_shop"
+    match "shop/edit/:id" => "shops#edit", :as => "edit_shop"
+    match "shop/delete/:id" => "shops#delete", :as => "delete_shop"
+    match "shop/confirmed_delete/:id" => "shops#confirmed_delete", :as => "confirmed_delete_shop"
 	end
 
 	#translations
@@ -46,7 +57,7 @@ root :to => redirect("/en")
 
 	#devise link to login
 #	as :user do
-#		get "/users/main_page" => "devise/sessions#new"
+#		match "/users/main_page" => "devise/sessions#new"
 #	end
 	
   # The priority is based upon order of creation:
@@ -66,12 +77,12 @@ root :to => redirect("/en")
   # Sample resource route with options:
   #   resources :products do
   #     member do
-  #       get 'short'
+  #       match 'short'
   #       post 'toggle'
   #     end
   #
   #     collection do
-  #       get 'sold'
+  #       match 'sold'
   #     end
   #   end
 
@@ -85,7 +96,7 @@ root :to => redirect("/en")
   #   resources :products do
   #     resources :comments
   #     resources :sales do
-  #       get 'recent', :on => :collection
+  #       match 'recent', :on => :collection
   #     end
   #   end
 
