@@ -4,7 +4,7 @@ class CreateThings < ActiveRecord::Migration
       t.string :name, :null => false
       t.string :unit, :null => false
       t.string :description
-			t.references :category
+			t.references :category, :null => false
 
       t.timestamps
     end

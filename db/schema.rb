@@ -92,7 +92,7 @@ ActiveRecord::Schema.define(:version => 20121111112727) do
     t.string   "name",        :null => false
     t.string   "unit",        :null => false
     t.string   "description"
-    t.integer  "category_id"
+    t.integer  "category_id", :null => false
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
