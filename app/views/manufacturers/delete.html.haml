@@ -1,2 +1,5 @@
-<h1>Manufacturers#delete</h1>
-<p>Find me in app/views/manufacturers/delete.html.erb</p>
+%h1= t('manufacturers.delete.title')
+
+%p= t('manufacturers.delete.info')
+= link_to t('manufacturers.delete.answer_no'), view_manufacturer_path(@manufacturer)
+= link_to t('manufacturers.delete.answer_yes'), confirmed_delete_manufacturer_path(@manufacturer)
