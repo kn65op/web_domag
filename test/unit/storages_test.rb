@@ -50,5 +50,10 @@ class StoragesTest < ActiveSupport::TestCase
     assert !storage.canView?(users(:two))
   end
 
+  test "Get full name" do
+    storage = storages(:cupboard_sink)
+    assert storage.getFullName == "Kitchen/Cupboard above sink", "Wrong full name"
+  end
+
 
 end

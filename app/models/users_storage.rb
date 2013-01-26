@@ -7,7 +7,7 @@ class UsersStorage < ActiveRecord::Base
   belongs_to :storage
 
   #validations
-  validates :admin, :presence => true
+#  validates :admin, :presence => true
   validates :storage, :presence => true
   validates :user, :presence => true
 end

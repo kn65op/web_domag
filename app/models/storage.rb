@@ -32,4 +32,14 @@ class Storage < ActiveRecord::Base
     users.include? user
   end
 
+  def getFullName
+    sto = self
+    full_name = name;
+    while (sto.parent != nil)
+      sto = sto.parent
+      full_name =  sto.name + "/" + full_name
+    end
+    return full_name
+  end
+
 end

@@ -68,12 +68,9 @@ ActiveRecord::Schema.define(:version => 20121111112727) do
     t.string   "name",        :null => false
     t.integer  "parent_id"
     t.string   "description"
-    t.integer  "user_id",     :null => false
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
-
-  add_index "storages", ["user_id"], :name => "index_storages_on_user_id"
 
   create_table "thing_instances", :force => true do |t|
     t.date     "valid_until"
