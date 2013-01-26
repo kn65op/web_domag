@@ -22,6 +22,9 @@ class ThingsController < ApplicationController
 
   def view
     @thing = getThing
+    if params[:limit]  != nil
+      @thing.limit.update_attributes(params[:limit])
+    end
   end
 
   def edit

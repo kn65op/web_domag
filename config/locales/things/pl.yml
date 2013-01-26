@@ -17,6 +17,13 @@ pl:
     view:
       edit: Edytuj
       delete: Usuń rzecz
+      unit: Jednostka
+      category: Kategoria
+      limit:
+        critical: Krytyczny
+        ends: Kończy się
+        full: Pełno
+        header: Limity
     edit:
       title: Edytuj rzecz
       successful: Edycja zakończona powodzeniem

@@ -10,12 +10,20 @@ en:
         name: Thing
         description: Description
         category: Category
+
     new:
       title: Add thing
       successful: Thing added
     view:
       edit: Edit
       delete: Delete
+      unit: Unit
+      category: Category
+      limit:
+        critical: Critical
+        ends: Ends
+        full: Full
+        header: Limits
     edit:
       title: Edit thing
       successful: Edition was successful

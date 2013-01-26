@@ -3,7 +3,7 @@ class Thing < ActiveRecord::Base
   attr_accessible :description, :name, :unit, :category_id
 
 	#relations
-	has_many :limits
+	has_one :limit
 	has_many :thing_instances
 	belongs_to :category
 

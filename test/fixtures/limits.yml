@@ -1,11 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-#one:
-#  critical: 1.5
-#  ends: 1.5
-#  full: 1.5
-#
-#two:
-#  critical: 1.5
-#  ends: 1.5
-#  full: 1.5
+one_beer_limit:
+  critical: 1.5
+  ends: 2.5
+  full: 3.5
+  thing: one_beer
+  user: one
+
+two_beer_limit:
+  critical: 1.5
+  ends: 1.5
+  full: 1.5
+  thing: two_beer
+  user: two

@@ -1,9 +1,19 @@
 %h1= @thing.name
 %h2= @thing.description
-%p= @thing.unit
-%p= @thing.category.name
+%p= (t 'things.view.unit') + " " +  @thing.unit
+%p= (t 'things.view.category') + " " + @thing.category.name
 
-=#TODO: ilość towaru
+=#TODO: lista towaru
+
+- if @thing.limit != nil
+  = t ('things.view.limit.header')
+  = simple_form_for @thing.limit, :url => view_thing_path(@thing) do |f|
+    = f.input :critical
+    = f.input :ends
+    = f.input :full
+    = f.submit
+
+
 
 .edit= link_to t('things.view.edit'), edit_thing_path(@thing)
 .delete= link_to t('things.view.delete'), delete_thing_path(@thing)
