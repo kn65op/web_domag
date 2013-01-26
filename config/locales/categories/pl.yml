@@ -15,6 +15,7 @@ pl:
     view:
       edit: Edytuj
       delete: Usuń kategorię
+      contents: Zwartość kategorii
     edit:
       title: Edytuj kategorię
       successful: Edycja zakończona powodzeniem

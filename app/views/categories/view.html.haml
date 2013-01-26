@@ -1,7 +1,12 @@
 %h1= @category.name
 %h2= @category.description
 
-=#TODO: tabela z zawartością
+%p= t('categories.view.contents')
+
+%table
+  - @category.things.each do |t|
+    %tr
+      %td= t.name
 
 .edit= link_to t('categories.view.edit'), edit_category_path(@category)
 .delete= link_to t('categories.view.delete'), delete_category_path(@category)
