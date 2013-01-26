@@ -4,10 +4,13 @@ class ThingsTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
+  test "No add new thing" do
+    thing = Thing.new(:name => "New thing")
+    assert !thing.save, "Thing saved"
+  end
 
   test "Add new thing" do
     thing = Thing.new(:name => "New thing")
-    thing.category = categories(:one_drinks)
     thing.unit = "unit"
     assert thing.save, "Thing not saved"
   end

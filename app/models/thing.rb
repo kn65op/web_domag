@@ -9,7 +9,6 @@ class Thing < ActiveRecord::Base
 
   #validations
   validates :name, :presence => true
-  validates :category, :presence => true
   validates :unit, :presence => true
 
   #methods
