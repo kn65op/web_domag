@@ -6,6 +6,7 @@ en:
     index:
       title: Your storages
       new: Add new storage
+      shared: Other users storages shared with you
       header:
         name: Storage
         description: Description

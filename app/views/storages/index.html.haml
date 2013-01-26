@@ -1,7 +1,7 @@
 %h1= t ('storages.index.title')
 = render :partial => "storage_show", :locals => {:storage => @my_storages}
 
-%h2= t ('storages.index.shared_storages')
+%h2= t ('storages.index.shared')
 = render :partial => "storage_shared_show", :locals => {:storage => @shared_storages}
 
 = link_to t('storages.index.new'), new_storage_path

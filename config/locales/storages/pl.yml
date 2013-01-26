@@ -6,6 +6,7 @@ pl:
     index:
       title: Twoje schowki
       new: Dodaj nowy schowek
+      shared: Udostępnione schowki innych
       header:
         name: Schowek
         description: Opis

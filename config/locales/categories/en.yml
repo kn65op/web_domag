@@ -15,6 +15,7 @@ en:
     view:
       edit: Edit
       delete: Delete
+      contents: "Contents:"
     edit:
       title: Edit category
       successful: Edition was successful
