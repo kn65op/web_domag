@@ -10,6 +10,7 @@ pl:
         name: Rzecz
         description: Opis
         unit: Jednostka
+        category: Kategoria
     new:
       title: Dodaj rzecz
       successful: Dodano rzecz

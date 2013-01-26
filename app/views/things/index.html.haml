@@ -7,12 +7,10 @@
   %thead
     %tr
       %th= t ('things.index.header.name')
-      %th= t ('things.index.header.description')
-      %th= t ('things.index.header.unit')
+      %th= t ('things.index.header.category')
   - @things.each do |t|
     %tr
       %td= link_to t.name, view_thing_path(t)
-      %td= t.description
-      %td= t.unit
+      %td= link_to t.category.name, view_category_path(t.category)
 
 = link_to t('things.index.new'), new_thing_path

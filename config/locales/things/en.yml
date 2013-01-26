@@ -9,6 +9,7 @@ en:
       header:
         name: Thing
         description: Description
+        category: Category
     new:
       title: Add thing
       successful: Thing added
