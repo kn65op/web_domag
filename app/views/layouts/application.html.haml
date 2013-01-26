@@ -25,6 +25,8 @@
       = link_to t('upper_menu.things'), things_path
       = link_to t('upper_menu.categories'), categories_path
       = link_to t('upper_menu.storages'), storages_path
+      = link_to t('upper_menu.shops'), shops_path
+      = link_to t('upper_menu.manufacturers'), manufacturers_path
       = link_to t('upper_menu.settings'), user_settings_path()
       = link_to t('upper_menu.logout'), destroy_user_session_path, :method => :delete
     - if flash[:notice]
