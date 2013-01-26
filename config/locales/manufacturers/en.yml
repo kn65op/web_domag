@@ -1,0 +1,27 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  manufacturers:
+    index:
+      title: Your manufacturers
+      new: Add new manufacturer
+      header:
+        name: Manufacturer
+        description: Description
+    new:
+      title: Add manufacturer
+      successful: Manufacturer added
+    view:
+      edit: Edit
+      delete: Delete
+    edit:
+      title: Edit manufacturer
+      successful: Edition was successful
+    delete:
+      title: Delete manufacturer
+      info: Are you sure? Items in manufacturer will be moved to non manufacturer
+      answer_yes: "Yes"
+      answer_no: "No"
+      succesful: Manufacturer was deleted
+

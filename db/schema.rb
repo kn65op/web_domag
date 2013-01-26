@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(:version => 20121111112727) do
 
   create_table "manufacturers", :force => true do |t|
     t.string   "name",       :null => false
+    t.integer  "user_id",    :null => false
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -54,6 +55,7 @@ ActiveRecord::Schema.define(:version => 20121111112727) do
   create_table "shops", :force => true do |t|
     t.string   "name",       :null => false
     t.string   "address"
+    t.integer  "user_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

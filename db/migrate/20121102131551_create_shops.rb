@@ -3,6 +3,7 @@ class CreateShops < ActiveRecord::Migration
     create_table :shops do |t|
       t.string :name, :null => false
       t.string :address
+      t.references :user
 
       t.timestamps
     end

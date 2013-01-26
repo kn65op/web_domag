@@ -1,7 +1,25 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  name: MyString
+one_zywiec:
+  name: Zywiec
+  user: one
 
-two:
-  name: MyString
+one_tatra:
+  name: Tatra mocne
+  user: one
+
+one_lech:
+  name: Lech
+  user: one
+
+one_lipton:
+  name: Lipton
+  user: one
+
+one_herbapol:
+  name: herbapol
+  user: one
+
+tow_zywiec:
+  name: Zywiec
+  user: two

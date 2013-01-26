@@ -2,6 +2,17 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 pl:
+  common:
+    hello: witaj ziomuś
+    web_title: Domowy magazynier
   upper_menu:
-    settings: Ustawienia konta
+    login: Zaloguj
+    logout: Wyloguj
+    register: Zarejestruj się
+    forgot: Zapomniałeś hasła?
+    remember: Zapamiętaj mnie
+    storages: Moje schowki
     categories: Moje kategorie
+    things: Moje rzeczy
+    shops: Moje sklepy
+    manufacturers: Moi producenci

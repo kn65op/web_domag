@@ -1,9 +1,27 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  name: MyString
-  address: MyString
 
-two:
-  name: MyString
-  address: MyString
+one_lidl:
+  name: Lidl - osiedle
+  address: ul. Piwna 23, Krakoów
+  user: one
+
+one_lidl_praca:
+  name: Lidl - praca
+  address: ul. Wolna 51, Kraków
+  user: one
+
+one_real_krokus:
+  name: Real - C.H. Krokus
+  address: ul. Krokus 1, Kraków
+  user: one
+
+two_lidl:
+  name: Lidl - osiedle
+  address: ul. Piwna 23, Krakoów
+  user: two
+
+two_auchan:
+  name: Auchan
+  address: ul. Auchańska 33, Mazowsze
+  user: two

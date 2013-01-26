@@ -4,4 +4,5 @@ class Shop < ActiveRecord::Base
 
 	#relations
 	has_many :thing_instances
+  belongs_to :user
 end

@@ -2,17 +2,5 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  common:
-    hello: Hello world
-    web_title: Home depot.
-  upper_menu:
-    login: Login
-    logout: Logout
-    register: Register
-    forgot: Forgot your password?
-    remember: Remember me
-    storages: My storages
-    categories: My categories
-    things: My things
   flash:
     no_view_permission: You don't have permission to view this site.

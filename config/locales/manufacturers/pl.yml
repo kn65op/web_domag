@@ -1,0 +1,33 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+pl:
+  manufacturers:
+    index:
+      title: Twoje kategorie
+      new: Dodaj nowego producenta
+      header:
+        name: Kategoria
+        description: Opis
+    new:
+      title: Dodaj producenta
+      successful: Dodano producenta
+    view:
+      edit: Edytuj
+      delete: Usuń producenta
+    edit:
+      title: Edytuj producenta
+      successful: Edycja zakończona powodzeniem
+    delete:
+      title: Usuń producenta
+      info: Czy na pewno? Przedmioty w kategori zostaną przeniesione do przestrzeni luźnej.
+      answer_yes: Tak
+      answer_no: Nie
+      succesful: Usunięto producenta
+
+  simple_form:
+    labels:
+      manufacturer:
+        name: Nazwa
+        description: Opis
+

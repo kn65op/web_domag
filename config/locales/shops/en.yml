@@ -1,0 +1,27 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  shops:
+    index:
+      title: Your shops
+      new: Add new shop
+      header:
+        name: Shop
+        description: Description
+    new:
+      title: Add shop
+      successful: Shop added
+    view:
+      edit: Edit
+      delete: Delete
+    edit:
+      title: Edit shop
+      successful: Edition was successful
+    delete:
+      title: Delete shop
+      info: Are you sure? Items in shop will be moved to non shop
+      answer_yes: "Yes"
+      answer_no: "No"
+      succesful: Shop was deleted
+
