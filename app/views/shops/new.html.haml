@@ -1,2 +1,6 @@
-<h1>Shops#new</h1>
-<p>Find me in app/views/shops/new.html.erb</p>
+%h1= t('shops.new.title')
+
+= simple_form_for @shop, :url => url_for(new_shop_path)  do |f|
+  = f.input :name
+  = f.input :address
+  = f.button :submit
