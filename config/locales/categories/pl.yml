@@ -20,7 +20,7 @@ pl:
       successful: Edycja zakończona powodzeniem
     delete:
       title: Usuń kategorię
-      info: Czy na pewno? Przedmioty w kategori zostaną przeniesione do przestrzeni luźnej.
+      info: Czy na pewno? Przedmioty w kategorii zostaną usunięte, wraz z całą historią.
       answer_yes: Tak
       answer_no: Nie
       succesful: Usunięto kategorię
