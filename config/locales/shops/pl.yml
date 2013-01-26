@@ -4,7 +4,7 @@
 pl:
   shops:
     index:
-      title: Twoje kategorie
+      title: Twoje sklepy
       new: Dodaj nowy sklep
       header:
         name: Kategoria
