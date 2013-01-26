@@ -35,8 +35,19 @@ one_nested:
   storage: good_nested
   admin: false
 
-one_nested:
+two_nested:
   user: two
   storage: good_nested
   admin: true
+
+one_nested_nested:
+  user: one
+  storage: good_nn
+  admin: false
+
+two_nested_nested:
+  user: two
+  storage: good_nn
+  admin: true
+
 

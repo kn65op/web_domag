@@ -4,7 +4,8 @@ class StoragesController < ApplicationController
   before_filter :canManage?, :only => [:edit, :delete, :confirmed_delete]
 
   def index
-    @storages = current_user.storages.find_all{|s| s.getNested == 0}.sort {|a,b| a.getFullName <=> b.getFullName}
+    @my_storages = current_user.storages.find_all{|s| s.getNested == 0 && s.isUserAdmin?(current_user) == true}.sort {|a,b| a.name <=> b.name}
+    @shared_storages = current_user.storages.find_all{|s| s.isUserAdmin?(current_user) == false}.sort {|a,b| a.name <=> b.name}
   end
 
   def new

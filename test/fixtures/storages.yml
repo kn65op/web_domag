@@ -27,3 +27,7 @@ good_nested:
   description: hehe
   parent: evil_cupboard
 
+good_nn:
+  name: Nested from nested other
+  description: hehehe
+  parent: good_nested
