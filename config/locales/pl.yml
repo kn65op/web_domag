@@ -4,6 +4,8 @@
 pl:
   flash:
     no_view_permission: Nie masz praw dostępu do tej strony.
+  common:
+    search: "Szukaj:"
 #active records
   activerecord:
     models:

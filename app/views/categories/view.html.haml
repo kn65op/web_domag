@@ -3,6 +3,9 @@
 
 %p= t('categories.view.contents')
 
+= t('common.search')
+%input#search
+
 %table
   - @category.things.each do |t|
     %tr
