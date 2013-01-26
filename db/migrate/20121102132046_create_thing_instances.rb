@@ -6,7 +6,7 @@ class CreateThingInstances < ActiveRecord::Migration
       t.decimal :price, :precision => 12, :scale => 2
 			t.float :size, :null => false
       t.references :user, :null => false
-      t.references :storage, :null => false
+      t.references :storage
       t.references :thing, :null => false
       t.references :shop
       t.references :manufacturer

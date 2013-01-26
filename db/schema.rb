@@ -74,7 +74,7 @@ ActiveRecord::Schema.define(:version => 20121111112727) do
     t.decimal  "price",           :precision => 12, :scale => 2
     t.float    "size",                                           :null => false
     t.integer  "user_id",                                        :null => false
-    t.integer  "storage_id",                                     :null => false
+    t.integer  "storage_id"
     t.integer  "thing_id",                                       :null => false
     t.integer  "shop_id"
     t.integer  "manufacturer_id"
