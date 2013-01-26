@@ -1,0 +1,8 @@
+%ul
+  - if category.kind_of?(Array)
+    - category.each do |s|
+      %li
+        = link_to s.name, view_category_path(s)
+        = render :partial => "category_show", :locals => {:category => s.subcategories.sort{|a,b| a.name <=> b.name}}
+  - else
+    = link_to category.name, view_category_path(category)

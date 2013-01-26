@@ -1,13 +1,5 @@
 %h1= t ('categories.index.title')
-=#TODO: szukaj
-%table
-  %thead
-    %tr
-      %th= t ('categories.index.header.name')
-      %th= t ('categories.index.header.description')
-  - @categories.each do |c|
-    %tr
-      %td= link_to c.name, view_category_path(c)
-      %td= c.description
+
+= render :partial => "category_show", :locals => {:category => @categories}
 
 = link_to t('categories.index.new'), new_category_path

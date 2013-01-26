@@ -2,7 +2,7 @@ class CategoriesController < ApplicationController
   before_filter :canView?, :only => [:edit, :delete, :confirmed_delete, :view]
 
   def index
-    @categories = current_user.categories
+    @categories = current_user.categories.find_all{|c| c.getNested == 0}.sort{|a,b| a.name <=> b.name}
   end
 
   def new
