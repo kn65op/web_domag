@@ -1,2 +1,13 @@
-<h1>Shops#index</h1>
-<p>Find me in app/views/shops/index.html.erb</p>
+%h1= t ('shops.index.title')
+=#TODO: szukaj
+%table
+  %thead
+    %tr
+      %th= t ('shops.index.header.name')
+      %th= t ('shops.index.header.address')
+  - @shops.each do |s|
+    %tr
+      %td= link_to s.name, view_shop_path(s)
+      %td= s.address
+
+= link_to t('shops.index.new'), new_shop_path

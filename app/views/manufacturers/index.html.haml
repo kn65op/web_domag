@@ -1,2 +1,11 @@
-<h1>Manufacturers#index</h1>
-<p>Find me in app/views/manufacturers/index.html.erb</p>
+%h1= t ('manufacturers.index.title')
+=#TODO: szukaj
+%table
+  %thead
+    %tr
+      %th= t ('manufacturers.index.header.name')
+  - @manufacturers.each do |m|
+    %tr
+      %td= link_to m.name, view_manufacturer_path(m)
+
+= link_to t('manufacturers.index.new'), new_manufacturer_path
