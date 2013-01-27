@@ -17,6 +17,17 @@ root.set_lang_from_link =  ->
 window.onload = ->
   add_thing()
 
+
+root.check_price = ->
+  ok = true
+  (if check_fields("things" + id) == false then ok = false) for id  in [1..root.id]
+  return ok
+
+root.check_fields = (id) ->
+  if ($("#" + id + "[price]")[0].value != "" and $("#" + id + "[currency]") == "") or ($("#" + id + "[price]")[0].value == "" and $("#" + id + "[currency]") != "")
+    return false
+#  alert("A")
+
 root.id = parseInt(0,10)
 
 root.add_thing = ->

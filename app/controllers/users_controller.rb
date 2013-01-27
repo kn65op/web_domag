@@ -18,8 +18,12 @@ class UsersController < ApplicationController
   def shopping
     act_param = "things1"
     if params[act_param] != nil
-      saveShopping(params)
-      redirect_to root_path, :notice => (t 'users.shopping.done')
+      saved = saveShopping(params)
+      if saved != []
+        redirect_to root_path, :notice => ((t 'user.shopping.not_done1') + saved.size.to_s + (t 'user.shopping.not_done2'))
+      else
+        redirect_to root_path, :notice => (t 'users.shopping.done')
+      end
     end
   end
 
@@ -44,22 +48,27 @@ class UsersController < ApplicationController
 
 private
   def saveShopping(params)
+    invalid = []
     param_text = "things"
     i = 1
     act_param = param_text + i.to_s
     while params[act_param] != nil
-      saveThingInstance(params[act_param])
+      invalid = invalid + saveThingInstance(params[act_param])
       i = i + 1
       act_param = param_text + i.to_s
     end
+    return invalid
   end
 
   def saveThingInstance(thing)
     ti = ThingInstance.new
     ti.storage = Storage.find(thing[:storage])
-    ti.thing = Thing.find(thing[:thing])
-    ti.size = thing[:size].to_f
-    if thing[:price] != nil
+    ti.thing = Thing.find(thing[:thing]) if thing[:thing] != nil
+    puts thing[:size]
+    puts thing[:size].gsub(",",".")
+    puts thing[:size].gsub(",",".").to_f
+    ti.size = thing[:size].gsub(",",".").to_f
+    if thing[:price] != ""
       ti.price = thing[:price].to_f
       ti.currency = thing[:currency]
     end
@@ -71,7 +80,9 @@ private
     ti.shop = Shop.find(thing[:shop]) if thing[:shop] != ""
     ti.manufacturer = Manufacturer.find(thing[:manufacturer]) if thing[:manufacturer] != ""
     ti.purchase_date = Date.today
-    puts ti
-    puts ti.save
+    if !ti.save
+      return ti.to_a
+    end
+    return []
   end
 end
