@@ -1,0 +1,15 @@
+%table
+  %thead
+    %tr
+      %th
+        = t('things_intances.header.thing')
+        = t('things_intances.header.amount')
+        = t('things_intances.header.purchase_date')
+        = t('things_intances.header.valid_unitl')
+  - ti.each do |t|
+    %tr
+      %td
+        = ti.name
+        = ti.amount
+        = ti.purchase_date
+        = ti.valid_util
