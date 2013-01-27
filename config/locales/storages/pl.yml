@@ -16,6 +16,7 @@ pl:
     view:
       edit: Edytuj
       delete: Usuń schowek
+      subsotrages: Schowki w danym schowku
     edit:
       title: Edytuj schowek
       successful: Edycja zakończona powodzeniem

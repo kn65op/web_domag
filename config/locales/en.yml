@@ -6,3 +6,4 @@ en:
     no_view_permission: You don't have permission to view this site.
   common:
     search: "Search:"
+    empty: There is nothing

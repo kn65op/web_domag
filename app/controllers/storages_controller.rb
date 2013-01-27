@@ -25,7 +25,7 @@ class StoragesController < ApplicationController
 
   def view
     @storage = getStorage
-    @ti = @storage.thing_instances.find_all{|t| t.amount > 0}
+    @ti = @storage.getNonZeroThingInstances
   end
 
   def edit

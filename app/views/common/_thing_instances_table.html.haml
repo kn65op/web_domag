@@ -1,38 +1,41 @@
-%table
-  %thead
-    %tr
-      %th
-        = t('things_intances.header.thing')
-      %th
-        = t('things_intances.header.amount')
-      %th
-        = t('things_intances.header.purchase_date')
-      %th
-        = t('things_intances.header.valid_unitl')
-      %th
-        = t('things_intances.header.manufacturer')
-      %th
-        = t('things_intances.header.shop')
-  - ti.each do |t|
-    %tr
-      %td
-        = link_to t.thing.name, view_thing_path(t.thing)
-      %td
-        = t.amount
-      %td
-        = t.purchase_date
-      %td
-        -if  t.valid_until != nil
-          = t.valid_until
-        -else
+-if ti.size != 0
+  %table
+    %thead
+      %tr
+        %th
+          = t('things_intances.header.thing')
+        %th
+          = t('things_intances.header.amount')
+        %th
+          = t('things_intances.header.purchase_date')
+        %th
+          = t('things_intances.header.valid_unitl')
+        %th
+          = t('things_intances.header.manufacturer')
+        %th
+          = t('things_intances.header.shop')
+    - ti.each do |t|
+      %tr
+        %td
+          = link_to t.thing.name, view_thing_path(t.thing)
+        %td
+          = t.amount
+        %td
+          = t.purchase_date
+        %td
+          -if  t.valid_until != nil
+            = t.valid_until
+            -else
+            = t('things_intances.not_specified')
+        %td
+          -if  t.manufacturer != nil
+            = link_to t.manufacturer.name, view_manufacturer_path(t.manufacturer)
+          -else
+            = t('things_intances.not_specified')
+        %td
+          -if  t.shop != nil
+            = link_to t.shop.name, view_shop_path(t.shop)
+          -else
           = t('things_intances.not_specified')
-      %td
-        -if  t.manufacturer != nil
-          = link_to t.manufacturer.name, view_manufacturer_path(t.manufacturer)
-        -else
-          = t('things_intances.not_specified')
-      %td
-        -if  t.shop != nil
-          = link_to t.shop.name, view_shop_path(t.shop)
-        -else
-          = t('things_intances.not_specified')
+-else
+  %p= t('common.empty')

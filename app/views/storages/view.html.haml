@@ -8,5 +8,16 @@
 
 = render :partial => "common/thing_instances_table", :locals => {:ti => @ti}
 
+=#substorages
+
+%h3= t ('storage.view.substorages')
+
+%ul
+  - @storage.substorages.each do |s|
+    %li
+      = link_to s.name, view_storage_path(s)
+      =render :partial => "common/thing_instances_table", :locals => {:ti => s.getNonZeroThingInstances}
+
+
 .edit= link_to t('storages.view.edit'), edit_storage_path(@storage)
 .delete= link_to t('storages.view.delete'), delete_storage_path(@storage)

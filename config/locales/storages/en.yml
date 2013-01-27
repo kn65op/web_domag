@@ -16,6 +16,7 @@ en:
     view:
       edit: Edit
       delete: Delete
+      subsotrages: Storages inside
     edit:
       title: Edit storage
       successful: Edition was successful

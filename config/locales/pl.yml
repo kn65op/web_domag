@@ -6,6 +6,7 @@ pl:
     no_view_permission: Nie masz praw dostępu do tej strony.
   common:
     search: "Szukaj:"
+    empty: Nic nie ma
 #active records
   activerecord:
     models:
