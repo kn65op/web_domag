@@ -56,7 +56,9 @@ root :to => redirect("/en")
     match "shop/confirmed_delete/:id" => "shops#confirmed_delete", :as => "confirmed_delete_shop"
 	end
   match "thing/get_limits/:id/:do" => "things#get_limits"
-  match "add_thing/:nr" => "users#add_thing", :as => "add_thing"
+  match "add_thing/:nr" => "users#add_thing"
+  match "get_things/:id" => "users#get_things"
+  match "get_unit/:id" => "users#get_unit"
 
 	#translations
   WebDomag::Application.routes.translate_from_file

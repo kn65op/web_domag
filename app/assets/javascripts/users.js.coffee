@@ -22,3 +22,11 @@ root.id = parseInt(0,10)
 root.add_thing = ->
   root.id = parseInt(parseInt(root.id, 10) + 1, 10)
   $.get '/add_thing/' + root.id, (data)->$("#table_body").append("#{data}")
+
+root.selected_category = (id, thing_id) ->
+  $.get '/get_things/' + $("#" + id)[0].value,
+  (data)->$("#" + thing_id)[0].innerHTML = "#{data}"
+
+
+root.selected_thing = (id, unit_id) ->
+  $.get '/get_unit/' + $("#" + id)[0].value, (data)->$("#" +unit_id)[0].innerHTML = "#{data}"

@@ -29,4 +29,14 @@ class UsersController < ApplicationController
     render "add_thing", :layout => false
   end
 
+  def get_things
+    @things = Category.find(params[:id]).things
+    render "get_things", :layout => false
+  end
+
+  def get_unit
+    @unit = Thing.find(params[:id]).unit
+    render "get_unit", :layout => false
+  end
+
 end

@@ -1,8 +1,9 @@
 %tr
   %td= collection_select("things" + @nr.to_s, "storage", @storages, :id, :getFullName)
-  %td= collection_select("things" + @nr.to_s, "category", @categories, :id, :getFullName)
-  %td= select_tag("things" + @nr.to_s + "[thing]")
+  %td= collection_select("things" + @nr.to_s, "category", @categories, :id, :getFullName, {:prompt => true}, :onclick => ("selected_category('things" + @nr.to_s + "_category', 'things" + @nr.to_s + "_thing')"))
+  %td= select_tag("things" + @nr.to_s + "[thing]", {}, :onclick => "selected_thing('things" + @nr.to_s + "_thing', 'things" + @nr.to_s + "unit')")
   %td= number_field_tag("things" + @nr.to_s + "[size]")
+  %td{:id => "things" + @nr.to_s + "unit"}
   %td= number_field_tag("things" + @nr.to_s + "[price]")
   %td= date_select("things" + @nr.to_s + "[price]", "valid_unitl")
   %td= collection_select("things" + @nr.to_s, "shop", @shops, :id, :name)
