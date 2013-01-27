@@ -16,7 +16,7 @@
   - ti.each do |t|
     %tr
       %td
-        = t.thing.name
+        = link_to t.thing.name, view_thing_path(t.thing)
       %td
         = t.amount
       %td
@@ -28,11 +28,11 @@
           = t('things_intances.not_specified')
       %td
         -if  t.manufacturer != nil
-          = t.manufacturer.name
+          = link_to t.manufacturer.name, view_manufacturer_path(t.manufacturer)
         -else
           = t('things_intances.not_specified')
       %td
         -if  t.shop != nil
-          = t.shop.name
+          = link_to t.shop.name, view_shop_path(t.shop)
         -else
           = t('things_intances.not_specified')
