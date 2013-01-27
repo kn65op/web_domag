@@ -3,13 +3,36 @@
     %tr
       %th
         = t('things_intances.header.thing')
+      %th
         = t('things_intances.header.amount')
+      %th
         = t('things_intances.header.purchase_date')
+      %th
         = t('things_intances.header.valid_unitl')
+      %th
+        = t('things_intances.header.manufacturer')
+      %th
+        = t('things_intances.header.shop')
   - ti.each do |t|
     %tr
       %td
-        = ti.name
-        = ti.amount
-        = ti.purchase_date
-        = ti.valid_util
+        = t.thing.name
+      %td
+        = t.amount
+      %td
+        = t.purchase_date
+      %td
+        -if  t.valid_until != nil
+          = t.valid_until
+        -else
+          = t('things_intances.not_specified')
+      %td
+        -if  t.manufacturer != nil
+          = t.manufacturer.name
+        -else
+          = t('things_intances.not_specified')
+      %td
+        -if  t.shop != nil
+          = t.shop.name
+        -else
+          = t('things_intances.not_specified')

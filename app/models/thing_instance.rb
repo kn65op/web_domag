@@ -13,4 +13,13 @@ class ThingInstance < ActiveRecord::Base
   validates :purchase_date, :presence => :true
   validates :thing_id, :presence => :true
   validates :size, :presence => :true
+
+  #methods
+  def amount
+    amount = size
+    if consumes != nil
+      consumes.each { |c| amount = amount - c.amount }
+    end
+    return amount
+  end
 end

@@ -10,4 +10,6 @@ pl:
       valid_unitl: Data ważności
       shop: Sklep
       manufacturer: Producent
+    not_specified: Nie określono
+
 

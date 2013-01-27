@@ -24,13 +24,13 @@ ActiveRecord::Schema.define(:version => 20121111112727) do
   add_index "categories", ["user_id"], :name => "index_categories_on_user_id"
 
   create_table "consumes", :force => true do |t|
-    t.date     "date",              :null => false
+    t.date     "date",                                             :null => false
     t.string   "purpose"
-    t.float    "amount",            :null => false
-    t.integer  "thing_instance_id", :null => false
-    t.integer  "user_id",           :null => false
-    t.datetime "created_at",        :null => false
-    t.datetime "updated_at",        :null => false
+    t.decimal  "amount",            :precision => 20, :scale => 3, :null => false
+    t.integer  "thing_instance_id",                                :null => false
+    t.integer  "user_id",                                          :null => false
+    t.datetime "created_at",                                       :null => false
+    t.datetime "updated_at",                                       :null => false
   end
 
   add_index "consumes", ["thing_instance_id"], :name => "index_consumes_on_thing_instance_id"

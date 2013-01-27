@@ -1,7 +1,7 @@
 %h1= @storage.name
 %h2= @storage.description
 
-= render :partial => "common/thing_instances_table", :locals => {ti = @ti}
+= render :partial => "common/thing_instances_table", :locals => {:ti => @ti}
 
 .edit= link_to t('storages.view.edit'), edit_storage_path(@storage)
 .delete= link_to t('storages.view.delete'), delete_storage_path(@storage)

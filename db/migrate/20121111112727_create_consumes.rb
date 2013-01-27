@@ -3,7 +3,7 @@ class CreateConsumes < ActiveRecord::Migration
     create_table :consumes do |t|
       t.date :date, :null => false
       t.string :purpose
-      t.float :amount, :null => false
+      t.decimal :amount, :null => false, :precision => 20, :scale => 3
       t.references :thing_instance, :null => false
       t.references :user, :null => false
 

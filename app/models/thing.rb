@@ -16,4 +16,5 @@ class Thing < ActiveRecord::Base
   def canView?(user)
     category.user == user
   end
+
 end
