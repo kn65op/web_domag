@@ -13,3 +13,6 @@ root.set_lang_from_link =  ->
   action = action.substr(0, index) + selected_option.value + action.substr(index + 2) #2 length of value
   lang_form.action = action
   null
+
+window.onload = ->
+  alert("A")

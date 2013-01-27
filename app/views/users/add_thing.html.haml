@@ -1,0 +1,3 @@
+%tr
+  %td= collection_select("things" + @nr.to_s, "storage", @storages, :id, :getFullName)
+  %td= collection_select("things" + @nr.to_s, "category", @categories, :id, :getFullName)

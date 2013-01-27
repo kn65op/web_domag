@@ -12,6 +12,16 @@ class Category < ActiveRecord::Base
 	validates :name, :presence => true
 
   #methods
+  def getFullName
+    cat = self
+    full_name = name;
+    while (cat.parent != nil)
+      cat = cat.parent
+      full_name =  cat.name + "/" + full_name
+    end
+    return full_name
+  end
+
   def canView? (u)
     user == u
   end

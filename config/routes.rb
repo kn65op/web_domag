@@ -22,6 +22,8 @@ root :to => redirect("/en")
 	  root :to => 'users#main_page'
 		match "/user/settings" => "users#settings", :as => "user_settings"
     devise_for :users
+    match "shopping" => "users#shopping", :as => "shopping"
+
     match "storages" => "storages#index", :as => "storages"
     match "storage/new" => "storages#new", :as => "new_storage"
     match "storage/edit/:id" => "storages#edit", :as => "edit_storage"
@@ -54,6 +56,7 @@ root :to => redirect("/en")
     match "shop/confirmed_delete/:id" => "shops#confirmed_delete", :as => "confirmed_delete_shop"
 	end
   match "thing/get_limits/:id/:do" => "things#get_limits"
+  match "add_thing/:nr" => "users#add_thing", :as => "add_thing"
 
 	#translations
   WebDomag::Application.routes.translate_from_file

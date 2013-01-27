@@ -10,3 +10,14 @@ en:
       language:
         title: "Change language: "
         button: Change
+    shopping:
+      title: Do shopping
+      header:
+        category: Category
+        thing: What
+        amount: How much/many
+        price: Price
+        valid_until: Valid until
+        shop: Shop
+        manufacturer: Manufacturer
+        storage: Storage

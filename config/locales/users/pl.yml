@@ -10,3 +10,14 @@ pl:
       language:
         title: "Zmień język: "
         button: Zmień
+    shopping:
+      title: Zrób zakupy
+      header:
+        category: Kategoria
+        thing: Co
+        amount: Ile
+        price: Cena
+        valid_until: Data ważności
+        shop: Sklep
+        manufacturer: Producent
+        storage: Schowek
