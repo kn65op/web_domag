@@ -27,6 +27,7 @@ class ManufacturersController < ApplicationController
 
   def view
     @manufacturer = getManufacturer
+    @ti = @manufacturer.getNonZeroThingInstances
   end
 
   def delete

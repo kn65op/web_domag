@@ -15,4 +15,8 @@ class Manufacturer < ActiveRecord::Base
     user == u
   end
 
+  def getNonZeroThingInstances
+    thing_instances.find_all{|t| t.amount > 0}.sort{|a,b| a.thing.name <=> b.thing.name}
+  end
+
 end

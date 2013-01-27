@@ -1,6 +1,11 @@
+= javascript_include_tag "things/things"
+
 %h1= @manufacturer.name
 
-=#TODO: tabela z zawartością
+= t('common.search')
+%input#search
+
+= render :partial => "common/thing_instances_table", :locals => {:ti => @ti}
 
 .edit= link_to t('manufacturers.view.edit'), edit_manufacturer_path(@manufacturer)
 .delete= link_to t('manufacturers.view.delete'), delete_manufacturer_path(@manufacturer)
