@@ -19,3 +19,4 @@ window.onload = ->
   lc = $('#limits_checkbox')[0]
   ok = typeof $('#limits_info')[0] != "undefined"
   lc.checked = ok
+  $('input#search').quicksearch('table tbody tr');

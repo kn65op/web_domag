@@ -3,9 +3,15 @@
     %thead
       %tr
         %th
+          = t('things_intances.header.storage')
+        %th
           = t('things_intances.header.thing')
         %th
+          = t('things_intances.header.category')
+        %th
           = t('things_intances.header.amount')
+        %th
+          = t('things_intances.header.unit')
         %th
           = t('things_intances.header.purchase_date')
         %th
@@ -17,9 +23,15 @@
     - ti.each do |t|
       %tr
         %td
+          = link_to t.storage.name, view_storage_path(t.storage)
+        %td
           = link_to t.thing.name, view_thing_path(t.thing)
         %td
+          = link_to t.thing.category.name, view_category_path(t.thing.category)
+        %td
           = t.amount
+        %td
+          = t.thing.unit
         %td
           = t.purchase_date
         %td
@@ -36,6 +48,6 @@
           -if  t.shop != nil
             = link_to t.shop.name, view_shop_path(t.shop)
           -else
-          = t('things_intances.not_specified')
+            = t('things_intances.not_specified')
 -else
   %p= t('common.empty')

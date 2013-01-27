@@ -5,12 +5,16 @@
 %p= (t 'things.view.unit') + ": " +  @thing.unit
 %p= (t 'things.view.category') + ": " + @thing.category.name
 
-=#TODO: lista towaru
+= t('common.search')
+%input#search
+
 
 %input{:type => "checkbox", :onclick => "change_limits()", :id => "limits_checkbox"}= t 'things.view.limit.checkbox'
 
 #limits_place
   = render :partial => "limits_form", :locals => {:thing => @thing}
+
+= render :partial => "common/thing_instances_table", :locals => {:ti => @ti}
 
 .edit= link_to t('things.view.edit'), edit_thing_path(@thing)
 .delete= link_to t('things.view.delete'), delete_thing_path(@thing)

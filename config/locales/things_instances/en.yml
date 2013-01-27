@@ -4,10 +4,13 @@
 en:
   things_intances:
     header:
+      storage: Storage
+      category: Category
       thing: What
       amount: How much/many
       purchase_date: Bought
       valid_unitl: Valid until
       shop: Shop
       manufacturer: Manufacturer
+      unit: Unit
     not_specified: Not specified

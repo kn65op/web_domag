@@ -4,12 +4,15 @@
 pl:
   things_intances:
     header:
+      storage: Schowek
+      category: Kateoria
       thing: Co
       amount: Ile
       purchase_date: Kupiono
       valid_unitl: Data ważności
       shop: Sklep
       manufacturer: Producent
+      unit: Jednostka
     not_specified: Nie określono
 
 
