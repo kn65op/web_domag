@@ -4,17 +4,21 @@
 
 = button_to_function (t 'user.shopping.add_thing'), "add_thing()"
 
-%table
-  %thead
-    %tr
-      %th= t ('user.shopping.header.storage')
-      %th= t ('user.shopping.header.category')
-      %th= t ('user.shopping.header.thing')
-      %th= t ('user.shopping.header.amount')
-      %th= t ('user.shopping.header.unit')
-      %th= t ('user.shopping.header.price.')
-      %th= t ('user.shopping.header.valid_until')
-      %th= t ('user.shopping.header.shop')
-      %th= t ('user.shopping.header.manufacturer')
-  %tbody#table_body
+%form{:method => :post}
+  = hidden_field_tag('authenticity_token', form_authenticity_token)
+  %table
+    %thead
+      %tr
+        %th= t ('user.shopping.header.storage')
+        %th= t ('user.shopping.header.category')
+        %th= t ('user.shopping.header.thing')
+        %th= t ('user.shopping.header.amount')
+        %th= t ('user.shopping.header.unit')
+        %th= t ('user.shopping.header.price.')
+        %th= t ('user.shopping.header.currency.')
+        %th= t ('user.shopping.header.valid_until')
+        %th= t ('user.shopping.header.shop')
+        %th= t ('user.shopping.header.manufacturer')
+    %tbody#table_body
 
+  =submit_tag

@@ -2,11 +2,12 @@
   %td= collection_select("things" + @nr.to_s, "storage", @storages, :id, :getFullName)
   %td= collection_select("things" + @nr.to_s, "category", @categories, :id, :getFullName, {:prompt => true}, :onclick => ("selected_category('things" + @nr.to_s + "_category', 'things" + @nr.to_s + "_thing')"))
   %td= select_tag("things" + @nr.to_s + "[thing]", {}, :onclick => "selected_thing('things" + @nr.to_s + "_thing', 'things" + @nr.to_s + "unit')")
-  %td= number_field_tag("things" + @nr.to_s + "[size]")
+  %td= number_field_tag("things" + @nr.to_s + "[size]", 0, :min => 0)
   %td{:id => "things" + @nr.to_s + "unit"}
-  %td= number_field_tag("things" + @nr.to_s + "[price]")
-  %td= date_select("things" + @nr.to_s + "[price]", "valid_unitl")
-  %td= collection_select("things" + @nr.to_s, "shop", @shops, :id, :name)
-  %td= collection_select("things" + @nr.to_s, "manufacturer", @manufacturers, :id, :name)
+  %td= number_field_tag("things" + @nr.to_s + "[price]", nil, :min => 0)
+  %td= text_field_tag("things" + @nr.to_s + "[currency]")
+  %td= date_select("things" + @nr.to_s + "[valid_until]", "")
+  %td= collection_select("things" + @nr.to_s, "shop", @shops, :id, :name, :prompt => true)
+  %td= collection_select("things" + @nr.to_s, "manufacturer", @manufacturers, :id, :name, :prompt => true)
 
 

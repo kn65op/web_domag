@@ -13,6 +13,7 @@ en:
     shopping:
       title: Do shopping
       add_thing: Add thing
+      dnoe: Shopping done
       header:
         category: Category
         thing: What
@@ -23,3 +24,4 @@ en:
         manufacturer: Manufacturer
         storage: Storage
         unit: Unit
+        currency: Currency

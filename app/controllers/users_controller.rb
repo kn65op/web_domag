@@ -13,11 +13,14 @@ class UsersController < ApplicationController
 	end
 
 	def settings
-		
   end
 
   def shopping
-
+    act_param = "things1"
+    if params[act_param] != nil
+      saveShopping(params)
+      redirect_to root_path, :notice => (t 'users.shopping.done')
+    end
   end
 
   def add_thing
@@ -39,4 +42,36 @@ class UsersController < ApplicationController
     render "get_unit", :layout => false
   end
 
+private
+  def saveShopping(params)
+    param_text = "things"
+    i = 1
+    act_param = param_text + i.to_s
+    while params[act_param] != nil
+      saveThingInstance(params[act_param])
+      i = i + 1
+      act_param = param_text + i.to_s
+    end
+  end
+
+  def saveThingInstance(thing)
+    ti = ThingInstance.new
+    ti.storage = Storage.find(thing[:storage])
+    ti.thing = Thing.find(thing[:thing])
+    ti.size = thing[:size].to_f
+    if thing[:price] != nil
+      ti.price = thing[:price].to_f
+      ti.currency = thing[:currency]
+    end
+    day = thing[:valid_until]["(3i)"]
+    month = thing[:valid_until]["(2i)"]
+    year = thing[:valid_until]["(1i)"]
+    date = Date.civil(year.to_i, month.to_i, day.to_i)
+    ti.valid_until = date
+    ti.shop = Shop.find(thing[:shop]) if thing[:shop] != ""
+    ti.manufacturer = Manufacturer.find(thing[:manufacturer]) if thing[:manufacturer] != ""
+    ti.purchase_date = Date.today
+    puts ti
+    puts ti.save
+  end
 end

@@ -13,6 +13,7 @@ pl:
     shopping:
       title: Zrób zakupy
       add_thing: Dodaj przedmiot
+      done: Zakupy zrobiono
       header:
         category: Kategoria
         thing: Co
@@ -23,3 +24,4 @@ pl:
         manufacturer: Producent
         storage: Schowek
         unit: Jednostka
+        currency: Waluta
