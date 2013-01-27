@@ -13,4 +13,5 @@ en:
       shop: Shop
       manufacturer: Manufacturer
       unit: Unit
+      owner: Who bought
     not_specified: Not specified

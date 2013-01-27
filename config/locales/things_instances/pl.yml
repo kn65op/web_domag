@@ -13,6 +13,7 @@ pl:
       shop: Sklep
       manufacturer: Producent
       unit: Jednostka
+      owner: Kupiec
     not_specified: Nie określono
 
 
