@@ -14,4 +14,9 @@ class Shop < ActiveRecord::Base
   def canView? (u)
     user == u
   end
+
+  def getNonZeroThingInstances
+    thing_instances.find_all{|t| t.amount > 0}.sort{|a,b| a.thing.name <=> b.thing.name}
+  end
+
 end

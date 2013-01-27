@@ -1,7 +1,12 @@
+= javascript_include_tag "things/things"
+
 %h1= @shop.name
 %h2= @shop.address
 
-=#TODO: tabela z zawartością
+= t('common.search')
+%input#search
+
+= render :partial => "common/thing_instances_table", :locals => {:ti => @ti}
 
 .edit= link_to t('shops.view.edit'), edit_shop_path(@shop)
 .delete= link_to t('shops.view.delete'), delete_shop_path(@shop)

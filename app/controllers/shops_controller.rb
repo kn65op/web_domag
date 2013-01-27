@@ -27,6 +27,7 @@ class ShopsController < ApplicationController
 
   def view
     @shop = getShop
+    @ti = @shop.getNonZeroThingInstances
   end
 
   def delete
