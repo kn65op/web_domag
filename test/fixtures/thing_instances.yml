@@ -1,15 +1,56 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-#one:
-#  valid_until: 2012-11-02
-#  user: 
-#  storage: 
-#  purchase: 
-#  thing: 
-#
-#two:
-#  valid_until: 2012-11-02
-#  user: 
-#  storage: 
-#  purchase: 
-#  thing: 
+one_beer1:
+  valid_until: 2014-11-02
+  storage: kitchen
+  purchase_date: 2012-12-02
+  thing: one_beer
+  shop: one_lidl
+  manufacturer: one_zywiec
+  size: 2.5
+
+two_beer1:
+  valid_until: 2014-11-02
+  storage: good_cupboard
+  purchase_date: 2012-12-02
+  thing: two_beer
+  shop: two_lidl
+  manufacturer: two_zywiec
+  size: 3
+
+two_beer2:
+  valid_until: 2014-11-02
+  storage: evil_cupboard
+  purchase_date: 2012-12-02
+  thing: two_beer
+  shop: two_lidl
+  manufacturer: two_zywiec
+  size: 1
+
+one_beer2:
+  valid_until: 2014-11-02
+  storage: kitchen
+  purchase_date: 2013-01-02
+  thing: one_beer
+  shop: one_real_krokus
+  manufacturer: one_tatra
+  size: 5
+
+one_beer3:
+  valid_until: 2014-11-02
+  storage: kitchen
+  purchase_date: 2013-01-03
+  thing: one_beer
+  shop: one_lidl
+  manufacturer: one_tatra
+  size: 6
+
+one_beer4:
+  valid_until: 2014-11-02
+  storage: cupboard_sink
+  purchase_date: 2012-12-02
+  thing: one_tea
+  shop: one_lidl
+  manufacturer: one_lipton
+  size: 7
+

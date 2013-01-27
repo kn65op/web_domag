@@ -1,13 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 #
-#one:
-#  date: 2012-11-11
-#  purpose: MyString
-#  amount: 1.5
-#  thing_instance: things(:one)
-#
-#two:
-#  date: 2012-11-11
-#  purpose: MyString
-#  amount: 1.5
-#  thing_instance: things(:two)
+one_beer2_1:
+  date: 2012-11-11
+  purpose: MyString
+  amount: 1.5
+  thing_instance: one_beer2
+  user: one
+
+one_beer2_2:
+  date: 2013-01-03
+  purpose: Do picia
+  amount: 2
+  thing_instance: one_beer2
+  user: two
+
+
