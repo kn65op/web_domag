@@ -29,4 +29,41 @@ class User < ActiveRecord::Base
     }
     return things
   end
+
+  def getInvalid7Days
+    getAllThingInstances.find_all{|t| t.valid_until < Date.today + 7.days}
+  end
+
+  def getLimitsCritical
+    getAllThingsWithLimits.find_all{|t| t.limit.critical > t.amountAll }
+  end
+
+  def getLimitsEnds
+    getAllThingsWithLimits.find_all{|t| t.limit.ends > t.amountAll && t.limit.critical < t.amountAll }
+  end
+
+  def getLimitsFull
+    getAllThingsWithLimits.find_all{|t| t.limit.full < t.amountAll }
+  end
+
+  private
+  def getAllThingInstances
+    ti = []
+    storages.each do |s|
+      ti = ti + s.thing_instances
+    end
+    return ti
+  end
+
+  def getAllThings
+    t = []
+    categories.each do |c|
+      t = t + c.things
+    end
+    return t
+  end
+
+  def getAllThingsWithLimits
+    getAllThings.find_all{|t| t.limit != nil }
+  end
 end

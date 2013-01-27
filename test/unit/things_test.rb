@@ -22,4 +22,9 @@ class ThingsTest < ActiveSupport::TestCase
     assert !thing.canView?(users(:one)), "can edit"
   end
 
+  test "amountAll" do
+    thing = things(:one_beer)
+    assert_equal 10, thing.amountAll, "Wrong amount all"
+  end
+
 end

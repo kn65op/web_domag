@@ -1,0 +1,13 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+pl:
+  main_page:
+    valid_until_info: Te prodkty utacą termin ważności w ciągu najbliższych 7 dni.
+    valid_until_none: Brak produktów o krótkiej dacie ważności.
+    critical_info: Te prodkty osiągnęły limit krytyczny.
+    critical_none: Brak produktów, które osiągnęły limit krytyczny.
+    ends_info: Te prodkty kończą się.
+    ends_none: Brak produktów, które się kończą.
+    full_info: Tych produktów masz pełno.
+    full_none: Brak produktów, których masz pełno.

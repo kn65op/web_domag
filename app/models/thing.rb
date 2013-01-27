@@ -17,4 +17,10 @@ class Thing < ActiveRecord::Base
     category.user == user
   end
 
+  def amountAll
+    sum = 0
+    thing_instances.each{|t| sum = sum + t.amount}
+    return sum
+  end
+
 end

@@ -1,0 +1,13 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  main_page:
+    valid_until_info: These products will be invalid in next 7 days.
+    valid_until_none: You don't have product with short valid date.
+    critical_info: This products has reached it's critical limit.
+    critical_none: You don't have products which has reached critical limit.
+    ends_info: This products has reached it's ends limit.
+    ends_none: You don't have products which has reached ends limit.
+    full_info: This products has reached it's full limit.
+    full_none: You don't have products which has reached full limit.

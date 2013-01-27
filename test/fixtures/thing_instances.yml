@@ -41,7 +41,7 @@ one_beer2:
   currency: zł
 
 one_beer3:
-  valid_until: 2014-11-02
+  valid_until: 2013-01-30
   storage: kitchen
   purchase_date: 2013-01-03
   thing: one_beer
@@ -49,12 +49,20 @@ one_beer3:
   manufacturer: one_tatra
   size: 6
 
-one_beer4:
-  valid_until: 2014-11-02
+one_tea1:
+  valid_until: 2013-01-29
   storage: cupboard_sink
   purchase_date: 2012-12-02
   thing: one_tea
   shop: one_lidl
   manufacturer: one_lipton
+  size: 7
+
+one_bread1:
+  valid_until: 2014-01-29
+  storage: cupboard_sink
+  purchase_date: 2012-12-02
+  thing: one_bread
+  shop: one_lidl
   size: 7
 

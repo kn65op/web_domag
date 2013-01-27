@@ -1,0 +1,28 @@
+-if ti.size != 0
+  %table
+    %thead
+      %tr
+        %th
+          = t('things.header.name')
+        %th
+          = t('things.header.amount')
+        %th
+          = t('things.header.critical')
+        %th
+          = t('things.header.ends')
+        %th
+          = t('things.header.full')
+    - ti.each do |t|
+      %tr
+        %td
+          = link_to t.name, view_thing_path(t)
+        %td
+          = t.amountAll
+        %td
+          = t.limit.critical
+        %td
+          = t.limit.ends
+        %td
+          = t.limit.full
+-else
+  %p= t('common.empty')

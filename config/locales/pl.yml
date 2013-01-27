@@ -23,6 +23,10 @@ pl:
         remember_me: Zapamiętaj mnie
         sign_in: Zaloguj
         password_confirmation: Potwierdź hasło
+      limit:
+        critical: Krytyczny
+        ends: Kończy się
+        full: Pełno
   #for devise
 
 #from Internet

@@ -58,7 +58,44 @@ class UserTest < ActiveSupport::TestCase
     assert things.length == 0, "Not zero things"
   end
 
+  #for main page
+  test "get valid 7 days" do
+    ti = users(:one).getInvalid7Days
+    assert_equal 2, ti.size, "returned not 2 t"
+
+    beer = ti.index(thing_instances(:one_beer3))
+    assert_not_nil beer, "Not found one_beer3"
+
+    tea = ti.index(thing_instances(:one_tea1))
+    assert_not_nil tea,  "Not found one_tea1"
+  end
+
+  test "get limit critical" do
+    ti = users(:one).getLimitsCritical
+    assert_equal 1, ti.size, "returned not 1 t"
+
+    tea = ti.index(things(:one_tea))
+    assert_not_nil tea, "Not found one_tea"
+  end
+
+  test "get limit ends" do
+    ti = users(:one).getLimitsEnds
+    assert_equal 1, ti.size, "returned not 1 t"
+
+    beer = ti.index(things(:one_beer))
+    assert_not_nil beer, "Not found one_beer"
+  end
+
+  test "get limit full" do
+    ti = users(:one).getLimitsFull
+    assert_equal 1, ti.size, "returned not 1 t"
+
+    bread = ti.index(things(:one_bread))
+    assert_not_nil bread, "Not found one_bread"
+  end
+
   #storage validations
+
 #  test "Not single storage" do
 #    user = User.new
 #    assert_equal nil, user.getStorages, "Have some storeages"

@@ -2,9 +2,23 @@
 
 one_beer_limit:
   critical: 1.5
-  ends: 2.5
-  full: 3.5
+  ends: 12.5
+  full: 33.5
   thing: one_beer
+  user: one
+
+one_tea_limit:
+  critical: 12
+  ends: 20
+  full: 22
+  thing: one_tea
+  user: one
+
+one_bread_limit:
+  critical: 2
+  ends: 3
+  full: 5
+  thing: one_bread
   user: one
 
 two_beer_limit:

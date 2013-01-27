@@ -1,0 +1,28 @@
+%p
+  -if invalid.size != 0
+    = t ('main_page.valid_until_info')
+    = render :partial => "common/thing_instances_table", :locals => {:ti => invalid}
+  -else
+    = t ('main_page.valid_until_none')
+
+%p
+  -if critical.size != 0
+    = t ('main_page.critical_info')
+    = render :partial => "common/thing_table", :locals => {:ti => critical}
+  -else
+    = t ('main_page.critical_none')
+
+%p
+  -if ends.size != 0
+    = t ('main_page.ends_info')
+    = render :partial => "common/thing_table", :locals => {:ti => ends}
+  -else
+    = t ('main_page.ends_none')
+
+%p
+  -if full.size != 0
+    = t ('main_page.full_info')
+    = render :partial => "common/thing_table", :locals => {:ti => full}
+  -else
+    = t ('main_page.full_none')
+
