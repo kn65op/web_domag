@@ -12,6 +12,7 @@ pl:
         button: Zmień
     shopping:
       title: Zrób zakupy
+      add_thing: Dodaj przedmiot
       header:
         category: Kategoria
         thing: Co

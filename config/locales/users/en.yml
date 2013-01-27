@@ -12,6 +12,7 @@ en:
         button: Change
     shopping:
       title: Do shopping
+      add_thing: Add thing
       header:
         category: Category
         thing: What

@@ -15,4 +15,10 @@ root.set_lang_from_link =  ->
   null
 
 window.onload = ->
-  alert("A")
+  add_thing()
+
+root.id = parseInt(0,10)
+
+root.add_thing = ->
+  root.id = parseInt(parseInt(root.id, 10) + 1, 10)
+  $.get '/add_thing/' + root.id, (data)->$("#table_body").append("#{data}")

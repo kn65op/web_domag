@@ -23,6 +23,8 @@ class UsersController < ApplicationController
   def add_thing
     @storages = current_user.storages.sort{|a,b| a.getFullName <=> b.getFullName}
     @categories = current_user.categories.sort{|a,b| a.getFullName <=> b.getFullName}
+    @shops = current_user.shops.sort{|a,b| a.name <=> b.name}
+    @manufacturers = current_user.manufacturers.sort{|a,b| a.name <=> b.name}
     @nr = params[:nr]
     render "add_thing", :layout => false
   end

@@ -2,6 +2,8 @@
 
 %h1= t('user.shopping.title')
 
+= button_to_function (t 'user.shopping.add_thing'), "add_thing()"
+
 %table
   %thead
     %tr
@@ -13,5 +15,5 @@
       %th= t ('user.shopping.header.valid_until')
       %th= t ('user.shopping.header.shop')
       %th= t ('user.shopping.header.manufacturer')
-  %tbody
+  %tbody#table_body
 
