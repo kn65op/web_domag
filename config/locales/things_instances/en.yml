@@ -1,0 +1,37 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  things:
+    index:
+      title: Your things
+      new: Add new thing
+      header:
+        name: Thing
+        description: Description
+        category: Category
+
+    new:
+      title: Add thing
+      successful: Thing added
+    view:
+      edit: Edit
+      delete: Delete
+      unit: Unit
+      category: Category
+      limit:
+        critical: Critical
+        ends: Ends
+        full: Full
+        header: Limits
+        checkbox: Use limits
+    edit:
+      title: Edit thing
+      successful: Edition was successful
+    delete:
+      title: Delete thing
+      info: Are you sure? All history connected to this thing will be erased (purchases/consumes)
+      answer_yes: "Yes"
+      answer_no: "No"
+      succesful: Thing was deleted
+
