@@ -8,6 +8,8 @@ one_beer1:
   shop: one_lidl
   manufacturer: one_zywiec
   size: 2.5
+  price: 2.56
+  currency: zł
 
 two_beer1:
   valid_until: 2014-11-02
@@ -35,6 +37,8 @@ one_beer2:
   shop: one_real_krokus
   manufacturer: one_tatra
   size: 5
+  price: 46.23
+  currency: zł
 
 one_beer3:
   valid_until: 2014-11-02

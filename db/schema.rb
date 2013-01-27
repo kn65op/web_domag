@@ -77,6 +77,7 @@ ActiveRecord::Schema.define(:version => 20121111112727) do
     t.date     "purchase_date",                                  :null => false
     t.decimal  "price",           :precision => 12, :scale => 2
     t.decimal  "size",            :precision => 20, :scale => 3, :null => false
+    t.string   "currency"
     t.integer  "storage_id"
     t.integer  "thing_id",                                       :null => false
     t.integer  "shop_id"

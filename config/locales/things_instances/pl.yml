@@ -14,6 +14,7 @@ pl:
       manufacturer: Producent
       unit: Jednostka
       owner: Kupiec
+      price: Cena za jednostkę
     not_specified: Nie określono
 
 

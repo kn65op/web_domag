@@ -1,6 +1,6 @@
 class ThingInstance < ActiveRecord::Base
 	#attributes
-  attr_accessible :valid_until, :price, :purchase_date, :size
+  attr_accessible :valid_until, :price, :purchase_date, :size, :currency
 
 	#relations
   belongs_to :storage
@@ -13,6 +13,8 @@ class ThingInstance < ActiveRecord::Base
   validates :purchase_date, :presence => :true
   validates :thing_id, :presence => :true
   validates :size, :presence => :true
+  validates :price, :presence => :true, :if => :currency?
+  validates :currency, :presence => :true, :if => :price?
 
   #methods
   def amount

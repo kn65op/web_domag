@@ -5,6 +5,7 @@ class CreateThingInstances < ActiveRecord::Migration
 			t.date :purchase_date, :null => false 
       t.decimal :price, :precision => 12, :scale => 2
 			t.decimal :size, :null => false, :precision => 20, :scale => 3
+      t.string :currency
       t.references :storage
       t.references :thing, :null => false
       t.references :shop

@@ -19,6 +19,8 @@
         %th
           = t('things_intances.header.owner')
         %th
+          = t('things_intances.header.price')
+        %th
           = t('things_intances.header.manufacturer')
         %th
           = t('things_intances.header.shop')
@@ -43,6 +45,11 @@
             = t('things_intances.not_specified')
         %td
           = t.thing.category.user.email
+        %td
+          -if  t.price != nil
+            = (t.price / t.size).to_s + " " + t.currency.to_s
+          -else
+            = t('things_intances.not_specified')
         %td
           -if  t.manufacturer != nil
             = link_to t.manufacturer.name, view_manufacturer_path(t.manufacturer)
