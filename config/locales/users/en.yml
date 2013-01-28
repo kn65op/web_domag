@@ -34,3 +34,5 @@ en:
     consume:
       title: How much/many you want to consume
       do: Consume
+      below_zero: You can't consume below zero.
+      to_much: You can't consume more then you have.

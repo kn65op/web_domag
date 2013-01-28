@@ -10,6 +10,7 @@ root.some_function = ->
     id = $("#id")[0].value
     $.get '/en/consume/' + id,
       amount: $("#consume")[0].value,
-      (data) -> $("#ok").append("OK")
+      (data) ->
+        $("#ok").append("#{data}")
     return false
   )

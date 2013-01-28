@@ -34,3 +34,5 @@ pl:
     consume:
       title: Ile checz skonsumować?
       do: Konsumuj
+      below_zero: Nie można konsumować poniżej 0.
+      to_much: Nie można konsumować więcej niż masz.

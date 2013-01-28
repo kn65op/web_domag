@@ -63,13 +63,20 @@ class UsersController < ApplicationController
     if (params[:amount] == nil)
       render "consume_thing_instance", :layout => false
     else
-      consume = Consume.new
-      consume.thing_instance = @thing_instance
-      consume.amount = params[:amount].to_i
-      consume.user = current_user
-      consume.date = Date.today
-      puts consume.save if params[:amount].to_i != 0
-      render :nothing => true
+      if params[:amount].to_i > @thing_instance.amount
+        @status = t ('user.consume.to_much')
+      elsif params[:amount].to_i < 0
+        @status = t ('user.consume.below_zero')
+      else
+        consume = Consume.new
+        consume.thing_instance = @thing_instance
+        consume.amount = params[:amount].to_i
+        consume.user = current_user
+        consume.date = Date.today
+        consume.save if params[:amount].to_i != 0
+        @status = "OK"
+      end
+      render "consume_reponse", :layout => false
     end
   end
 
