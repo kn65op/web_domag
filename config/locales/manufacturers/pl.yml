@@ -4,7 +4,7 @@
 pl:
   manufacturers:
     index:
-      title: Twoje kategorie
+      title: Twoi producenci
       new: Dodaj nowego producenta
       header:
         name: Kategoria
