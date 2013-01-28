@@ -5,9 +5,9 @@
 .upper_menu {
   background-color: #87ceeb;
   color: #ffffe0;
-  padding: 10px;
+  padding: 0px;
   margin: 0px;
-  padding-left: 20px;
+  padding-left: 0px;
   display: block;
   border-bottom: solid;
   border-bottom-width: 1px;
@@ -15,6 +15,18 @@
   -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+
+  a {
+    line-height: 30px;
+    display: inline-block;
+    padding: 1Em;
+    margin: 0px;
+  }
+
+  a:hover {
+    background-color: #000000;
+    color: #ffffff;
+  }
 }
 
 body {
@@ -45,6 +57,9 @@ table {
   border-width: 2px;
   border-style: groove;
   width: 90%;
+  td {
+    padding: 0.5em;
+  }
 }
 
 table.shopping {
@@ -97,25 +112,52 @@ li {
 .link_new {
   border: ridge #00008b 2px;
   background-color: #90ee90;
-  display: inline;
-  a:link {
-    color: #00008b;
+  display: inline-block;
+  padding: 0.4Em;
+  margin-top: 0.5EM;
+
+  a {
+    color: gray;
+    text-decoration: none;
   }
-  a:visited {
-    color: #00008b;
+
+  a:hover {
+    color: #000000;
   }
 }
 
 .delete {
   border: ridge #00008b 2px;
-  background-color: #8b0000;
-  display: inline;
+  background-color: #faebd7;
+  display: inline-block;
+  padding: 0.4Em;
+  margin-top: 0.5EM;
+
+  a {
+    color: gray;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #000000;
+  }
 }
 
 .edit {
   border: ridge #00008b 2px;
-  background-color: #d2691e;
-  display: inline;
+  background-color: #dcdcdc;
+  display: inline-block;
+  padding: 0.4Em;
+  margin-top: 0.5EM;
+
+  a {
+    color: gray;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #000000;
+  }
 }
 
 .answer_yes {
@@ -217,3 +259,12 @@ box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
 
 }
 
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #aaa;
+}
