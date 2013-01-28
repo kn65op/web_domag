@@ -27,6 +27,8 @@ pl:
         critical: Krytyczny
         ends: Kończy się
         full: Pełno
+      thing:
+        category: Kategoria
   #for devise
 
 #from Internet

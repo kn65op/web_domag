@@ -8,6 +8,8 @@
 = t('common.search')
 %input#search
 
+= hidden_field_tag  "limits_create_link", get_limits_path(@thing, "create")
+= hidden_field_tag  "limits_delete_link", get_limits_path(@thing, "delete")
 %input{:type => "checkbox", :onclick => "change_limits()", :id => "limits_checkbox"}= t 'things.view.limit.checkbox'
 
 #limits_place
@@ -17,6 +19,3 @@
 
 .edit= link_to t('things.view.edit'), edit_thing_path(@thing)
 .delete= link_to t('things.view.delete'), delete_thing_path(@thing)
-
-=#TMP
-#thing_id= @thing.id

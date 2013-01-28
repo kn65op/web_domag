@@ -6,12 +6,12 @@ root = exports ? this
 
 root.change_limits =  ->
   lc = $("#limits_info")[0]
-  id = $("#thing_id")[0].innerHTML
   if typeof lc != 'undefined'
     lc.parentNode.removeChild(lc) #style.visibility="hidden"
-    $.get '/thing/get_limits/' + id + "/delete"
+    link = $("#limits_delete_link")[0].value
+    $.get link
   else
-    $.get '/thing/get_limits/' + id + "/create",
+    $.get $("#limits_create_link")[0].value,
       (data)->$('#limits_place').append("#{data}")
 
 

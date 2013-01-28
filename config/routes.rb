@@ -56,9 +56,10 @@ root :to => redirect("/en")
     match "shop/edit/:id" => "shops#edit", :as => "edit_shop"
     match "shop/delete/:id" => "shops#delete", :as => "delete_shop"
     match "shop/confirmed_delete/:id" => "shops#confirmed_delete", :as => "confirmed_delete_shop"
+
+    match "thing/get_limits/:id/:do" => "things#get_limits", :as => "get_limits"
+    match "add_thing/:nr" => "users#add_thing"
 	end
-  match "thing/get_limits/:id/:do" => "things#get_limits"
-  match "add_thing/:nr" => "users#add_thing"
   match "get_things/:id" => "users#get_things"
   match "get_unit/:id" => "users#get_unit"
 
