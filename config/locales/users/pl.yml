@@ -25,3 +25,9 @@ pl:
         storage: Schowek
         unit: Jednostka
         currency: Waluta
+    move:
+      title: Gdzie chcesz przenieść?
+      do: Przenieś
+    consume:
+      title: Ile checz skonsumować?
+      do: Konsumuj

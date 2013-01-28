@@ -25,3 +25,9 @@ en:
         storage: Storage
         unit: Unit
         currency: Currency
+    move:
+      title: Where you want to move?
+      do: Move
+    consume:
+      title: How much/many you want to consume
+      do: Consume
