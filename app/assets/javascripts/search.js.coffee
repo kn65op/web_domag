@@ -4,3 +4,5 @@
 
 
 window.onload = -> $('input#search').quicksearch('table tbody tr');
+
+

@@ -23,6 +23,8 @@ root :to => redirect("/en")
 		match "/user/settings" => "users#settings", :as => "user_settings"
     devise_for :users
     match "shopping" => "users#shopping", :as => "shopping"
+    match "consume/:id" => "users#consume_thing_instance", :as => "consume"
+    match "move/:id" => "users#move_thing_instance", :as => "move"
 
     match "storages" => "storages#index", :as => "storages"
     match "storage/new" => "storages#new", :as => "new_storage"

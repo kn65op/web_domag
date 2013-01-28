@@ -16,5 +16,7 @@ pl:
       owner: Kupiec
       price: Cena za jednostkę
     not_specified: Nie określono
+    move: Przenieś
+    consume: Konsumuj
 
 

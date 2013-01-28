@@ -46,7 +46,38 @@ class UsersController < ApplicationController
     render "get_unit", :layout => false
   end
 
+  def move_thing_instance
+    @thing_instance = getThingInstance
+    if (params[:storage] == nil)
+      @storages = current_user.storages.sort{|a,b| a.getFullName <=> b.getFullName}
+      render "move_thing_instance", :layout => false
+    else
+      @thing_instance.storage = Storage.find(params[:storage])
+      @thing_instance.save
+      render :nothing => true
+    end
+  end
+
+  def consume_thing_instance
+    @thing_instance = getThingInstance
+    if (params[:amount] == nil)
+      render "consume_thing_instance", :layout => false
+    else
+      consume = Consume.new
+      consume.thing_instance = @thing_instance
+      consume.amount = params[:amount].to_i
+      consume.user = current_user
+      consume.date = Date.today
+      puts consume.save if params[:amount].to_i != 0
+      render :nothing => true
+    end
+  end
+
 private
+  def getThingInstance
+    ThingInstance.find(params[:id])
+  end
+
   def saveShopping(params)
     invalid = []
     param_text = "things"

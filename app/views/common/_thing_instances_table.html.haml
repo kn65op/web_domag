@@ -1,3 +1,7 @@
+= javascript_include_tag "jquery.tools.min"
+= javascript_include_tag "facebox"
+= javascript_include_tag "overlay"
+
 -if ti.size != 0
   %table
     %thead
@@ -24,6 +28,8 @@
           = t('things_intances.header.manufacturer')
         %th
           = t('things_intances.header.shop')
+        %th
+        %th
     - ti.each do |t|
       %tr
         %td
@@ -60,5 +66,10 @@
             = link_to t.shop.name, view_shop_path(t.shop)
           -else
             = t('things_intances.not_specified')
+        %td
+          = link_to t('things_intances.move'), move_path(t), :rel => "#facebox"
+        %td
+          = link_to t('things_intances.consume'), consume_path(t), :rel => "#facebox"
 -else
   %p= t('common.empty')
+

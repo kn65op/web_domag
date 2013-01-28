@@ -1,0 +1,12 @@
+= t('user.consume.title')
+= form_tag
+= hidden_field_tag ("id", @thing_instance.id)
+= number_field_tag("consume", 0, :min => 0, :max => @thing_instance.amount, :step => "any")
+= submit_tag(t('user.consume.do'), :id => "submit")
+
+.ok#ok
+
+= javascript_include_tag "jquery"
+= javascript_include_tag "consume"
+
+= javascript_tag ("some_function()")
