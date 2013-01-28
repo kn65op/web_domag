@@ -1,6 +1,6 @@
 %h1= t('categories.delete.title')
 
 %p= t('categories.delete.info')
-= link_to t('categories.delete.answer_no'), view_category_path(@category)
-= link_to t('categories.delete.answer_yes'), confirmed_delete_category_path(@category)
+.answer_no= link_to t('categories.delete.answer_no'), view_category_path(@category)
+.answer_yes= link_to t('categories.delete.answer_yes'), confirmed_delete_category_path(@category)
 

@@ -31,7 +31,7 @@
         %th
         %th
     - ti.each do |t|
-      %tr
+      %tr{:class => (cycle 'odd', 'even')}
         %td
           = link_to t.storage.name, view_storage_path(t.storage)
         %td

@@ -12,7 +12,7 @@
 = hidden_field_tag  "limits_delete_link", get_limits_path(@thing, "delete")
 %input{:type => "checkbox", :onclick => "change_limits()", :id => "limits_checkbox"}= t 'things.view.limit.checkbox'
 
-#limits_place
+.limits_form#limits_place
   = render :partial => "limits_form", :locals => {:thing => @thing}
 
 = render :partial => "common/thing_instances_table", :locals => {:ti => @ti}

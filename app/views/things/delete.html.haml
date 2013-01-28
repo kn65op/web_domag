@@ -1,5 +1,5 @@
 %h1= t('things.delete.title')
 
 %p= t('things.delete.info')
-= link_to t('things.delete.answer_no'), view_thing_path(@thing)
-= link_to t('things.delete.answer_yes'), confirmed_delete_thing_path(@thing)
+.answer_no= link_to t('things.delete.answer_no'), view_thing_path(@thing)
+.answer_yes= link_to t('things.delete.answer_yes'), confirmed_delete_thing_path(@thing)

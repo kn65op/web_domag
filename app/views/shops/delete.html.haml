@@ -1,5 +1,5 @@
 %h1= t('shops.delete.title')
 
 %p= t('shops.delete.info')
-= link_to t('shops.delete.answer_no'), view_shop_path(@shop)
-= link_to t('shops.delete.answer_yes'), confirmed_delete_shop_path(@shop)
+.answer_no= link_to t('shops.delete.answer_no'), view_shop_path(@shop)
+.answer_yes= link_to t('shops.delete.answer_yes'), confirmed_delete_shop_path(@shop)

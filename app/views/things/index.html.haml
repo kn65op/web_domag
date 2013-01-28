@@ -15,4 +15,4 @@
       %td= link_to t.name, view_thing_path(t)
       %td= link_to t.category.name, view_category_path(t.category)
 
-= link_to t('things.index.new'), new_thing_path
+.link_new= link_to t('things.index.new'), new_thing_path

@@ -1,5 +1,5 @@
 %h1= t('storages.delete.title')
 
 %p= t('storages.delete.info')
-= link_to t('storages.delete.answer_no'), view_storage_path(@storage)
-= link_to t('storages.delete.answer_yes'), confirmed_delete_storage_path(@storage)
+.answer_no= link_to t('storages.delete.answer_no'), view_storage_path(@storage)
+.answer_yes= link_to t('storages.delete.answer_yes'), confirmed_delete_storage_path(@storage)

@@ -1,0 +1,181 @@
+// Place all the styles related to the Categories controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.upper_menu {
+  background-color: #87ceeb;
+  color: #ffffe0;
+  padding: 10px;
+  margin: 0px;
+  padding-left: 20px;
+  display: block;
+}
+
+body {
+  background-color: #fff8dc;
+  margin: 0px;
+  padding: 0px;
+}
+
+h1 {
+  padding-left: 15px;
+  color: gray;
+}
+
+h2 {
+  padding-left: 7px;
+  color: #add8e6;
+}
+
+.log_place {
+  float: right;
+  display: inline;
+}
+
+table {
+  margin: 10px;
+  border-color: #000000;
+  border-width: 2px;
+  border-style: groove;
+  width: 90%;
+}
+
+table.shopping {
+  td {
+    border-left: dotted #000000 1px;
+    border-right: dotted #000000 1px;
+    border-bottom: dashed #d2691e 1px;
+  }
+}
+
+th {
+  background-color: #696969;
+  color: #f5deb3;
+}
+
+tr.odd {
+  background-color: #b0e0e6;
+}
+
+tr.even {
+  background-color: #b0c4de;
+}
+
+.content {
+  margin-left: 10px;
+}
+
+ul {
+ margin: 4px;
+  margin-left: 0px;
+  padding: 0px;
+}
+
+li {
+  margin: 0px;
+  padding: 0px;
+ list-style: none;
+  margin-left: 10px;
+  padding-left: 0px;
+}
+
+.link_new {
+  border: ridge #00008b 2px;
+  background-color: #90ee90;
+  display: inline;
+  a:link {
+    color: #00008b;
+  }
+  a:visited {
+    color: #00008b;
+  }
+}
+
+.delete {
+  border: ridge #00008b 2px;
+  background-color: #8b0000;
+  display: inline;
+}
+
+.edit {
+  border: ridge #00008b 2px;
+  background-color: #d2691e;
+  display: inline;
+}
+
+.answer_yes {
+  background-color: #ff0000;
+  border: solid;
+  display: inline;
+}
+
+.answer_no {
+  background-color: green;
+  border: solid;
+  display: inline;
+}
+label {
+  display: compact;
+  width: 100px;
+  text-align: left;
+  font-weight:bold;
+  }
+
+form.no_render {
+  margin: 0px;
+  background: none;
+  border: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  width: auto;
+  height: auto;
+  padding: 0px;
+}
+
+ form    {
+background: -webkit-gradient(linear, bottom, left 175px, from(#CCCCCC), to(#EEEEEE));
+background: -moz-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
+margin:auto;
+position:relative;
+width:550px;
+height:450px;
+font-family: Tahoma, Geneva, sans-serif;
+font-size: 14px;
+font-style: italic;
+line-height: 24px;
+font-weight: bold;
+color: #09C;
+text-decoration: none;
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+padding:10px;
+border: 1px solid #999;
+border: inset 1px solid #333;
+-webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+-moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+
+}
+
+ .limits_form {
+   form {
+     width: 120px;
+     height: 180px;
+     margin: 10px;
+   }
+ }
+
+.small_form {
+  form {
+    width:200px;
+    height:100px;
+  }
+}
+
+.small_height_form {
+  form {
+    width:500px;
+    height:100px;
+  }
+}

@@ -10,31 +10,34 @@
     %body
     - #Top menubar
     -#%form{:action => "#{url_for(params.merge(:locale => "" ))}", :method => "POST"}
-    - #TODO: add change language
-    - if current_user == nil #no user logged
-      = form_tag user_session_path do
-        = text_field_tag 'user[email]'
-        = password_field_tag 'user[password]'
-        = check_box_tag 'user[remember_me]'
-        = label_tag 'user[remember_me]', t('upper_menu.remember')
-        %button#Login
-          = t('upper_menu.login')
-        = link_to t('upper_menu.forgot'), new_password_path('user')
-        = link_to t('upper_menu.register'), new_user_registration_path
-    -else #user logged
-      = link_to image_tag("/images/main_page_image.jpg"), root_path
-      = link_to t('upper_menu.shopping'), shopping_path
-      = link_to t('upper_menu.things'), things_path
-      = link_to t('upper_menu.categories'), categories_path
-      = link_to t('upper_menu.storages'), storages_path
-      = link_to t('upper_menu.shops'), shops_path
-      = link_to t('upper_menu.manufacturers'), manufacturers_path
-      = link_to t('upper_menu.settings'), user_settings_path()
-      = link_to t('upper_menu.logout'), destroy_user_session_path, :method => :delete
+    .upper_menu
+      - if current_user == nil #no user logged
+        .log_place
+          = form_tag user_session_path do
+            = text_field_tag 'user[email]'
+            = password_field_tag 'user[password]'
+            = check_box_tag 'user[remember_me]'
+            = label_tag 'user[remember_me]', t('upper_menu.remember')
+            %button#Login
+              = t('upper_menu.login')
+            = link_to t('upper_menu.forgot'), new_password_path('user')
+            = link_to t('upper_menu.register'), new_user_registration_path
+      -else #user logged
+        = link_to image_tag("/images/main_page_image.jpg"), root_path
+        = link_to t('upper_menu.shopping'), shopping_path
+        = link_to t('upper_menu.things'), things_path
+        = link_to t('upper_menu.categories'), categories_path
+        = link_to t('upper_menu.storages'), storages_path
+        = link_to t('upper_menu.shops'), shops_path
+        = link_to t('upper_menu.manufacturers'), manufacturers_path
+        = link_to t('upper_menu.settings'), user_settings_path()
+        .log_place
+          = link_to t('upper_menu.logout'), destroy_user_session_path, :method => :delete
     - if flash[:notice]
       .notice
         = flash[:notice]
     - if flash[:error]
       .error
         = flash[:error]
-    = yield
+    .content
+      = yield

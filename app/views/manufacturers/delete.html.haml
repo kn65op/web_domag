@@ -1,5 +1,5 @@
 %h1= t('manufacturers.delete.title')
 
 %p= t('manufacturers.delete.info')
-= link_to t('manufacturers.delete.answer_no'), view_manufacturer_path(@manufacturer)
-= link_to t('manufacturers.delete.answer_yes'), confirmed_delete_manufacturer_path(@manufacturer)
+.answer_no= link_to t('manufacturers.delete.answer_no'), view_manufacturer_path(@manufacturer)
+.answer_yes= link_to t('manufacturers.delete.answer_yes'), confirmed_delete_manufacturer_path(@manufacturer)
