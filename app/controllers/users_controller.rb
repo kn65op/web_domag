@@ -22,7 +22,7 @@ class UsersController < ApplicationController
       if saved != []
         redirect_to root_path, :notice => ((t 'user.shopping.not_done1') + saved.size.to_s + (t 'user.shopping.not_done2'))
       else
-        redirect_to root_path, :notice => (t 'users.shopping.done')
+        redirect_to root_path, :notice => (t 'user.shopping.done')
       end
     end
   end
@@ -63,17 +63,17 @@ class UsersController < ApplicationController
     if (params[:amount] == nil)
       render "consume_thing_instance", :layout => false
     else
-      if params[:amount].to_i > @thing_instance.amount
+      if params[:amount].to_f > @thing_instance.amount
         @status = t ('user.consume.to_much')
-      elsif params[:amount].to_i < 0
+      elsif params[:amount].to_f < 0
         @status = t ('user.consume.below_zero')
       else
         consume = Consume.new
         consume.thing_instance = @thing_instance
-        consume.amount = params[:amount].to_i
+        consume.amount = params[:amount].to_f
         consume.user = current_user
         consume.date = Date.today
-        consume.save if params[:amount].to_i != 0
+        consume.save if params[:amount].to_f != 0
         @status = "OK"
       end
       render "consume_reponse", :layout => false

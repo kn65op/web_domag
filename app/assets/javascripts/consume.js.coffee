@@ -8,7 +8,8 @@ root.some_function = ->
   submit = $('#submit')
   submit.click(dso = ->
     id = $("#id")[0].value
-    $.get '/en/consume/' + id,
+    link = $("#action")[0].value
+    $.get link,
       amount: $("#consume")[0].value,
       (data) ->
         $("#ok").append("#{data}")

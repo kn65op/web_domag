@@ -1,5 +1,6 @@
 = t('user.consume.title')
-= form_tag
+= form_tag :id => "form"
+= hidden_field_tag "action", consume_path(@thing_instance)
 = hidden_field_tag "id", @thing_instance.id
 = number_field_tag("consume", 0, :min => 0, :max => @thing_instance.amount, :step => "any")
 = submit_tag(t('user.consume.do'), :id => "submit")
