@@ -53,7 +53,7 @@
           = t.thing.category.user.email
         %td
           -if  t.price != nil
-            = (t.price / t.size).to_s + " " + t.currency.to_s
+            = ( "%.2f" % (t.price / t.size)) + " " + t.currency.to_s
           -else
             = t('things_intances.not_specified')
         %td
