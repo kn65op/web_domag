@@ -1,0 +1,11 @@
+= t('user.move.title')
+= form_tag
+= hidden_field_tag ("id", @thing_instance.id)
+= collection_select("things", "storage", @storages, :id, :getFullName)
+= submit_tag(t('user.move.do'), :id => "submit")
+.ok#ok
+
+= javascript_include_tag "jquery"
+= javascript_include_tag "move"
+
+= javascript_tag ("some_function()")
