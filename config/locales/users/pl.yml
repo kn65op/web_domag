@@ -14,6 +14,9 @@ pl:
       title: Zrób zakupy
       add_thing: Dodaj przedmiot
       done: Zakupy zrobiono
+      not_done1: "Nie udało się dodać takiej liczby przedmiotów: "
+      not_done2: Upewnij się, że dobrze wpisałeś.
+      do: Zakończono
       header:
         category: Kategoria
         thing: Co
