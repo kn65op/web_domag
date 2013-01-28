@@ -12,7 +12,7 @@
     -#%form{:action => "#{url_for(params.merge(:locale => "" ))}", :method => "POST"}
     .upper_menu
       - if current_user == nil #no user logged
-        .log_place
+        .login_place
           = form_tag user_session_path do
             = text_field_tag 'user[email]'
             = password_field_tag 'user[password]'
