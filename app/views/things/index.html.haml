@@ -11,7 +11,7 @@
       %th= t ('things.index.header.name')
       %th= t ('things.index.header.category')
   - @things.each do |t|
-    %tr
+    %tr{:class => (cycle 'odd', 'even')}
       %td= link_to t.name, view_thing_path(t)
       %td= link_to t.category.name, view_category_path(t.category)
 
