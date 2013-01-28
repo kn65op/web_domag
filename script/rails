@@ -11,8 +11,8 @@ if true
 	
 	module Rails
     class Server < ::Rack::Server
-			def default_options
 =begin
+			def default_options
 				super.merge({
 						:Port => 3000,
 						:environment => (ENV['RAILS_ENV'] || "development").dup,
@@ -26,8 +26,8 @@ if true
 							File.open("privkey.pem").read),
 						:SSLCertName => [["CN", WEBrick::Utils::getservername]]
 					})
-=end
 			end
+=end
     end
 	end 
 end
