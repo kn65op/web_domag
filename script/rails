@@ -27,8 +27,8 @@ if true
 						:SSLCertName => [["CN", WEBrick::Utils::getservername]]
 					})
 			end
-    end
 =end
+    end
 	end
 end
 
