@@ -31,19 +31,19 @@ class User < ActiveRecord::Base
   end
 
   def getInvalid7Days
-    getAllThingInstances.find_all{|t| t.valid_until < Date.today + 7.days}
+    getAllThingInstances.find_all{|t| t.valid_until < Date.today + 7.day && t.amount > 0}
   end
 
   def getLimitsCritical
-    getAllThingsWithLimits.find_all{|t| t.limit.critical > t.amountAll }
+    getAllThingsWithLimits.find_all{|t| t.limit.critical != nil && t.limit.critical > t.amountAll }
   end
 
   def getLimitsEnds
-    getAllThingsWithLimits.find_all{|t| t.limit.ends > t.amountAll && t.limit.critical < t.amountAll }
+    getAllThingsWithLimits.find_all{|t| t.limit.ends != nil && t.limit.ends > t.amountAll && t.limit.critical < t.amountAll }
   end
 
   def getLimitsFull
-    getAllThingsWithLimits.find_all{|t| t.limit.full < t.amountAll }
+    getAllThingsWithLimits.find_all{|t| t.limit.full != nil && t.limit.full < t.amountAll }
   end
 
   private
