@@ -12,5 +12,4 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery.quicksearch.js
 //= require_tree .
