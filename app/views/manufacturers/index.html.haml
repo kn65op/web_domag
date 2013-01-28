@@ -3,12 +3,12 @@
 = t('common.search')
 %input#search
 
-%table
+%table.manufacturers
   %thead
     %tr
       %th= t ('manufacturers.index.header.name')
   - @manufacturers.each do |m|
-    %tr
+    %tr{:class => (cycle 'odd', 'even')}
       %td= link_to m.name, view_manufacturer_path(m)
 
 .link_new= link_to t('manufacturers.index.new'), new_manufacturer_path

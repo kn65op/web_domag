@@ -8,9 +8,9 @@
 = t('common.search')
 %input#search
 
-%table
+%table.category
   - @category.things.each do |t|
-    %tr
+    %tr{:class => (cycle 'odd', 'even')}
       %td= link_to t.name, view_thing_path(t)
 
 .edit= link_to t('categories.view.edit'), edit_category_path(@category)

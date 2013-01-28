@@ -9,7 +9,7 @@
       %th= t ('shops.index.header.name')
       %th= t ('shops.index.header.address')
   - @shops.each do |s|
-    %tr
+    %tr{:class => (cycle 'odd', 'even')}
       %td= link_to s.name, view_shop_path(s)
       %td= s.address
 
