@@ -29,10 +29,13 @@ root.check_fields = (id) ->
 #  alert("A")
 
 root.id = parseInt(0,10)
+root.common_link
 
 root.add_thing = ->
   root.id = parseInt(parseInt(root.id, 10) + 1, 10)
-  $.get '/add_thing/' + root.id, (data)->$("#table_body").append("#{data}")
+  link = $("#link_to_add")[0]
+  root.common_link = link.value.substr(0,link.value.length-1)
+  $.get common_link + root.id, (data)->$("#table_body").append("#{data}")
 
 root.selected_category = (id, thing_id) ->
   $.get '/get_things/' + $("#" + id)[0].value,

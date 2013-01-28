@@ -13,7 +13,7 @@ en:
     shopping:
       title: Do shopping
       add_thing: Add thing
-      dnoe: Shopping done
+      done: Shopping done
       not_done1: "Adding this number of things genereted error: "
       not_done2: Please be sure, to insert correct data.
       do: Done
