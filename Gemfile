@@ -1,4 +1,6 @@
 source 'https://rubygems.org'
+ruby "1.9.3"
+
 
 gem 'rails', '>3.2.10'
 
@@ -8,7 +10,7 @@ gem 'rails', '>3.2.10'
 #development enviroment
 group :development do
 	gem "rails-erd"
-	gem "ruby-debug"
+	gem "ruby-debug19"
 end
 
 #production enviroment
