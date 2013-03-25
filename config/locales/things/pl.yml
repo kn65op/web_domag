@@ -34,6 +34,7 @@ pl:
       answer_yes: Tak
       answer_no: Nie
       succesful: Usunięto rzecz
+      wrong_thing: Nie masz takiej rzeczy
 
   simple_form:
     labels:

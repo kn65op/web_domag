@@ -34,3 +34,4 @@ en:
       answer_yes: "Yes"
       answer_no: "No"
       succesful: Thing was deleted
+      wrong_thing: "You don't have such thing"

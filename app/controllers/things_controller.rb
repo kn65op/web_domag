@@ -42,7 +42,10 @@ class ThingsController < ApplicationController
 
   def confirmed_delete
     thing = getThing
-    thing.delete
+    redirect_to things_path, :notice => t('things.delete.wrong_thing') if thing == nil
+
+    thing.thing_instances.destroy_all
+    thing.category.things.destroy(thing.id)
 
     redirect_to things_path, :notice => t('things.delete.succesful')
   end
